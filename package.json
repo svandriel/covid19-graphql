@@ -1,0 +1,56 @@
+{
+  "name": "covid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "lint": "npm run lint:prettier && npm run lint:tslint",
+    "lint:fix": "npm run lint:prettier:fix && npm run lint:tslint:fix",
+    "lint:prettier": "prettier \"src/**/*.{ts,graphql,json}\" --check",
+    "lint:prettier:fix": "prettier \"src/**/*.{ts,graphql,json}\" --write",
+    "lint:tslint": "tslint -p . -t stylish",
+    "lint:tslint:fix": "tslint -p . -t stylish --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "ramda": "^0.27.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.0",
+    "@types/ramda": "^0.26.43",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^24.3.0",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5",
+    "concurrently": "^5.1.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run build && npm run test"
+    }
+  },
+  "lint-staged": {
+    "packages/**/*.ts": [
+      "prettier --write",
+      "tslint -p . -t stylish --fix"
+    ],
+    "**/*.json": [
+      "prettier --write"
+    ],
+    "**/*.graphql": [
+      "prettier --write"
+    ]
+  }
+}
