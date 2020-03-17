@@ -42,7 +42,7 @@
     }
   },
   "lint-staged": {
-    "packages/**/*.ts": [
+    "src/**/*.ts": [
       "prettier --write",
       "tslint -p . -t stylish --fix"
     ],
