@@ -77,7 +77,7 @@
     "no-var-keyword": true,
     "no-var-requires": true,
     "object-literal-key-quotes": {
-      "options": ["consistent-as-needed"]
+      "options": ["as-needed"]
     },
     "object-literal-shorthand": true,
     "one-line": {

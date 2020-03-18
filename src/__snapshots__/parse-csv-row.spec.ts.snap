@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Parse CSV row parses correctly 1`] = `
+Object {
+  "countryCodeIso2": "SG",
+  "countryRegion": "Singapore",
+  "items": Array [
+    Object {
+      "date": "2020-01-22",
+      "value": 0,
+    },
+    Object {
+      "date": "2020-01-23",
+      "value": 1,
+    },
+    Object {
+      "date": "2020-01-24",
+      "value": 3,
+    },
+    Object {
+      "date": "2020-01-25",
+      "value": 3,
+    },
+    Object {
+      "date": "2020-01-26",
+      "value": 4,
+    },
+    Object {
+      "date": "2020-01-27",
+      "value": 5,
+    },
+    Object {
+      "date": "2020-01-28",
+      "value": 7,
+    },
+    Object {
+      "date": "2020-01-29",
+      "value": 7,
+    },
+    Object {
+      "date": "2020-01-30",
+      "value": 10,
+    },
+    Object {
+      "date": "2020-01-31",
+      "value": 13,
+    },
+    Object {
+      "date": "2020-02-01",
+      "value": 16,
+    },
+    Object {
+      "date": "2020-02-02",
+      "value": 18,
+    },
+    Object {
+      "date": "2020-02-03",
+      "value": 18,
+    },
+    Object {
+      "date": "2020-02-04",
+      "value": 24,
+    },
+    Object {
+      "date": "2020-02-05",
+      "value": 28,
+    },
+    Object {
+      "date": "2020-02-06",
+      "value": 28,
+    },
+    Object {
+      "date": "2020-02-07",
+      "value": 30,
+    },
+    Object {
+      "date": "2020-02-08",
+      "value": 33,
+    },
+    Object {
+      "date": "2020-02-09",
+      "value": 40,
+    },
+    Object {
+      "date": "2020-02-10",
+      "value": 45,
+    },
+    Object {
+      "date": "2020-02-11",
+      "value": 47,
+    },
+    Object {
+      "date": "2020-02-12",
+      "value": 50,
+    },
+    Object {
+      "date": "2020-02-13",
+      "value": 58,
+    },
+    Object {
+      "date": "2020-02-14",
+      "value": 67,
+    },
+    Object {
+      "date": "2020-02-15",
+      "value": 72,
+    },
+    Object {
+      "date": "2020-02-16",
+      "value": 75,
+    },
+    Object {
+      "date": "2020-02-17",
+      "value": 77,
+    },
+    Object {
+      "date": "2020-02-18",
+      "value": 81,
+    },
+    Object {
+      "date": "2020-02-19",
+      "value": 84,
+    },
+    Object {
+      "date": "2020-02-20",
+      "value": 84,
+    },
+    Object {
+      "date": "2020-02-21",
+      "value": 85,
+    },
+    Object {
+      "date": "2020-02-22",
+      "value": 85,
+    },
+    Object {
+      "date": "2020-02-23",
+      "value": 89,
+    },
+    Object {
+      "date": "2020-02-24",
+      "value": 89,
+    },
+    Object {
+      "date": "2020-02-25",
+      "value": 91,
+    },
+    Object {
+      "date": "2020-02-26",
+      "value": 93,
+    },
+    Object {
+      "date": "2020-02-27",
+      "value": 93,
+    },
+    Object {
+      "date": "2020-02-28",
+      "value": 93,
+    },
+    Object {
+      "date": "2020-02-29",
+      "value": 102,
+    },
+    Object {
+      "date": "2020-03-01",
+      "value": 106,
+    },
+    Object {
+      "date": "2020-03-02",
+      "value": 108,
+    },
+    Object {
+      "date": "2020-03-03",
+      "value": 110,
+    },
+    Object {
+      "date": "2020-03-04",
+      "value": 110,
+    },
+    Object {
+      "date": "2020-03-05",
+      "value": 117,
+    },
+    Object {
+      "date": "2020-03-06",
+      "value": 130,
+    },
+    Object {
+      "date": "2020-03-07",
+      "value": 138,
+    },
+    Object {
+      "date": "2020-03-08",
+      "value": 150,
+    },
+    Object {
+      "date": "2020-03-09",
+      "value": 150,
+    },
+    Object {
+      "date": "2020-03-10",
+      "value": 160,
+    },
+    Object {
+      "date": "2020-03-11",
+      "value": 178,
+    },
+    Object {
+      "date": "2020-03-12",
+      "value": 178,
+    },
+    Object {
+      "date": "2020-03-13",
+      "value": 200,
+    },
+    Object {
+      "date": "2020-03-14",
+      "value": 212,
+    },
+    Object {
+      "date": "2020-03-15",
+      "value": 226,
+    },
+    Object {
+      "date": "2020-03-16",
+      "value": 243,
+    },
+    Object {
+      "date": "2020-03-17",
+      "value": 266,
+    },
+  ],
+  "key": "SG|all",
+  "lat": 1.2833,
+  "long": 103.8333,
+  "provinceState": "",
+}
+`;

@@ -5,6 +5,8 @@
     "declaration": true,
     "sourceMap": true,
 
+    "lib": ["ES2019"],
+
     /* Strict Type-Checking Options */
     "strict": true,
 
