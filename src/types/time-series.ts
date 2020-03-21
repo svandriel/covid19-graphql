@@ -17,4 +17,6 @@ export interface TimeSeriesItem<T> {
 
 export interface DailyStat extends Record<StatsType, number> {}
 
-export interface TimeSeriesPerCountryAndState extends Record<string, Record<string, TimeSeries<number>>> {}
+export interface TimeSeriesPerState<T> extends Record<string, TimeSeries<T>> {}
+export interface TimeSeriesPerCountry<T> extends Record<string, TimeSeries<T>> {}
+export interface TimeSeriesPerCountryAndState<T> extends Record<string, TimeSeriesPerState<T>> {}

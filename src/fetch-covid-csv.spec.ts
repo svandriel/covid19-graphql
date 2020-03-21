@@ -1,7 +1,7 @@
 import nock from 'nock';
 import path from 'path';
 
-import { fetchAll, fetchCovidCsv } from './fetch-covid-csv';
+import { fetchAllStats, fetchSingleStat } from './fetch-covid-csv';
 import { StatsType } from './types/stats-type';
 
 const TESTDATA_DIR = path.resolve(__dirname, '..', 'testdata');
@@ -23,16 +23,16 @@ describe('fetch covid csv', () => {
 
     it('works', async () => {
         try {
-            const result = await fetchCovidCsv(StatsType.Confirmed);
+            const result = await fetchSingleStat(StatsType.Confirmed);
             expect(result).toMatchSnapshot();
         } catch (err) {
             fail(err);
         }
     });
 
-    it('fetchAll', async () => {
+    it('fetchAllStats', async () => {
         try {
-            const result = await fetchAll();
+            const result = await fetchAllStats();
             expect(result).toMatchSnapshot();
         } catch (err) {
             fail(err);

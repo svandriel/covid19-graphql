@@ -9,7 +9,8 @@ export async function fetchCsv(url: string): Promise<Array<Record<string, string
             text,
             {
                 columns: true,
-                delimiter: ','
+                delimiter: ',',
+                quote: '"'
             },
             (err, output) => {
                 if (err) {
