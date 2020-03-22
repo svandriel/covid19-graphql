@@ -1,11 +1,15 @@
+import chalk from 'chalk';
 import { last } from 'ramda';
 
 import { fetchAllStats } from './fetch-covid-csv';
+import { mergeDailyState } from './merge-daily-stat';
 import { mergeStats } from './merge-stats';
+import { startServer } from './server';
 import { StatsType } from './types/stats-type';
 import { DailyStat } from './types/time-series';
-import { mergeDailyState } from './merge-daily-stat';
-import chalk from 'chalk';
+
+const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 12000;
+const isProduction = process.env.NODE_ENV === 'production';
 
 main().catch(err => {
     console.error(err);
@@ -24,4 +28,11 @@ async function main(): Promise<void> {
     console.log(`  Confirmed: ${chalk.cyan(total[StatsType.Confirmed])}`);
     console.log(`  Deceased:   ${chalk.gray(total[StatsType.Deceased])}`);
     console.log(`  Recovered:  ${chalk.green(total[StatsType.Recovered])}`);
+
+    await startServer({
+        port,
+        isProduction
+    });
+    const url = `http://localhost:${port}`;
+    console.log(`🚀  Server ready at ${chalk.cyan(url)}`);
 }

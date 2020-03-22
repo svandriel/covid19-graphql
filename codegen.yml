@@ -1,0 +1,17 @@
+overwrite: true
+schema:
+  - src/graphql/**/*.graphql.ts
+config:
+  declarationKind: interface
+  immutableTypes: true
+generates:
+  src/generated/graphql-backend.ts:
+    config:
+      contextType: Context
+      typesPrefix: Api
+    plugins:
+      - add: |
+          // tslint:disable
+          import { Context } from '../graphql/context';
+      - typescript
+      - typescript-resolvers

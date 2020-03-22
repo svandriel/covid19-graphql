@@ -1,7 +1,8 @@
 import { pluck, propEq, uniq } from 'ramda';
 
 import { StatsType } from './types/stats-type';
-import { DailyStat, TimeSeriesPerCountryAndState, TimeSeriesPerState } from './types/time-series';
+import { DailyStat, TimeSeriesPerCountryAndState, TimeSeriesPerState, TimeSeriesPerCountry } from './types/time-series';
+import { ApiTimeSeriesItem } from './generated/graphql-backend';
 
 export function mergeStats(
     resultMap: Record<StatsType, TimeSeriesPerCountryAndState<number>>

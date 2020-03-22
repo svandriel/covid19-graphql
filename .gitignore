@@ -5,3 +5,4 @@ dist
 .cache
 coverage
 .DS_Store
+src/generated
