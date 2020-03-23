@@ -1,38 +1,44 @@
-import { TimeSeries, TimeSeriesItem } from './types/time-series';
+import chalk from 'chalk';
 import moment from 'moment';
-import { countries } from './countries';
 
-export function parseCsvRow(row: Record<string, string>): TimeSeries<number> {
+import { countries } from './countries';
+import { StatsType } from './types/stats-type';
+import { TimeSeries, TimeSeriesItem } from './types/time-series';
+import { DATE_FORMAT_CSV, DATE_FORMAT_REVERSE } from './util/date-formats';
+
+export function parseCsvRow(type: StatsType, row: Record<string, string>): TimeSeries {
     const countryName = row['Country/Region'];
     const state = row['Province/State'];
     const countryCodeIso2 = countries[countryName];
     if (!countryCodeIso2) {
-        console.error(`Invalid country name: ${countryName}`);
+        console.error(`${chalk.red('ERROR')}: Invalid country name: ${chalk.cyan(countryName)}`);
     }
-    const key = `${countryCodeIso2 || 'unknown'}|${state || 'all'}`;
     return {
-        key,
-        provinceState: row['Province/State'],
+        provinceState: state,
         countryRegion: countryName,
         countryCodeIso2,
         lat: parseFloat(row.Lat),
         long: parseFloat(row.Long),
-        items: parseTimeSeriesItems(row)
+        items: parseTimeSeriesItems(type, row)
     };
 }
 
-export function parseTimeSeriesItems(row: Record<string, string>): Array<TimeSeriesItem<number>> {
+export function parseTimeSeriesItems(type: StatsType, row: Record<string, string>): TimeSeriesItem[] {
     return Object.keys(row)
         .filter(rowName => {
             return /^\d+\/\d+\/\d+$/.test(rowName);
         })
         .map(rowName => {
-            const date = moment(rowName, 'MM/DD/y');
+            const date = moment(rowName, DATE_FORMAT_CSV);
             if (date.isValid()) {
-                const dateStr = date.format('Y-MM-DD');
                 return {
-                    date: dateStr,
-                    value: parseInt(row[rowName], 10)
+                    date: date.format(DATE_FORMAT_REVERSE),
+                    value: {
+                        [StatsType.Confirmed]: 0,
+                        [StatsType.Deceased]: 0,
+                        [StatsType.Recovered]: 0,
+                        [type]: parseInt(row[rowName], 10)
+                    }
                 };
             } else {
                 throw new Error(`Cannot parse date: ${rowName}`);

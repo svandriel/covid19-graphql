@@ -1,19 +1,35 @@
 import { gql } from 'apollo-server-express';
 
 export const typeDefs = gql`
+    scalar LocalDate
+
     type Query {
         ping: String!
-        global: [TimeSeriesItem!]!
-        country(code: String!): [TimeSeriesItem!]!
+        globalHistory(where: TimeSeriesWhere): [TimeSeriesItem!]!
+
+        country(code: String!): Country
     }
 
     input TimeSeriesWhere {
-        countryCode: String
-        state: String
+        """
+        Filters time line items to be on or after this date (inclusive)
+        """
+        from: LocalDate
+        """
+        Filters time line items to be before this date (exclusive)
+        """
+        to: LocalDate
+    }
+
+    type Country {
+        code: String!
+        name: String!
+        history: [TimeSeriesItem!]!
+        latest: TimeSeriesItem!
     }
 
     type TimeSeriesItem {
-        date: String!
+        date: LocalDate!
         confirmed: Int!
         deceased: Int!
         recovered: Int!

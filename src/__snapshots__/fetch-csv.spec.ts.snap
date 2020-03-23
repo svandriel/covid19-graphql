@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetchCsv works 1`] = `
+Array [
+  Object {
+    "One": "1",
+    "Two": "2",
+  },
+  Object {
+    "One": "3",
+    "Two": "4",
+  },
+]
+`;

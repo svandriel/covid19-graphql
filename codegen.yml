@@ -9,9 +9,12 @@ generates:
     config:
       contextType: Context
       typesPrefix: Api
+      scalars:
+        LocalDate: Moment
     plugins:
       - add: |
           // tslint:disable
           import { Context } from '../graphql/context';
+          import { Moment } from 'moment';
       - typescript
       - typescript-resolvers

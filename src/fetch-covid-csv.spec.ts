@@ -1,12 +1,11 @@
 import nock from 'nock';
 import path from 'path';
 
-import { fetchAllStats, fetchSingleStat } from './fetch-covid-csv';
-import { StatsType } from './types/stats-type';
+import { fetchCovidStats } from './fetch-covid-csv';
 
 const TESTDATA_DIR = path.resolve(__dirname, '..', 'testdata');
 
-describe('fetch covid csv', () => {
+describe('fetchCovidStats', () => {
     beforeEach(() => {
         nock(
             'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series'
@@ -23,16 +22,7 @@ describe('fetch covid csv', () => {
 
     it('works', async () => {
         try {
-            const result = await fetchSingleStat(StatsType.Confirmed);
-            expect(result).toMatchSnapshot();
-        } catch (err) {
-            fail(err);
-        }
-    });
-
-    it('fetchAllStats', async () => {
-        try {
-            const result = await fetchAllStats();
+            const result = await fetchCovidStats();
             expect(result).toMatchSnapshot();
         } catch (err) {
             fail(err);

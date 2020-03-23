@@ -1,8 +1,9 @@
 import { parseCsvRow } from './parse-csv-row';
+import { StatsType } from './types/stats-type';
 
 describe('Parse CSV row', () => {
     it('parses correctly', () => {
-        expect(parseCsvRow(makeData())).toMatchSnapshot();
+        expect(parseCsvRow(StatsType.Confirmed, makeData())).toMatchSnapshot();
     });
 });
 

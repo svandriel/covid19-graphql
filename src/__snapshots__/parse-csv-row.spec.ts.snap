@@ -7,230 +7,453 @@ Object {
   "items": Array [
     Object {
       "date": "2020-01-22",
-      "value": 0,
+      "value": Object {
+        "CONFIRMED": 0,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-01-23",
-      "value": 1,
+      "value": Object {
+        "CONFIRMED": 1,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-01-24",
-      "value": 3,
+      "value": Object {
+        "CONFIRMED": 3,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-01-25",
-      "value": 3,
+      "value": Object {
+        "CONFIRMED": 3,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-01-26",
-      "value": 4,
+      "value": Object {
+        "CONFIRMED": 4,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-01-27",
-      "value": 5,
+      "value": Object {
+        "CONFIRMED": 5,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-01-28",
-      "value": 7,
+      "value": Object {
+        "CONFIRMED": 7,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-01-29",
-      "value": 7,
+      "value": Object {
+        "CONFIRMED": 7,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-01-30",
-      "value": 10,
+      "value": Object {
+        "CONFIRMED": 10,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-01-31",
-      "value": 13,
+      "value": Object {
+        "CONFIRMED": 13,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-01",
-      "value": 16,
+      "value": Object {
+        "CONFIRMED": 16,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-02",
-      "value": 18,
+      "value": Object {
+        "CONFIRMED": 18,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-03",
-      "value": 18,
+      "value": Object {
+        "CONFIRMED": 18,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-04",
-      "value": 24,
+      "value": Object {
+        "CONFIRMED": 24,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-05",
-      "value": 28,
+      "value": Object {
+        "CONFIRMED": 28,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-06",
-      "value": 28,
+      "value": Object {
+        "CONFIRMED": 28,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-07",
-      "value": 30,
+      "value": Object {
+        "CONFIRMED": 30,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-08",
-      "value": 33,
+      "value": Object {
+        "CONFIRMED": 33,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-09",
-      "value": 40,
+      "value": Object {
+        "CONFIRMED": 40,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-10",
-      "value": 45,
+      "value": Object {
+        "CONFIRMED": 45,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-11",
-      "value": 47,
+      "value": Object {
+        "CONFIRMED": 47,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-12",
-      "value": 50,
+      "value": Object {
+        "CONFIRMED": 50,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-13",
-      "value": 58,
+      "value": Object {
+        "CONFIRMED": 58,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-14",
-      "value": 67,
+      "value": Object {
+        "CONFIRMED": 67,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-15",
-      "value": 72,
+      "value": Object {
+        "CONFIRMED": 72,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-16",
-      "value": 75,
+      "value": Object {
+        "CONFIRMED": 75,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-17",
-      "value": 77,
+      "value": Object {
+        "CONFIRMED": 77,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-18",
-      "value": 81,
+      "value": Object {
+        "CONFIRMED": 81,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-19",
-      "value": 84,
+      "value": Object {
+        "CONFIRMED": 84,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-20",
-      "value": 84,
+      "value": Object {
+        "CONFIRMED": 84,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-21",
-      "value": 85,
+      "value": Object {
+        "CONFIRMED": 85,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-22",
-      "value": 85,
+      "value": Object {
+        "CONFIRMED": 85,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-23",
-      "value": 89,
+      "value": Object {
+        "CONFIRMED": 89,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-24",
-      "value": 89,
+      "value": Object {
+        "CONFIRMED": 89,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-25",
-      "value": 91,
+      "value": Object {
+        "CONFIRMED": 91,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-26",
-      "value": 93,
+      "value": Object {
+        "CONFIRMED": 93,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-27",
-      "value": 93,
+      "value": Object {
+        "CONFIRMED": 93,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-28",
-      "value": 93,
+      "value": Object {
+        "CONFIRMED": 93,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-02-29",
-      "value": 102,
+      "value": Object {
+        "CONFIRMED": 102,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-01",
-      "value": 106,
+      "value": Object {
+        "CONFIRMED": 106,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-02",
-      "value": 108,
+      "value": Object {
+        "CONFIRMED": 108,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-03",
-      "value": 110,
+      "value": Object {
+        "CONFIRMED": 110,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-04",
-      "value": 110,
+      "value": Object {
+        "CONFIRMED": 110,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-05",
-      "value": 117,
+      "value": Object {
+        "CONFIRMED": 117,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-06",
-      "value": 130,
+      "value": Object {
+        "CONFIRMED": 130,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-07",
-      "value": 138,
+      "value": Object {
+        "CONFIRMED": 138,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-08",
-      "value": 150,
+      "value": Object {
+        "CONFIRMED": 150,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-09",
-      "value": 150,
+      "value": Object {
+        "CONFIRMED": 150,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-10",
-      "value": 160,
+      "value": Object {
+        "CONFIRMED": 160,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-11",
-      "value": 178,
+      "value": Object {
+        "CONFIRMED": 178,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-12",
-      "value": 178,
+      "value": Object {
+        "CONFIRMED": 178,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-13",
-      "value": 200,
+      "value": Object {
+        "CONFIRMED": 200,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-14",
-      "value": 212,
+      "value": Object {
+        "CONFIRMED": 212,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-15",
-      "value": 226,
+      "value": Object {
+        "CONFIRMED": 226,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-16",
-      "value": 243,
+      "value": Object {
+        "CONFIRMED": 243,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
     Object {
       "date": "2020-03-17",
-      "value": 266,
+      "value": Object {
+        "CONFIRMED": 266,
+        "DECEASED": 0,
+        "RECOVERED": 0,
+      },
     },
   ],
-  "key": "SG|all",
   "lat": 1.2833,
   "long": 103.8333,
   "provinceState": "",

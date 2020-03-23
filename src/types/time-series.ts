@@ -1,22 +1,17 @@
 import { StatsType } from './stats-type';
 
-export interface TimeSeries<T> {
-    key: string;
+export interface TimeSeries {
     provinceState: string;
     countryRegion: string;
-    countryCodeIso2?: string;
+    countryCodeIso2: string;
     lat: number;
     long: number;
-    items: Array<TimeSeriesItem<T>>;
+    items: TimeSeriesItem[];
 }
 
-export interface TimeSeriesItem<T> {
+export interface TimeSeriesItem {
     date: string;
-    value: T;
+    value: DailyStat;
 }
 
 export interface DailyStat extends Record<StatsType, number> {}
-
-export interface TimeSeriesPerState<T> extends Record<string, TimeSeries<T>> {}
-export interface TimeSeriesPerCountry<T> extends Record<string, TimeSeries<T>> {}
-export interface TimeSeriesPerCountryAndState<T> extends Record<string, TimeSeriesPerState<T>> {}
