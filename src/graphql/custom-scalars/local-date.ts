@@ -9,7 +9,7 @@ export const LocalDate = new GraphQLScalarType({
     parseValue(value: string): Moment {
         const date = moment(value, DATE_FORMAT_REVERSE, true);
         if (!date.isValid()) {
-            throw new Error(`Invalid LocalDate: ${value}`);
+            throw new Error(`Invalid LocalDate: ${value}. Use yyyy-mm-dd notation.`);
         }
         return date;
     },
@@ -22,7 +22,7 @@ export const LocalDate = new GraphQLScalarType({
         }
         const date = moment(ast.value, DATE_FORMAT_REVERSE, true);
         if (!date.isValid()) {
-            throw new Error(`Invalid LocalDate: ${ast.value}`);
+            throw new Error(`Invalid LocalDate: ${ast.value}. Use yyyy-mm-dd notation.`);
         }
         return date;
     }

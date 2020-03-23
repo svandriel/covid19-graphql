@@ -8,6 +8,7 @@ export const typeDefs = gql`
         globalHistory(where: TimeSeriesWhere): [TimeSeriesItem!]!
 
         country(code: String!): Country
+        countries(offset: Int = 0, count: Int = 10, where: CountriesWhere): PagedCountries!
     }
 
     input TimeSeriesWhere {
@@ -21,11 +22,35 @@ export const typeDefs = gql`
         to: LocalDate
     }
 
+    input CountriesWhere {
+        ignore: [String!]
+    }
+
+    type PagedCountries {
+        offset: Int!
+        count: Int!
+        totalCount: Int!
+        hasNext: Boolean!
+        results: [Country!]!
+    }
+
     type Country {
         code: String!
         name: String!
-        history: [TimeSeriesItem!]!
+        history(where: TimeSeriesWhere): [TimeSeriesItem!]!
         latest: TimeSeriesItem!
+    }
+
+    type TimeSeries {
+        countryCode: String!
+        state: String!
+        items: [TimeSeriesItem!]!
+    }
+
+    type CountryTimeSeries {
+        countryCode: String!
+        country: Country!
+        items: [TimeSeriesItem!]!
     }
 
     type TimeSeriesItem {

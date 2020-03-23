@@ -1,12 +1,13 @@
-import { mergeDailyState } from './merge-daily-stat';
-import { TimeSeriesItem } from './types/time-series';
+import { ApiTimeSeriesItem } from './generated/graphql-backend';
 
-export function mergeTimeSeriesItem(itemA: TimeSeriesItem, itemB: TimeSeriesItem): TimeSeriesItem {
-    if (itemA.date !== itemB.date) {
+export function mergeTimeSeriesItem(itemA: ApiTimeSeriesItem, itemB: ApiTimeSeriesItem): ApiTimeSeriesItem {
+    if (!itemA.date.isSame(itemB.date)) {
         throw new Error(`Cannot merge time series items with a different date: ${itemA.date} vs ${itemB.date}`);
     }
     return {
         date: itemA.date,
-        value: mergeDailyState(itemA.value, itemB.value)
+        confirmed: itemA.confirmed + itemB.confirmed,
+        deceased: itemA.deceased + itemB.deceased,
+        recovered: itemA.recovered + itemB.recovered
     };
 }

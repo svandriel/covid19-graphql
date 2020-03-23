@@ -1,13 +1,10 @@
+import { ApiTimeSeries } from './generated/graphql-backend';
 import { mergeTimeSeriesItemArray } from './merge-time-series-item-array';
-import { TimeSeries } from './types/time-series';
 
-export function mergeTimeSeries(a: TimeSeries, b: TimeSeries): TimeSeries {
+export function mergeTimeSeries(a: ApiTimeSeries, b: ApiTimeSeries): ApiTimeSeries {
     return {
-        countryRegion: a.countryRegion,
-        provinceState: a.provinceState,
-        countryCodeIso2: a.countryCodeIso2,
-        lat: a.lat,
-        long: a.long,
+        countryCode: a.countryCode,
+        state: a.state,
         items: mergeTimeSeriesItemArray(a.items, b.items)
     };
 }

@@ -2,11 +2,11 @@ import chalk from 'chalk';
 import moment from 'moment';
 
 import { countries } from './countries';
+import { ApiTimeSeries, ApiTimeSeriesItem } from './generated/graphql-backend';
 import { StatsType } from './types/stats-type';
-import { TimeSeries, TimeSeriesItem } from './types/time-series';
-import { DATE_FORMAT_CSV, DATE_FORMAT_REVERSE } from './util/date-formats';
+import { DATE_FORMAT_CSV } from './util/date-formats';
 
-export function parseCsvRow(type: StatsType, row: Record<string, string>): TimeSeries {
+export function parseCsvRow(type: StatsType, row: Record<string, string>): ApiTimeSeries {
     const countryName = row['Country/Region'];
     const state = row['Province/State'];
     const countryCodeIso2 = countries[countryName];
@@ -14,16 +14,13 @@ export function parseCsvRow(type: StatsType, row: Record<string, string>): TimeS
         console.error(`${chalk.red('ERROR')}: Invalid country name: ${chalk.cyan(countryName)}`);
     }
     return {
-        provinceState: state,
-        countryRegion: countryName,
-        countryCodeIso2,
-        lat: parseFloat(row.Lat),
-        long: parseFloat(row.Long),
+        countryCode: countryCodeIso2,
+        state,
         items: parseTimeSeriesItems(type, row)
     };
 }
 
-export function parseTimeSeriesItems(type: StatsType, row: Record<string, string>): TimeSeriesItem[] {
+export function parseTimeSeriesItems(type: StatsType, row: Record<string, string>): ApiTimeSeriesItem[] {
     return Object.keys(row)
         .filter(rowName => {
             return /^\d+\/\d+\/\d+$/.test(rowName);
@@ -31,15 +28,14 @@ export function parseTimeSeriesItems(type: StatsType, row: Record<string, string
         .map(rowName => {
             const date = moment(rowName, DATE_FORMAT_CSV);
             if (date.isValid()) {
-                return {
-                    date: date.format(DATE_FORMAT_REVERSE),
-                    value: {
-                        [StatsType.Confirmed]: 0,
-                        [StatsType.Deceased]: 0,
-                        [StatsType.Recovered]: 0,
-                        [type]: parseInt(row[rowName], 10)
-                    }
+                const value = parseInt(row[rowName], 10);
+                const x: ApiTimeSeriesItem = {
+                    date,
+                    confirmed: type === StatsType.Confirmed ? value : 0,
+                    recovered: type === StatsType.Recovered ? value : 0,
+                    deceased: type === StatsType.Deceased ? value : 0
                 };
+                return x;
             } else {
                 throw new Error(`Cannot parse date: ${rowName}`);
             }

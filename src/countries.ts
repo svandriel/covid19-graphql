@@ -1,3 +1,5 @@
+import { sortBy, uniq } from 'ramda';
+
 export const countries: Record<string, string> = {
     Afghanistan: 'AF',
     'Aland Islands': 'AX',
@@ -262,7 +264,11 @@ export const countries: Record<string, string> = {
     'Cruise Ship': 'xxxx'
 };
 
-// const iso2Codes = uniq(Object.values(countries));
+const iso2Codes = sortBy(x => x, uniq(Object.values(countries)));
+
+export function getCountryCodes(): string[] {
+    return iso2Codes;
+}
 
 export const getCountryNameFromIso2 = (iso2String: string | undefined) => {
     if (typeof iso2String === 'undefined') {

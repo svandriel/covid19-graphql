@@ -1,10 +1,10 @@
 import { fetchCsv } from './fetch-csv';
+import { ApiTimeSeries } from './generated/graphql-backend';
 import { mergeTimeSeriesArray } from './merge-time-series-array';
 import { parseCsvRow } from './parse-csv-row';
-import { TimeSeries } from './types/time-series';
 import { statsTypes, statUrls } from './urls';
 
-export async function fetchCovidStats(): Promise<TimeSeries[]> {
+export async function fetchCovidStats(): Promise<readonly ApiTimeSeries[]> {
     const results = await Promise.all(
         statsTypes.map(async type => {
             const result = await fetchCsv(statUrls[type]);

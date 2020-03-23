@@ -1,7 +1,7 @@
 import nock from 'nock';
 import path from 'path';
 
-import { fetchCovidStats } from './fetch-covid-csv';
+import { fetchCovidStats } from './fetch-covid-stats';
 
 const TESTDATA_DIR = path.resolve(__dirname, '..', 'testdata');
 
