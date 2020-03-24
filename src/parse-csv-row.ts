@@ -7,7 +7,7 @@ import { DATE_FORMAT_CSV } from './util/date-formats';
 export function parseCsvRow(
     codeLookup: Record<string, string>,
     type: StatsType,
-    row: Record<string, string>
+    row: Record<string, string>,
 ): ApiTimeSeries {
     const countryName = row['Country/Region'];
     const state = row['Province/State'];
@@ -18,7 +18,7 @@ export function parseCsvRow(
     return {
         countryCode: countryCodeIso2,
         state,
-        items: parseTimeSeriesItems(type, row)
+        items: parseTimeSeriesItems(type, row),
     };
 }
 
@@ -38,14 +38,14 @@ export function parseTimeSeriesItems(type: StatsType, row: Record<string, string
                     const countryName = row['Country/Region'];
                     const state = row['Province/State'];
                     throw new Error(
-                        `Cannot parse '${valueStr}' into number for ${countryName}/${state} (type: ${type})`
+                        `Cannot parse '${valueStr}' into number for ${countryName}/${state} (type: ${type})`,
                     );
                 }
                 const x: ApiTimeSeriesItem = {
                     date,
                     confirmed: type === StatsType.Confirmed ? value : 0,
                     recovered: type === StatsType.Recovered ? value : 0,
-                    deceased: type === StatsType.Deceased ? value : 0
+                    deceased: type === StatsType.Deceased ? value : 0,
                 };
                 return x;
             } else {

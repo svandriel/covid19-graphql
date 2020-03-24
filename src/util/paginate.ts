@@ -13,7 +13,7 @@ export interface PaginationOptions {
 
 export async function paginate<T>(
     { offset, count }: PaginationOptions,
-    list: T[] | Promise<T[]>
+    list: T[] | Promise<T[]>,
 ): Promise<PaginatedList<T>> {
     const actualList = list instanceof Promise ? await list : list;
     const pagedCoinList = actualList.slice(offset, offset + count);
@@ -22,6 +22,6 @@ export async function paginate<T>(
         offset,
         totalCount: actualList.length,
         results: pagedCoinList,
-        hasNext: offset + count < actualList.length
+        hasNext: offset + count < actualList.length,
     };
 }

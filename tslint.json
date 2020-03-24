@@ -110,7 +110,7 @@
     "trailing-comma": {
       "options": {
         "singleline": "never",
-        "multiline": "never"
+        "multiline": "always"
       }
     },
     "triple-equals": {

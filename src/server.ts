@@ -16,11 +16,11 @@ const dataSource = new DataSource();
 export async function startServer({ port, isProduction }: StartServerOptions): Promise<Application> {
     const server = new ApolloServer({
         context: (): Context => ({
-            dataSource
+            dataSource,
         }),
         schema,
         tracing: !isProduction,
-        playground: !isProduction
+        playground: !isProduction,
     });
 
     const app = express();
@@ -28,7 +28,7 @@ export async function startServer({ port, isProduction }: StartServerOptions): P
 
     server.applyMiddleware({
         app,
-        path: '/'
+        path: '/',
     });
 
     return new Promise<Application>(resolve => {

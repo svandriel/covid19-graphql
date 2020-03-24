@@ -19,7 +19,7 @@ export async function fetchCsv(url: string): Promise<CsvContent> {
                     columns: true,
                     delimiter: ',',
                     quote: '"',
-                    bom: true
+                    bom: true,
                 },
                 (err, output) => {
                     if (err) {
@@ -27,7 +27,7 @@ export async function fetchCsv(url: string): Promise<CsvContent> {
                     } else {
                         resolve(output);
                     }
-                }
+                },
             );
         } catch (err) {
             reject(err);

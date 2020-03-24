@@ -36,7 +36,7 @@ export function parseDailyStatRow(codeLookup: CountryLookup, date: Moment, row: 
         confirmed,
         deceased,
         recovered,
-        country: (undefined as any) as ApiCountry
+        country: (undefined as any) as ApiCountry,
     };
     // console.log('--->', parsed);
 

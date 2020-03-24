@@ -11,5 +11,5 @@ export const DAILY_STATS_BASE_URL = `https://raw.githubusercontent.com/CSSEGISan
 export const statUrls: Record<StatsType, string> = {
     [StatsType.Confirmed]: TIMESERIES_CONFIRMED_URL,
     [StatsType.Deceased]: TIMESERIES_DEATHS_URL,
-    [StatsType.Recovered]: TIMESERIES_RECOVERED_URL
+    [StatsType.Recovered]: TIMESERIES_RECOVERED_URL,
 };

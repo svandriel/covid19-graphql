@@ -5,6 +5,6 @@ export function mergeTimeSeries(a: ApiTimeSeries, b: ApiTimeSeries): ApiTimeSeri
     return {
         countryCode: a.countryCode,
         state: a.state,
-        items: mergeTimeSeriesItemArray(a.items, b.items)
+        items: mergeTimeSeriesItemArray(a.items, b.items),
     };
 }

@@ -14,7 +14,7 @@ export async function fetchTimeSeries(): Promise<readonly ApiTimeSeries[]> {
         statsTypes.map(async type => {
             const result = await fetchCsv(statUrls[type]);
             return result.map(i => parseCsvRow(lookup.lookupCode, type, i));
-        })
+        }),
     );
     if (invalidCountries.size > 0) {
         const list = [...invalidCountries];

@@ -17,13 +17,13 @@ export class DataSource {
         this.fetchCovidStats = cachifyPromise(fetchTimeSeries, {
             ttl: 3600 * 1000,
             staleWhileRevalidate: true,
-            debug: true
+            debug: true,
         });
         this.fetchDailyStats = cachifyPromise(fetchDailyStats, {
             ttl: 3600 * 1000,
             staleWhileRevalidate: true,
             debug: true,
-            cacheKeyFn: a => a.format(DATE_FORMAT_REVERSE)
+            cacheKeyFn: a => a.format(DATE_FORMAT_REVERSE),
         });
     }
 

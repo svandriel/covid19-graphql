@@ -13,7 +13,7 @@ main().catch(err => {
 async function main(): Promise<void> {
     await startServer({
         port,
-        isProduction
+        isProduction,
     });
     const url = `http://localhost:${port}`;
     console.log(`🚀  Server ready at ${chalk.cyan(url)}`);

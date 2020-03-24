@@ -3,7 +3,7 @@ import { mergeTimeSeriesItem } from './merge-time-series-item';
 
 export function mergeTimeSeriesItemArray(
     a: readonly ApiTimeSeriesItem[],
-    b: readonly ApiTimeSeriesItem[]
+    b: readonly ApiTimeSeriesItem[],
 ): ApiTimeSeriesItem[] {
     if (a.length !== b.length) {
         throw new Error(`Cannot merge time series of unequal length: ${a.length} vs ${b.length} items`);

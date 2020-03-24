@@ -27,11 +27,11 @@ export const countryAliases: Record<string, string> = {
     Venezuela: 'Venezuela (Bolivarian Republic of)',
     Vietnam: 'Viet Nam',
     'Mainland China': 'China',
-    Taiwan: 'Taiwan, Province of China'
+    Taiwan: 'Taiwan, Province of China',
 };
 
 export const missingCountries = [
     { name: 'Kosovo', code: 'XK' },
     { name: 'No Country', code: 'NONE' },
-    { name: 'Macau', code: 'MO' }
+    { name: 'Macau', code: 'MO' },
 ];

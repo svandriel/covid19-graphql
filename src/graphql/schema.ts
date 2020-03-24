@@ -5,5 +5,5 @@ import { typeDefs } from './schema.graphql';
 
 export const schema = makeExecutableSchema({
     typeDefs,
-    resolvers: resolvers as IResolvers
+    resolvers: resolvers as IResolvers,
 });

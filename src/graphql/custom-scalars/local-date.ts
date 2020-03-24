@@ -25,5 +25,5 @@ export const LocalDate = new GraphQLScalarType({
             throw new Error(`Invalid LocalDate: ${ast.value}. Use yyyy-mm-dd notation.`);
         }
         return date;
-    }
+    },
 });

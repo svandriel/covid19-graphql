@@ -8,6 +8,6 @@ export function mergeTimeSeriesItem(itemA: ApiTimeSeriesItem, itemB: ApiTimeSeri
         date: itemA.date,
         confirmed: itemA.confirmed + itemB.confirmed,
         deceased: itemA.deceased + itemB.deceased,
-        recovered: itemA.recovered + itemB.recovered
+        recovered: itemA.recovered + itemB.recovered,
     };
 }

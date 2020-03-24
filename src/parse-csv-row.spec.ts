@@ -4,7 +4,7 @@ import { StatsType } from './types/stats-type';
 describe('Parse CSV row', () => {
     it('parses correctly', () => {
         const lookup: Record<string, string> = {
-            Singapore: 'SG'
+            Singapore: 'SG',
         };
         expect(parseCsvRow(lookup, StatsType.Confirmed, makeData())).toMatchSnapshot();
     });
@@ -71,6 +71,6 @@ function makeData(): Record<string, string> {
         '3/14/20': '212',
         '3/15/20': '226',
         '3/16/20': '243',
-        '3/17/20': '266'
+        '3/17/20': '266',
     };
 }

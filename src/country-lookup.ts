@@ -14,7 +14,7 @@ async function getCountryLookupUncached(): Promise<CountryLookup> {
     const list = response
         .map(row => ({
             code: row['alpha-2'],
-            name: row.name
+            name: row.name,
         }))
         .concat(missingCountries);
 
@@ -40,7 +40,7 @@ async function getCountryLookupUncached(): Promise<CountryLookup> {
     return {
         list,
         lookupCode,
-        lookupName
+        lookupName,
     };
 }
 

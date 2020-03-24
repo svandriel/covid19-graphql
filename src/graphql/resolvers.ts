@@ -24,7 +24,7 @@ export const resolvers: ApiResolvers = {
                 code: upperCode,
                 name,
                 history: [],
-                latest: (undefined as any) as ApiTimeSeriesItem
+                latest: (undefined as any) as ApiTimeSeriesItem,
             };
         },
         countries: async (_query, { offset, count, where }, context) => {
@@ -53,7 +53,7 @@ export const resolvers: ApiResolvers = {
         dailyStat: async (_query, { date }, context) => {
             const stats = await context.dataSource.fetchForDate(date);
             return stats;
-        }
+        },
     },
 
     Country: {
@@ -75,7 +75,7 @@ export const resolvers: ApiResolvers = {
             } else {
                 return emptyTimeSeriesItem();
             }
-        }
+        },
     },
     DailyStat: {
         country: async dailyStat => {
@@ -86,11 +86,11 @@ export const resolvers: ApiResolvers = {
             }
             return {
                 code: dailyStat.countryCode,
-                name
+                name,
             } as ApiCountry;
-        }
+        },
     },
-    LocalDate
+    LocalDate,
 };
 
 function applyTimeSeriesRange(where: ApiTimeSeriesWhere, stats: readonly ApiTimeSeriesItem[]): ApiTimeSeriesItem[] {
@@ -117,6 +117,6 @@ function emptyTimeSeriesItem(): ApiTimeSeriesItem {
         confirmed: 0,
         deceased: 0,
         recovered: 0,
-        date: moment()
+        date: moment(),
     };
 }

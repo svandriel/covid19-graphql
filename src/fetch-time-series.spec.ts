@@ -8,7 +8,7 @@ const TESTDATA_DIR = path.resolve(__dirname, '..', 'testdata');
 describe('fetchCovidStats', () => {
     beforeEach(() => {
         nock(
-            'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series'
+            'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series',
         )
             .get('/time_series_19-covid-Confirmed.csv')
             .replyWithFile(200, path.join(TESTDATA_DIR, 'confirmed.csv'))
