@@ -1,6 +1,6 @@
 import { allPass, propEq } from 'ramda';
 
-import { ApiTimeSeries } from './generated/graphql-backend';
+import { ApiTimeSeries } from '../generated/graphql-backend';
 import { mergeTimeSeries } from './merge-time-series';
 
 export function mergeTimeSeriesArray(a: ApiTimeSeries[], b: ApiTimeSeries[]): ApiTimeSeries[] {

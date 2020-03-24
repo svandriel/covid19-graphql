@@ -1,4 +1,4 @@
-import { ApiTimeSeriesItem } from './generated/graphql-backend';
+import { ApiTimeSeriesItem } from '../generated/graphql-backend';
 
 export function mergeTimeSeriesItem(itemA: ApiTimeSeriesItem, itemB: ApiTimeSeriesItem): ApiTimeSeriesItem {
     if (!itemA.date.isSame(itemB.date)) {

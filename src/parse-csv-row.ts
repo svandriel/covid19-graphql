@@ -1,17 +1,20 @@
 import chalk from 'chalk';
 import moment from 'moment';
 
-import { countries } from './countries';
 import { ApiTimeSeries, ApiTimeSeriesItem } from './generated/graphql-backend';
 import { StatsType } from './types/stats-type';
 import { DATE_FORMAT_CSV } from './util/date-formats';
 
-export function parseCsvRow(type: StatsType, row: Record<string, string>): ApiTimeSeries {
+export function parseCsvRow(
+    codeLookup: Record<string, string>,
+    type: StatsType,
+    row: Record<string, string>
+): ApiTimeSeries {
     const countryName = row['Country/Region'];
     const state = row['Province/State'];
-    const countryCodeIso2 = countries[countryName];
+    const countryCodeIso2 = codeLookup[countryName];
     if (!countryCodeIso2) {
-        console.error(`${chalk.red('ERROR')}: Invalid country name: ${chalk.cyan(countryName)}`);
+        invalidCountries.add(countryName);
     }
     return {
         countryCode: countryCodeIso2,
@@ -19,6 +22,8 @@ export function parseCsvRow(type: StatsType, row: Record<string, string>): ApiTi
         items: parseTimeSeriesItems(type, row)
     };
 }
+
+export const invalidCountries = new Set<string>();
 
 export function parseTimeSeriesItems(type: StatsType, row: Record<string, string>): ApiTimeSeriesItem[] {
     return Object.keys(row)
@@ -28,7 +33,15 @@ export function parseTimeSeriesItems(type: StatsType, row: Record<string, string
         .map(rowName => {
             const date = moment(rowName, DATE_FORMAT_CSV);
             if (date.isValid()) {
-                const value = parseInt(row[rowName], 10);
+                const valueStr = row[rowName];
+                const value = valueStr === '' ? 0 : parseInt(valueStr, 10);
+                if (isNaN(value)) {
+                    const countryName = row['Country/Region'];
+                    const state = row['Province/State'];
+                    throw new Error(
+                        `Cannot parse '${valueStr}' into number for ${countryName}/${state} (type: ${type})`
+                    );
+                }
                 const x: ApiTimeSeriesItem = {
                     date,
                     confirmed: type === StatsType.Confirmed ? value : 0,

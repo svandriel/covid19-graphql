@@ -1,21 +1,19 @@
 import { cachifyPromise } from 'cachify-promise';
-import { groupBy, prop } from 'ramda';
+import { groupBy, pluck, prop } from 'ramda';
 
-import { fetchCovidStats } from './fetch-covid-stats';
+import { fetchTimeSeries } from './fetch-time-series';
 import { ApiTimeSeries, ApiTimeSeriesItem } from './generated/graphql-backend';
-import { mergeTimeSeries } from './merge-time-series';
-import { timed } from './util/timed';
+import { mergeTimeSeries } from './merging/merge-time-series';
 
 export class DataSource {
     private fetchCovidStats: () => Promise<readonly ApiTimeSeries[]>;
 
     constructor() {
-        this.fetchCovidStats = cachifyPromise(fetchCovidStats, {
+        this.fetchCovidStats = cachifyPromise(fetchTimeSeries, {
             ttl: 3600 * 1000,
             staleWhileRevalidate: true,
             debug: true
         });
-        this.fetchPerCountry = timed(this.fetchPerCountry.bind(this));
     }
 
     async fetchGlobal(): Promise<readonly ApiTimeSeriesItem[]> {
@@ -41,5 +39,10 @@ export class DataSource {
         console.log(`fetchPerCountry: ${elapsed} ms`);
 
         return result;
+    }
+
+    async fetchCountryCodesWithCases(): Promise<string[]> {
+        const stats = await this.fetchCovidStats();
+        return pluck('countryCode', stats);
     }
 }

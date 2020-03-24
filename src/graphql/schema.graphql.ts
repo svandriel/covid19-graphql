@@ -23,7 +23,9 @@ export const typeDefs = gql`
     }
 
     input CountriesWhere {
+        search: String
         ignore: [String!]
+        hasCases: Boolean
     }
 
     type PagedCountries {

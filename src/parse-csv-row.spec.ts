@@ -3,7 +3,10 @@ import { StatsType } from './types/stats-type';
 
 describe('Parse CSV row', () => {
     it('parses correctly', () => {
-        expect(parseCsvRow(StatsType.Confirmed, makeData())).toMatchSnapshot();
+        const lookup: Record<string, string> = {
+            Singapore: 'SG'
+        };
+        expect(parseCsvRow(lookup, StatsType.Confirmed, makeData())).toMatchSnapshot();
     });
 });
 

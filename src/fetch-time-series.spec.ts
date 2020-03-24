@@ -1,7 +1,7 @@
 import nock from 'nock';
 import path from 'path';
 
-import { fetchCovidStats } from './fetch-covid-stats';
+import { fetchTimeSeries } from './fetch-time-series';
 
 const TESTDATA_DIR = path.resolve(__dirname, '..', 'testdata');
 
@@ -22,7 +22,7 @@ describe('fetchCovidStats', () => {
 
     it('works', async () => {
         try {
-            const result = await fetchCovidStats();
+            const result = await fetchTimeSeries();
             expect(result).toMatchSnapshot();
         } catch (err) {
             fail(err);

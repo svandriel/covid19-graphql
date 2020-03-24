@@ -1,4 +1,4 @@
-import { ApiTimeSeriesItem } from './generated/graphql-backend';
+import { ApiTimeSeriesItem } from '../generated/graphql-backend';
 import { mergeTimeSeriesItem } from './merge-time-series-item';
 
 export function mergeTimeSeriesItemArray(
