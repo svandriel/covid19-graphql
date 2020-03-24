@@ -9,6 +9,8 @@ export const typeDefs = gql`
 
         country(code: String!): Country
         countries(offset: Int = 0, count: Int = 10, where: CountriesWhere): PagedCountries!
+
+        dailyStat(date: LocalDate!): [DailyStat!]!
     }
 
     input TimeSeriesWhere {
@@ -47,6 +49,17 @@ export const typeDefs = gql`
         countryCode: String!
         state: String!
         items: [TimeSeriesItem!]!
+    }
+
+    type DailyStat {
+        countryCode: String!
+        country: Country!
+        state: String!
+        date: LocalDate!
+        lastUpdated: String!
+        confirmed: Int!
+        deceased: Int!
+        recovered: Int!
     }
 
     type CountryTimeSeries {

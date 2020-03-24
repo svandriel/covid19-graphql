@@ -1,18 +1,29 @@
 import { cachifyPromise } from 'cachify-promise';
+import { Moment } from 'moment';
 import { groupBy, pluck, prop } from 'ramda';
 
+import { fetchDailyStats } from './fetch-daily-stats';
 import { fetchTimeSeries } from './fetch-time-series';
-import { ApiTimeSeries, ApiTimeSeriesItem } from './generated/graphql-backend';
+import { ApiDailyStat, ApiTimeSeries, ApiTimeSeriesItem } from './generated/graphql-backend';
 import { mergeTimeSeries } from './merging/merge-time-series';
+import { DATE_FORMAT_REVERSE } from './util/date-formats';
 
 export class DataSource {
     private fetchCovidStats: () => Promise<readonly ApiTimeSeries[]>;
+    private fetchDailyStats: (date: Moment) => Promise<readonly ApiDailyStat[]>;
 
     constructor() {
+        console.log('Creating DataSource');
         this.fetchCovidStats = cachifyPromise(fetchTimeSeries, {
             ttl: 3600 * 1000,
             staleWhileRevalidate: true,
             debug: true
+        });
+        this.fetchDailyStats = cachifyPromise(fetchDailyStats, {
+            ttl: 3600 * 1000,
+            staleWhileRevalidate: true,
+            debug: true,
+            cacheKeyFn: a => a.format(DATE_FORMAT_REVERSE)
         });
     }
 
@@ -44,5 +55,9 @@ export class DataSource {
     async fetchCountryCodesWithCases(): Promise<string[]> {
         const stats = await this.fetchCovidStats();
         return pluck('countryCode', stats);
+    }
+
+    async fetchForDate(date: Moment): Promise<readonly ApiDailyStat[]> {
+        return this.fetchDailyStats(date);
     }
 }

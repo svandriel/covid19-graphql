@@ -10,7 +10,7 @@ export async function fetchCsv(url: string): Promise<CsvContent> {
             console.log(`Fetching ${chalk.cyan(url)}`);
             const response = await fetch(url);
             if (response.status !== 200) {
-                throw new FetchError(`Got HTTP ${response.status} on ${url} (expected HTTP 200)`, 'error');
+                throw new FetchError(`Got HTTP ${response.status} on ${url} (expected HTTP 200)`, 'ENOTFOUND');
             }
             const text = await response.text();
             csvParse(
@@ -18,7 +18,8 @@ export async function fetchCsv(url: string): Promise<CsvContent> {
                 {
                     columns: true,
                     delimiter: ',',
-                    quote: '"'
+                    quote: '"',
+                    bom: true
                 },
                 (err, output) => {
                     if (err) {

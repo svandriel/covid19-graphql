@@ -1,4 +1,3 @@
-import chalk from 'chalk';
 import moment from 'moment';
 
 import { ApiTimeSeries, ApiTimeSeriesItem } from './generated/graphql-backend';

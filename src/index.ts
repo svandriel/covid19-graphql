@@ -17,4 +17,7 @@ async function main(): Promise<void> {
     });
     const url = `http://localhost:${port}`;
     console.log(`🚀  Server ready at ${chalk.cyan(url)}`);
+
+    // const daily = await fetchDailyStats(moment('2020-03-20', DATE_FORMAT_REVERSE));
+    // console.log(daily);
 }

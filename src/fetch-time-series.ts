@@ -5,7 +5,8 @@ import { fetchCsv } from './fetch-csv';
 import { ApiTimeSeries } from './generated/graphql-backend';
 import { mergeTimeSeriesArray } from './merging/merge-time-series-array';
 import { invalidCountries, parseCsvRow } from './parse-csv-row';
-import { statsTypes, statUrls } from './urls';
+import { statsTypes } from './types/stats-type';
+import { statUrls } from './urls';
 
 export async function fetchTimeSeries(): Promise<readonly ApiTimeSeries[]> {
     const lookup = await getCountryLookup();
