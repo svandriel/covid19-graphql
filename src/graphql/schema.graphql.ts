@@ -9,8 +9,6 @@ export const typeDefs = gql`
 
         country(code: String!): Country
         countries(offset: Int = 0, count: Int = 10, where: CountriesWhere): PagedCountries!
-
-        dailyStat(date: LocalDate!): [DailyStat!]!
     }
 
     input TimeSeriesWhere {
@@ -51,12 +49,11 @@ export const typeDefs = gql`
         items: [TimeSeriesItem!]!
     }
 
-    type DailyStat {
+    type CountryStat {
         countryCode: String!
         country: Country!
-        state: String!
         date: LocalDate!
-        lastUpdated: String!
+        lastUpdated: Int
         confirmed: Int!
         deceased: Int!
         recovered: Int!
@@ -73,6 +70,7 @@ export const typeDefs = gql`
         confirmed: Int!
         deceased: Int!
         recovered: Int!
+        lastUpdated: String
     }
 
     enum StatsType {

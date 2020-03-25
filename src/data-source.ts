@@ -1,34 +1,40 @@
 import { cachifyPromise } from 'cachify-promise';
-import { Moment } from 'moment';
-import { groupBy, pluck, prop } from 'ramda';
+import moment from 'moment';
+import { groupBy, pluck, prop, propEq } from 'ramda';
 
-import { fetchDailyStats } from './fetch-daily-stats';
-import { fetchTimeSeries } from './fetch-time-series';
-import { ApiDailyStat, ApiTimeSeries, ApiTimeSeriesItem } from './generated/graphql-backend';
+import { fetchCurrent } from './fetch-current';
+import { fetchBetterTimeSeries, fetchTimeSeries } from './fetch-time-series';
+import { ApiCountryStat, ApiTimeSeries, ApiTimeSeriesItem } from './generated/graphql-backend';
 import { mergeTimeSeries } from './merging/merge-time-series';
-import { DATE_FORMAT_REVERSE } from './util/date-formats';
+
+const ONE_MINUTE = 60 * 1000;
+const ONE_HOUR = 60 * ONE_MINUTE;
 
 export class DataSource {
-    private fetchCovidStats: () => Promise<readonly ApiTimeSeries[]>;
-    private fetchDailyStats: (date: Moment) => Promise<readonly ApiDailyStat[]>;
+    private fetchTimeSeries: () => Promise<readonly ApiTimeSeries[]>;
+    private fetchCurrent: () => Promise<readonly ApiCountryStat[]>;
+    private fetchBetterTimeSeries: () => Promise<readonly ApiCountryStat[]>;
 
     constructor() {
-        console.log('Creating DataSource');
-        this.fetchCovidStats = cachifyPromise(fetchTimeSeries, {
-            ttl: 3600 * 1000,
+        this.fetchTimeSeries = cachifyPromise(fetchTimeSeries, {
+            ttl: ONE_HOUR,
             staleWhileRevalidate: true,
             debug: true,
         });
-        this.fetchDailyStats = cachifyPromise(fetchDailyStats, {
-            ttl: 3600 * 1000,
+        this.fetchCurrent = cachifyPromise(fetchCurrent, {
+            ttl: ONE_MINUTE,
             staleWhileRevalidate: true,
             debug: true,
-            cacheKeyFn: a => a.format(DATE_FORMAT_REVERSE),
+        });
+        this.fetchBetterTimeSeries = cachifyPromise(fetchBetterTimeSeries, {
+            ttl: ONE_HOUR,
+            staleWhileRevalidate: true,
+            debug: true,
         });
     }
 
     async fetchGlobal(): Promise<readonly ApiTimeSeriesItem[]> {
-        const stats = await this.fetchCovidStats();
+        const stats = await this.fetchTimeSeries();
         const start = new Date().getTime();
         const result = stats.reduce(mergeTimeSeries);
         const elapsed = new Date().getTime() - start;
@@ -37,7 +43,7 @@ export class DataSource {
     }
 
     async fetchPerCountry(): Promise<Record<string, readonly ApiTimeSeriesItem[]>> {
-        const stats = await this.fetchCovidStats();
+        const stats = await this.fetchTimeSeries();
         const start = new Date().getTime();
         const grouped = groupBy(prop('countryCode'), stats);
         const result: Record<string, readonly ApiTimeSeriesItem[]> = {};
@@ -52,12 +58,24 @@ export class DataSource {
         return result;
     }
 
+    async fetchTimelineForCountry(countryCode: string): Promise<readonly ApiTimeSeriesItem[]> {
+        const allTimeSeriesItems = await this.fetchBetterTimeSeries();
+        const filtered = allTimeSeriesItems.filter(propEq('countryCode', countryCode));
+        return filtered.map(item => ({
+            date: item.date,
+            confirmed: item.confirmed,
+            deceased: item.deceased,
+            recovered: item.recovered,
+            lastUpdated: moment(item.lastUpdated || 0).toISOString(),
+        }));
+    }
+
     async fetchCountryCodesWithCases(): Promise<string[]> {
-        const stats = await this.fetchCovidStats();
+        const stats = await this.fetchTimeSeries();
         return pluck('countryCode', stats);
     }
 
-    async fetchForDate(date: Moment): Promise<readonly ApiDailyStat[]> {
-        return this.fetchDailyStats(date);
+    async fetchLatest(): Promise<readonly ApiCountryStat[]> {
+        return this.fetchCurrent();
     }
 }

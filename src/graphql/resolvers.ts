@@ -49,45 +49,39 @@ export const resolvers: ApiResolvers = {
 
             return paginate({ offset, count }, filteredCountries);
         },
-
-        dailyStat: async (_query, { date }, context) => {
-            const stats = await context.dataSource.fetchForDate(date);
-            return stats;
-        },
     },
 
     Country: {
         history: async (country, { where }, context) => {
-            const countries = await context.dataSource.fetchPerCountry();
-            const stats = countries[country.code] || [emptyTimeSeriesItem()];
+            const stats = await context.dataSource.fetchTimelineForCountry(country.code);
             if (where) {
                 return applyTimeSeriesRange(where, stats);
             } else {
                 return stats;
             }
         },
-        latest: async (country, {}, context) => {
-            const countries = await context.dataSource.fetchPerCountry();
-            const countryTimeline = countries[country.code];
-            if (countryTimeline) {
-                const latest = last(countryTimeline);
-                return latest || emptyTimeSeriesItem();
+        latest: async (country, _args, context) => {
+            const all = await context.dataSource.fetchLatest();
+            const found = all.find(item => item.countryCode === country.code);
+            if (found) {
+                const lastUpdated = found.lastUpdated ? moment(found.lastUpdated) : undefined;
+                return {
+                    confirmed: found.confirmed,
+                    deceased: found.deceased,
+                    recovered: found.recovered,
+                    date: found.date,
+                    lastUpdated: lastUpdated?.toISOString(),
+                } as ApiTimeSeriesItem;
             } else {
-                return emptyTimeSeriesItem();
+                const countries = await context.dataSource.fetchPerCountry();
+                const countryTimeline = countries[country.code];
+                if (countryTimeline) {
+                    const latest = last(countryTimeline);
+                    return latest || emptyTimeSeriesItem();
+                } else {
+                    return emptyTimeSeriesItem();
+                }
             }
-        },
-    },
-    DailyStat: {
-        country: async dailyStat => {
-            const lookup = await getCountryLookup();
-            const name = lookup.lookupName[dailyStat.countryCode];
-            if (!name) {
-                throw new Error(`Cannot find country with code ${dailyStat.countryCode}`);
-            }
-            return {
-                code: dailyStat.countryCode,
-                name,
-            } as ApiCountry;
         },
     },
     LocalDate,
