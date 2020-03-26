@@ -11,7 +11,7 @@ import { DATE_FORMAT_REVERSE } from './util/date-formats';
 
 const ONE_MINUTE = 60 * 1000;
 const ONE_HOUR = 60 * ONE_MINUTE;
-const STALE_WHILE_REVALIDATE: boolean = false;
+const STALE_WHILE_REVALIDATE: boolean = true;
 const DEBUG: boolean = false;
 
 export class DataSource {
