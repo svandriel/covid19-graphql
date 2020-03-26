@@ -1,7 +1,7 @@
 {
   "name": "covid19-graphql",
   "version": "1.0.0",
-  "description": "Provides a GraphQL API for the COVID-19 data source from Johns Hopkins universiry",
+  "description": "Provides a GraphQL API for the COVID-19 data source from Johns Hopkins university",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist src/generated",
