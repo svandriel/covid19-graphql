@@ -1,5 +1,4 @@
-import moment from 'moment';
-import { allPass, isNil, last } from 'ramda';
+import { allPass, isNil } from 'ramda';
 
 import { getCountryLookup } from '../country-lookup';
 import { ApiCountry, ApiResolvers, ApiTimeSeriesItem, ApiTimeSeriesWhere } from '../generated/graphql-backend';
@@ -10,20 +9,24 @@ export const resolvers: ApiResolvers = {
     Query: {
         ping: () => 'pong',
         globalHistory: async (_query, { where }, context) => {
-            const stats = await context.dataSource.fetchGlobal();
+            // const stats = await context.dataSource.getCsvBasedGlobalTimeSeries();
+            const stats = await context.dataSource.getGlobalTimeSeries();
             return applyTimeSeriesRange(where || {}, stats);
         },
         country: async (_query, { code }) => {
             const lookup = await getCountryLookup();
             const upperCode = code.toUpperCase();
-            const name = lookup.lookupName[upperCode];
-            if (!name) {
+            const country = lookup.lookupByCode[upperCode];
+            if (!country) {
                 return (undefined as any) as ApiCountry;
             }
             return {
                 code: upperCode,
-                name,
+                name: country.name,
+                region: country.region,
+                subRegion: country.subRegion,
                 history: [],
+                historyCsv: [],
                 latest: (undefined as any) as ApiTimeSeriesItem,
             };
         },
@@ -42,7 +45,7 @@ export const resolvers: ApiResolvers = {
                 filters.push(country => !ignore.includes(country.code));
             }
             if (!isNil(hasCases)) {
-                const countriesWithCases = await context.dataSource.fetchCountryCodesWithCases();
+                const countriesWithCases = await context.dataSource.getCountryCodesWithCases();
                 filters.push(country => countriesWithCases.includes(country.code) === hasCases);
             }
             const filteredCountries = countries.filter(allPass(filters));
@@ -53,7 +56,15 @@ export const resolvers: ApiResolvers = {
 
     Country: {
         history: async (country, { where }, context) => {
-            const stats = await context.dataSource.fetchTimelineForCountry(country.code);
+            const stats = await context.dataSource.getTimelineForCountry(country.code);
+            if (where) {
+                return applyTimeSeriesRange(where, stats);
+            } else {
+                return stats;
+            }
+        },
+        historyCsv: async (country, { where }, context) => {
+            const stats = await context.dataSource.getTimelineForCountryFromCsv(country.code);
             if (where) {
                 return applyTimeSeriesRange(where, stats);
             } else {
@@ -61,27 +72,7 @@ export const resolvers: ApiResolvers = {
             }
         },
         latest: async (country, _args, context) => {
-            const all = await context.dataSource.fetchLatest();
-            const found = all.find(item => item.countryCode === country.code);
-            if (found) {
-                const lastUpdated = found.lastUpdated ? moment(found.lastUpdated) : undefined;
-                return {
-                    confirmed: found.confirmed,
-                    deceased: found.deceased,
-                    recovered: found.recovered,
-                    date: found.date,
-                    lastUpdated: lastUpdated?.toISOString(),
-                } as ApiTimeSeriesItem;
-            } else {
-                const countries = await context.dataSource.fetchPerCountry();
-                const countryTimeline = countries[country.code];
-                if (countryTimeline) {
-                    const latest = last(countryTimeline);
-                    return latest || emptyTimeSeriesItem();
-                } else {
-                    return emptyTimeSeriesItem();
-                }
-            }
+            return context.dataSource.getCurrentForCountry(country.code) as Promise<ApiTimeSeriesItem>;
         },
     },
     LocalDate,
@@ -104,13 +95,4 @@ function applyTimeSeriesRange(where: ApiTimeSeriesWhere, stats: readonly ApiTime
         }
     }
     return stats.slice(fromIndex, toIndex);
-}
-
-function emptyTimeSeriesItem(): ApiTimeSeriesItem {
-    return {
-        confirmed: 0,
-        deceased: 0,
-        recovered: 0,
-        date: moment(),
-    };
 }

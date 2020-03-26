@@ -2,9 +2,9 @@ import { StatsType } from './types/stats-type';
 
 const TIMESERIES_BASE_URL = `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series`;
 
-const TIMESERIES_CONFIRMED_URL = `${TIMESERIES_BASE_URL}/time_series_19-covid-Confirmed.csv`;
-const TIMESERIES_DEATHS_URL = `${TIMESERIES_BASE_URL}/time_series_19-covid-Deaths.csv`;
-const TIMESERIES_RECOVERED_URL = `${TIMESERIES_BASE_URL}/time_series_19-covid-Recovered.csv`;
+const TIMESERIES_CONFIRMED_URL = `${TIMESERIES_BASE_URL}/time_series_covid19_confirmed_global.csv`;
+const TIMESERIES_DEATHS_URL = `${TIMESERIES_BASE_URL}/time_series_covid19_deaths_global.csv`;
+const TIMESERIES_RECOVERED_URL = `${TIMESERIES_BASE_URL}/time_series_covid19_recovered_global.csv`;
 
 export const DAILY_STATS_BASE_URL = `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports`;
 

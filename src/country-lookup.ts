@@ -1,8 +1,8 @@
 import { cachifyPromise } from 'cachify-promise';
-
-import { fetchCsv } from './fetch-csv';
-import { countryAliases, missingCountries } from './country-aliases';
 import chalk from 'chalk';
+
+import { countryAliases, missingCountries } from './country-aliases';
+import { fetchCsv } from './fetch-csv';
 
 const DOWNLOAD_URL =
     'https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv';
@@ -15,23 +15,25 @@ async function getCountryLookupUncached(): Promise<CountryLookup> {
         .map(row => ({
             code: row['alpha-2'],
             name: row.name,
+            region: row.region,
+            subRegion: row['sub-region'],
         }))
         .concat(missingCountries);
 
-    const lookupName = list.reduce((acc, { code, name }) => {
-        acc[code] = name;
+    const lookupByCode = list.reduce((acc, country) => {
+        acc[country.code] = country;
         return acc;
-    }, {} as Record<string, string>);
-    const lookupCode = list.reduce((acc, { code, name }) => {
-        acc[name] = code;
+    }, {} as Record<string, Country>);
+    const lookupByName = list.reduce((acc, country) => {
+        acc[country.name] = country;
         return acc;
-    }, {} as Record<string, string>);
+    }, {} as Record<string, Country>);
 
     // Add aliases to code lookup
     Object.entries(countryAliases).forEach(([wrongName, correctName]) => {
-        const correctCode = lookupCode[correctName];
+        const correctCode = lookupByName[correctName];
         if (correctCode) {
-            lookupCode[wrongName] = correctCode;
+            lookupByName[wrongName] = correctCode;
         } else {
             console.error(`${chalk.red('ERROR')}: Invalid alias: ${correctName} for '${wrongName}' does not exist`);
         }
@@ -39,13 +41,20 @@ async function getCountryLookupUncached(): Promise<CountryLookup> {
 
     return {
         list,
-        lookupCode,
-        lookupName,
+        lookupByName,
+        lookupByCode,
     };
 }
 
 export interface CountryLookup {
-    list: Array<{ code: string; name: string }>;
-    lookupName: Record<string, string>;
-    lookupCode: Record<string, string>;
+    list: Country[];
+    lookupByCode: Record<string, Country>;
+    lookupByName: Record<string, Country>;
+}
+
+export interface Country {
+    code: string;
+    name: string;
+    region: string;
+    subRegion: string;
 }

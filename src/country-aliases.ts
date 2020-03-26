@@ -1,3 +1,5 @@
+import { Country } from './country-lookup';
+
 export const countryAliases: Record<string, string> = {
     'Bahamas, The': 'Bahamas',
     Bolivia: 'Bolivia (Plurinational State of)',
@@ -8,6 +10,7 @@ export const countryAliases: Record<string, string> = {
     "Cote d'Ivoire": "Côte d'Ivoire",
     'Ivory Coast': "Côte d'Ivoire",
     'Cruise Ship': 'No Country',
+    'Diamond Princess': 'No Country',
     'East Timor': 'Timor-Leste',
     'Gambia, The': 'Gambia',
     Iran: 'Iran (Islamic Republic of)',
@@ -30,8 +33,9 @@ export const countryAliases: Record<string, string> = {
     Taiwan: 'Taiwan, Province of China',
 };
 
-export const missingCountries = [
-    { name: 'Kosovo', code: 'XK' },
-    { name: 'No Country', code: 'NONE' },
-    { name: 'Macau', code: 'MO' },
+export const missingCountries: Country[] = [
+    { name: 'Kosovo', code: 'XK', region: 'Europe', subRegion: 'Southern Europe' },
+    { name: 'No Country', code: 'NONE', region: 'None', subRegion: 'None' },
+    { name: 'Macau', code: 'MO', region: 'Asia', subRegion: 'Eastern Asia' },
+    { name: 'Laos', code: 'LA', region: 'Asia', subRegion: 'South-eastern Asia' },
 ];

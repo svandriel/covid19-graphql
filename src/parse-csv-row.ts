@@ -1,22 +1,24 @@
 import moment from 'moment';
 
-import { ApiTimeSeries, ApiTimeSeriesItem } from './generated/graphql-backend';
+import { Country } from './country-lookup';
+import { ApiTimeSeriesItem } from './generated/graphql-backend';
 import { StatsType } from './types/stats-type';
+import { TimeSeries } from './types/time-series-item';
 import { DATE_FORMAT_CSV } from './util/date-formats';
 
 export function parseCsvRow(
-    codeLookup: Record<string, string>,
+    lookupByName: Record<string, Country>,
     type: StatsType,
     row: Record<string, string>,
-): ApiTimeSeries {
+): TimeSeries {
     const countryName = row['Country/Region'];
     const state = row['Province/State'];
-    const countryCodeIso2 = codeLookup[countryName];
-    if (!countryCodeIso2) {
-        invalidCountries.add(countryName);
+    const country = lookupByName[countryName];
+    if (!country) {
+        throw new Error(`Country not found: ${countryName}`);
     }
     return {
-        countryCode: countryCodeIso2,
+        countryCode: country?.code || 'NO CODE',
         state,
         items: parseTimeSeriesItems(type, row),
     };

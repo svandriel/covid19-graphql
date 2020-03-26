@@ -40,29 +40,10 @@ export const typeDefs = gql`
         code: String!
         name: String!
         history(where: TimeSeriesWhere): [TimeSeriesItem!]!
-        latest: TimeSeriesItem!
-    }
-
-    type TimeSeries {
-        countryCode: String!
-        state: String!
-        items: [TimeSeriesItem!]!
-    }
-
-    type CountryStat {
-        countryCode: String!
-        country: Country!
-        date: LocalDate!
-        lastUpdated: Int
-        confirmed: Int!
-        deceased: Int!
-        recovered: Int!
-    }
-
-    type CountryTimeSeries {
-        countryCode: String!
-        country: Country!
-        items: [TimeSeriesItem!]!
+        historyCsv(where: TimeSeriesWhere): [TimeSeriesItem!]!
+        latest: TimeSeriesItem
+        region: String!
+        subRegion: String!
     }
 
     type TimeSeriesItem {
@@ -71,11 +52,5 @@ export const typeDefs = gql`
         deceased: Int!
         recovered: Int!
         lastUpdated: String
-    }
-
-    enum StatsType {
-        CONFIRMED
-        DECEASED
-        RECOVERED
     }
 `;

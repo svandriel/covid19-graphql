@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import csvParse from 'csv-parse';
 import fetch, { FetchError } from 'node-fetch';
 
-export interface CsvContent extends Array<Record<string, string>> {}
+export interface CsvContent extends ReadonlyArray<Record<string, string>> {}
 
 export async function fetchCsv(url: string): Promise<CsvContent> {
     return new Promise<CsvContent>(async (resolve, reject) => {

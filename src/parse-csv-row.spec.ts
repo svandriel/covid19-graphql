@@ -1,10 +1,13 @@
+import { Country } from './country-lookup';
 import { parseCsvRow } from './parse-csv-row';
 import { StatsType } from './types/stats-type';
 
 describe('Parse CSV row', () => {
     it('parses correctly', () => {
-        const lookup: Record<string, string> = {
-            Singapore: 'SG',
+        const lookup: Record<string, Country> = {
+            Singapore: {
+                code: 'SG',
+            } as Country,
         };
         expect(parseCsvRow(lookup, StatsType.Confirmed, makeData())).toMatchSnapshot();
     });
