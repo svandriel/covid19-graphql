@@ -1,7 +1,7 @@
 {
-  "name": "covid",
+  "name": "covid19-graphql",
   "version": "1.0.0",
-  "description": "",
+  "description": "Provides a GraphQL API for the COVID-19 data source from Johns Hopkins universiry",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist src/generated",
@@ -22,8 +22,15 @@
     "lint:tslint": "tslint -p . -t stylish",
     "lint:tslint:fix": "tslint -p . -t stylish --fix"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "covid19",
+    "corona",
+    "coronavirus",
+    "graphql",
+    "api",
+    "pandemic"
+  ],
+  "author": "Sander van Driel <sander.vandriel@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "cachify-promise": "^0.2.2",
