@@ -4,6 +4,7 @@ export const countryAliases: Record<string, string> = {
     'Bahamas, The': 'Bahamas',
     Bolivia: 'Bolivia (Plurinational State of)',
     Brunei: 'Brunei Darussalam',
+    Burma: 'Myanmar',
     'Cape Verde': 'Cabo Verde',
     'Congo (Brazzaville)': 'Congo',
     'Congo (Kinshasa)': 'Congo, Democratic Republic of the',
@@ -22,6 +23,7 @@ export const countryAliases: Record<string, string> = {
     Russia: 'Russian Federation',
     Syria: 'Syrian Arab Republic',
     'Taiwan*': 'Taiwan, Province of China',
+    Taiwan: 'Taiwan, Province of China',
     Tanzania: 'Tanzania, United Republic of',
     'The Bahamas': 'Bahamas',
     'The Gambia': 'Gambia',
@@ -30,7 +32,6 @@ export const countryAliases: Record<string, string> = {
     Venezuela: 'Venezuela (Bolivarian Republic of)',
     Vietnam: 'Viet Nam',
     'Mainland China': 'China',
-    Taiwan: 'Taiwan, Province of China',
 };
 
 export const missingCountries: Country[] = [
@@ -38,4 +39,5 @@ export const missingCountries: Country[] = [
     { name: 'No Country', code: 'NONE', region: 'None', subRegion: 'None' },
     { name: 'Macau', code: 'MO', region: 'Asia', subRegion: 'Eastern Asia' },
     { name: 'Laos', code: 'LA', region: 'Asia', subRegion: 'South-eastern Asia' },
+    { name: 'West Bank and Gaza', code: 'WBG', region: 'Asia', subRegion: 'Western Asia' },
 ];

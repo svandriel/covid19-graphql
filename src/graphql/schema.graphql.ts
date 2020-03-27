@@ -6,7 +6,6 @@ export const typeDefs = gql`
     type Query {
         ping: String!
         globalHistory(where: TimeSeriesWhere): [TimeSeriesItem!]!
-
         country(code: String!): Country
         countries(offset: Int = 0, count: Int = 10, where: CountriesWhere): PagedCountries!
     }
@@ -40,7 +39,6 @@ export const typeDefs = gql`
         code: String!
         name: String!
         history(where: TimeSeriesWhere): [TimeSeriesItem!]!
-        historyCsv(where: TimeSeriesWhere): [TimeSeriesItem!]!
         latest: TimeSeriesItem
         region: String!
         subRegion: String!

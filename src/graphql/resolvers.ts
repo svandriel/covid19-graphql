@@ -9,8 +9,7 @@ export const resolvers: ApiResolvers = {
     Query: {
         ping: () => 'pong',
         globalHistory: async (_query, { where }, context) => {
-            // const stats = await context.dataSource.getCsvBasedGlobalTimeSeries();
-            const stats = await context.dataSource.getGlobalTimeSeries();
+            const stats = await context.dataSource.getGlobalTimeSeriesFromCsv();
             return applyTimeSeriesRange(where || {}, stats);
         },
         country: async (_query, { code }) => {
@@ -56,14 +55,6 @@ export const resolvers: ApiResolvers = {
 
     Country: {
         history: async (country, { where }, context) => {
-            const stats = await context.dataSource.getTimelineForCountry(country.code);
-            if (where) {
-                return applyTimeSeriesRange(where, stats);
-            } else {
-                return stats;
-            }
-        },
-        historyCsv: async (country, { where }, context) => {
             const stats = await context.dataSource.getTimelineForCountryFromCsv(country.code);
             if (where) {
                 return applyTimeSeriesRange(where, stats);

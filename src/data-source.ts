@@ -6,6 +6,7 @@ import { fetchBetterTimeSeries, fetchCsvBasedTimeSeries } from './fetch-time-ser
 import { ApiTimeSeriesItem } from './generated/graphql-backend';
 import { mergeCountryStats } from './merging/merge-country-stats';
 import { mergeTimeSeries } from './merging/merge-time-series';
+import { mergeTimeSeriesItemArray } from './merging/merge-time-series-item-array';
 import { CountryStat, TimeSeries } from './types/time-series-item';
 import { DATE_FORMAT_REVERSE } from './util/date-formats';
 
@@ -59,13 +60,17 @@ export class DataSource {
 
     async getGlobalTimeSeriesFromCsv(): Promise<readonly ApiTimeSeriesItem[]> {
         const stats = await this.fetchCsvBasedTimeSeries();
+
         const start = new Date().getTime();
-        const result = stats.reduce(mergeTimeSeries);
+        const result = stats.reduce(mergeTimeSeries).items;
         const elapsed = new Date().getTime() - start;
         console.log(`getCsvBasedGlobalTimeSeries: ${elapsed} ms`);
-        return result.items;
+        return result;
     }
 
+    /**
+     * Deprecated: Not used at the moment because it doesn't contains recoveries
+     */
     async getGlobalTimeSeries(): Promise<readonly ApiTimeSeriesItem[]> {
         const stats = await this.fetchTimeSeries();
         const start = new Date().getTime();
@@ -83,19 +88,22 @@ export class DataSource {
 
     async getTimelineForCountryFromCsv(countryCode: string): Promise<readonly ApiTimeSeriesItem[]> {
         const stats = await this.fetchCsvBasedTimeSeries();
-        const start = new Date().getTime();
-        const statsForCountry = stats.filter(propEq('countryCode', countryCode));
-        const merged = statsForCountry.reduce(mergeTimeSeries);
-        const result = merged.items;
-        const elapsed = new Date().getTime() - start;
-        console.log(`getCsvBasedTimelineForCountry ${countryCode}: ${elapsed} ms`);
+        // const start = new Date().getTime();
+        const statsForCountry = pluck('items', stats.filter(propEq('countryCode', countryCode)));
+        const result = statsForCountry.reduce(mergeTimeSeriesItemArray, []);
+        // const elapsed = new Date().getTime() - start;
+        // console.log(`getTimelineForCountryFromCsv ${countryCode}: ${elapsed} ms`);
 
         return result;
     }
 
+    /**
+     * Deprecated: Not used at the moment because it lacks recoveries
+     * @param countryCode
+     */
     async getTimelineForCountry(countryCode: string): Promise<readonly ApiTimeSeriesItem[]> {
         const allTimeSeriesItems = await this.fetchTimeSeries();
-        // const start = new Date().getTime();
+        const start = new Date().getTime();
 
         const filtered = allTimeSeriesItems.filter(c => c.countryCode === countryCode);
         const result = filtered.map(item => ({
@@ -104,8 +112,8 @@ export class DataSource {
             deceased: item.deceased,
             recovered: item.recovered,
         }));
-        // const elapsed = new Date().getTime() - start;
-        // console.log(`getTimelineForCountry '${countryCode}': ${elapsed} ms`);
+        const elapsed = new Date().getTime() - start;
+        console.log(`getTimelineForCountry '${countryCode}': ${elapsed} ms`);
 
         return result;
     }
