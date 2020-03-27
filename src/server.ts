@@ -2,25 +2,26 @@ import { ApolloServer } from 'apollo-server-express';
 import compression from 'compression';
 import express, { Application } from 'express';
 
+import { DataSource } from './data-source';
 import { Context } from './graphql/context';
 import { schema } from './graphql/schema';
-import { DataSource } from './data-source';
 
 export interface StartServerOptions {
     port: number;
-    isProduction: boolean;
+    enableTracing: boolean;
+    enablePlayground: boolean;
 }
 
 const dataSource = new DataSource();
 
-export async function startServer({ port, isProduction }: StartServerOptions): Promise<Application> {
+export async function startServer({ port, enableTracing, enablePlayground }: StartServerOptions): Promise<Application> {
     const server = new ApolloServer({
         context: (): Context => ({
             dataSource,
         }),
         schema,
-        tracing: !isProduction,
-        playground: !isProduction,
+        tracing: enableTracing,
+        playground: enablePlayground,
     });
 
     const app = express();
