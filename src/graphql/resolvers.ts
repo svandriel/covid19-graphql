@@ -1,16 +1,16 @@
+import { Moment } from 'moment';
 import { allPass, isNil } from 'ramda';
 
 import { getCountryLookup } from '../country-lookup';
-import { ApiCountry, ApiResolvers, ApiTimeSeriesItem, ApiTimeSeriesWhere } from '../generated/graphql-backend';
+import { ApiCountry, ApiResolvers, ApiTimelineItem } from '../generated/graphql-backend';
 import { paginate } from '../util/paginate';
 import { LocalDate } from './custom-scalars/local-date';
 
 export const resolvers: ApiResolvers = {
     Query: {
-        ping: () => 'pong',
-        globalHistory: async (_query, { where }, context) => {
+        globalTimeline: async (_query, { from, to }, context) => {
             const stats = await context.dataSource.getGlobalTimeSeriesFromCsv();
-            return applyTimeSeriesRange(where || {}, stats);
+            return applyTimeSeriesRange({ from, to } || {}, stats);
         },
         country: async (_query, { code }) => {
             const lookup = await getCountryLookup();
@@ -24,15 +24,14 @@ export const resolvers: ApiResolvers = {
                 name: country.name,
                 region: country.region,
                 subRegion: country.subRegion,
-                history: [],
-                historyCsv: [],
-                latest: (undefined as any) as ApiTimeSeriesItem,
+                timeline: [],
+                latest: (undefined as any) as ApiTimelineItem,
             };
         },
-        countries: async (_query, { offset, count, where }, context) => {
+        countries: async (_query, { offset, count, filter }, context) => {
             const lookup = await getCountryLookup();
             const countries = lookup.list as ApiCountry[];
-            const { search, ignore, hasCases } = where || {};
+            const { search, exclude, hasCases } = filter || {};
             const filters: Array<(item: ApiCountry) => boolean> = [];
             if (search) {
                 const upperSearch = search.toUpperCase();
@@ -40,8 +39,8 @@ export const resolvers: ApiResolvers = {
                     return item.name.toUpperCase().indexOf(upperSearch) !== -1 || item.code.indexOf(upperSearch) !== -1;
                 });
             }
-            if (ignore) {
-                filters.push(country => !ignore.includes(country.code));
+            if (exclude) {
+                filters.push(country => !exclude.includes(country.code));
             }
             if (!isNil(hasCases)) {
                 const countriesWithCases = await context.dataSource.getCountryCodesWithCases();
@@ -54,23 +53,25 @@ export const resolvers: ApiResolvers = {
     },
 
     Country: {
-        history: async (country, { where }, context) => {
+        timeline: async (country, { from, to }, context) => {
             const stats = await context.dataSource.getTimelineForCountryFromCsv(country.code);
-            if (where) {
-                return applyTimeSeriesRange(where, stats);
+            if (from || to) {
+                return applyTimeSeriesRange({ from, to }, stats);
             } else {
                 return stats;
             }
         },
         latest: async (country, _args, context) => {
-            return context.dataSource.getCurrentForCountry(country.code) as Promise<ApiTimeSeriesItem>;
+            return context.dataSource.getCurrentForCountry(country.code) as Promise<ApiTimelineItem>;
         },
     },
     LocalDate,
 };
 
-function applyTimeSeriesRange(where: ApiTimeSeriesWhere, stats: readonly ApiTimeSeriesItem[]): ApiTimeSeriesItem[] {
-    const { from, to } = where;
+function applyTimeSeriesRange(
+    { from, to }: { from?: Moment | null; to?: Moment | null },
+    stats: readonly ApiTimelineItem[],
+): ApiTimelineItem[] {
     let fromIndex: number = 0;
     let toIndex: number = stats.length;
     if (from) {

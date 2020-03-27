@@ -4,26 +4,42 @@ export const typeDefs = gql`
     scalar LocalDate
 
     type Query {
-        ping: String!
-        globalHistory(where: TimeSeriesWhere): [TimeSeriesItem!]!
+        """
+        Aggregates all data into a single global timeline.
+        """
+        globalTimeline(
+            """
+            Filters time line items to be on or after this date (inclusive)
+            """
+            from: LocalDate
+            """
+            Filters time line items to be before this date (exclusive)
+            """
+            to: LocalDate
+        ): [TimelineItem!]!
         country(code: String!): Country
-        countries(offset: Int = 0, count: Int = 10, where: CountriesWhere): PagedCountries!
+        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
     }
 
-    input TimeSeriesWhere {
+    """
+    Filters countries based on certain conditions
+    """
+    input CountryFilter {
         """
-        Filters time line items to be on or after this date (inclusive)
+        Search text, will match countries' names and codes
         """
-        from: LocalDate
-        """
-        Filters time line items to be before this date (exclusive)
-        """
-        to: LocalDate
-    }
-
-    input CountriesWhere {
         search: String
-        ignore: [String!]
+        """
+        A list of country codes to include
+        """
+        include: [String!]
+        """
+        A list of country codes to exclude
+        """
+        exclude: [String!]
+        """
+        Only includes countries with or without cases
+        """
         hasCases: Boolean
     }
 
@@ -38,13 +54,22 @@ export const typeDefs = gql`
     type Country {
         code: String!
         name: String!
-        history(where: TimeSeriesWhere): [TimeSeriesItem!]!
-        latest: TimeSeriesItem
+        timeline(
+            """
+            Filters time line items to be on or after this date (inclusive)
+            """
+            from: LocalDate
+            """
+            Filters time line items to be before this date (exclusive)
+            """
+            to: LocalDate
+        ): [TimelineItem!]!
+        latest: TimelineItem
         region: String!
         subRegion: String!
     }
 
-    type TimeSeriesItem {
+    type TimelineItem {
         date: LocalDate!
         confirmed: Int!
         deceased: Int!

@@ -1,11 +1,11 @@
 import { Moment } from 'moment';
 
-import { ApiTimeSeriesItem } from '../generated/graphql-backend';
+import { ApiTimelineItem } from '../generated/graphql-backend';
 
 export interface TimeSeries {
     readonly countryCode: string;
     readonly state: string;
-    items: readonly ApiTimeSeriesItem[];
+    items: readonly ApiTimelineItem[];
 }
 
 export interface CountryStat {

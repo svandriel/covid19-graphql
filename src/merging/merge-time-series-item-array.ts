@@ -1,16 +1,16 @@
-import { ApiTimeSeriesItem } from '../generated/graphql-backend';
+import { ApiTimelineItem } from '../generated/graphql-backend';
 import { mergeTimeSeriesItem } from './merge-time-series-item';
 
 export function mergeTimeSeriesItemArray(
-    a: readonly ApiTimeSeriesItem[],
-    b: readonly ApiTimeSeriesItem[],
-): ApiTimeSeriesItem[] {
+    a: readonly ApiTimelineItem[],
+    b: readonly ApiTimelineItem[],
+): ApiTimelineItem[] {
     const length = Math.max(a.length, b.length);
 
     // I hate loops but this is by far the fastest way
-    const result: ApiTimeSeriesItem[] = [];
-    let lastA: ApiTimeSeriesItem | undefined;
-    let lastB: ApiTimeSeriesItem | undefined;
+    const result: ApiTimelineItem[] = [];
+    let lastA: ApiTimelineItem | undefined;
+    let lastB: ApiTimelineItem | undefined;
 
     for (let i = 0; i < length; i++) {
         const aItem =

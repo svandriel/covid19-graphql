@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 import { Country } from './country-lookup';
-import { ApiTimeSeriesItem } from './generated/graphql-backend';
+import { ApiTimelineItem } from './generated/graphql-backend';
 import { StatsType } from './types/stats-type';
 import { TimeSeries } from './types/time-series-item';
 import { DATE_FORMAT_CSV } from './util/date-formats';
@@ -26,7 +26,7 @@ export function parseCsvRow(
 
 export const invalidCountries = new Set<string>();
 
-export function parseTimeSeriesItems(type: StatsType, row: Record<string, string>): ApiTimeSeriesItem[] {
+export function parseTimeSeriesItems(type: StatsType, row: Record<string, string>): ApiTimelineItem[] {
     return Object.keys(row)
         .filter(rowName => {
             return /^\d+\/\d+\/\d+$/.test(rowName);
@@ -43,7 +43,7 @@ export function parseTimeSeriesItems(type: StatsType, row: Record<string, string
                         `Cannot parse '${valueStr}' into number for ${countryName}/${state} (type: ${type})`,
                     );
                 }
-                const x: ApiTimeSeriesItem = {
+                const x: ApiTimelineItem = {
                     date,
                     confirmed: type === StatsType.Confirmed ? value : 0,
                     recovered: type === StatsType.Recovered ? value : 0,
