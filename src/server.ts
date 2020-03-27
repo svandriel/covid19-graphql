@@ -22,6 +22,7 @@ export async function startServer({ port, enableTracing, enablePlayground }: Sta
         schema,
         tracing: enableTracing,
         playground: enablePlayground,
+        introspection: enablePlayground,
     });
 
     const app = express();
