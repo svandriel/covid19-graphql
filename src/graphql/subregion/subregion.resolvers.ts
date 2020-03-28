@@ -1,7 +1,5 @@
 import { getCountryLookup } from '../../country-lookup';
 import { ApiPagedCountries, ApiRegion, ApiResolvers, ApiSubRegion } from '../../generated/graphql-backend';
-import { applyCountryFilter, createApiCountry } from '../country/country.resolvers';
-import { createApiRegion } from '../region/region.resolvers';
 import { applyTimeSeriesRange } from '../common';
 
 export const resolvers: ApiResolvers = {
@@ -21,16 +19,6 @@ export const resolvers: ApiResolvers = {
     },
 
     SubRegion: {
-        countries: async (subRegion, args, context) => {
-            const lookup = await getCountryLookup();
-            const countries = lookup.countriesPerSubRegion[subRegion.name].map(createApiCountry);
-            return await applyCountryFilter(args, context, countries);
-        },
-        region: async subRegion => {
-            const lookup = await getCountryLookup();
-            const regionName = lookup.regionPerSubRegion[subRegion.name];
-            return createApiRegion(regionName);
-        },
         timeline: async (subRegion, { from, to }, context) => {
             const lookup = await getCountryLookup();
             const countries = lookup.countriesPerSubRegion[subRegion.name].reduce((acc, item) => {
@@ -41,9 +29,24 @@ export const resolvers: ApiResolvers = {
             return applyTimeSeriesRange({ from, to }, stats);
         },
     },
+
+    Region: {
+        subRegions: async region => {
+            const lookup = await getCountryLookup();
+            return lookup.subRegionsByRegionName[region.name].map(createApiSubRegion);
+        },
+    },
+
+    Country: {
+        subRegion: async country => {
+            const lookup = await getCountryLookup();
+            const subRegionName = lookup.lookupByCode[country.code].subRegion;
+            return createApiSubRegion(subRegionName);
+        },
+    },
 };
 
-export function createApiSubRegion(name: string): ApiSubRegion {
+function createApiSubRegion(name: string): ApiSubRegion {
     return {
         name,
         countries: (undefined as any) as ApiPagedCountries,

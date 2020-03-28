@@ -39,8 +39,6 @@ export const typeDefs = gql`
     type Country {
         code: String!
         name: String!
-        region: Region!
-        subRegion: SubRegion!
         timeline(
             """
             Filters time line items to be on or after this date (inclusive)
@@ -52,5 +50,13 @@ export const typeDefs = gql`
             to: LocalDate
         ): [TimelineItem!]!
         latest: TimelineItem
+    }
+
+    extend type Region {
+        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
+    }
+
+    extend type SubRegion {
+        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
     }
 `;

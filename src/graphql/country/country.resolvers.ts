@@ -11,10 +11,8 @@ import {
 } from '../../generated/graphql-backend';
 import { makeStringLookup } from '../../util/make-lookup';
 import { paginate, PaginatedList } from '../../util/paginate';
-import { Context } from '../context';
-import { createApiRegion } from '../region/region.resolvers';
 import { applyTimeSeriesRange } from '../common';
-import { createApiSubRegion } from '../subregion/subregion.resolvers';
+import { Context } from '../context';
 
 export const resolvers: ApiResolvers = {
     Query: {
@@ -30,16 +28,6 @@ export const resolvers: ApiResolvers = {
     },
 
     Country: {
-        region: async country => {
-            const lookup = await getCountryLookup();
-            const regionName = lookup.lookupByCode[country.code].region;
-            return createApiRegion(regionName);
-        },
-        subRegion: async country => {
-            const lookup = await getCountryLookup();
-            const subRegionName = lookup.lookupByCode[country.code].subRegion;
-            return createApiSubRegion(subRegionName);
-        },
         timeline: async (country, { from, to }, context) => {
             const stats = await context.dataSource.getTimelineForCountryFromCsv(country.code);
             return applyTimeSeriesRange({ from, to }, stats);
@@ -48,15 +36,31 @@ export const resolvers: ApiResolvers = {
             return context.dataSource.getCurrentForCountry(country.code) as Promise<ApiTimelineItem>;
         },
     },
+
+    Region: {
+        countries: async (region, args, context) => {
+            const lookup = await getCountryLookup();
+            const countries = lookup.countriesPerRegion[region.name].map(createApiCountry);
+            return await applyCountryFilter(args, context, countries);
+        },
+    },
+
+    SubRegion: {
+        countries: async (subRegion, args, context) => {
+            const lookup = await getCountryLookup();
+            const countries = lookup.countriesPerSubRegion[subRegion.name].map(createApiCountry);
+            return await applyCountryFilter(args, context, countries);
+        },
+    },
 };
 
-export interface CountryOptions {
+interface CountryOptions {
     offset: number;
     count: number;
     filter?: ApiCountryFilter;
 }
 
-export async function applyCountryFilter(
+async function applyCountryFilter(
     args: CountryOptions,
     context: Context,
     input: ApiCountry[],
@@ -87,7 +91,7 @@ export async function applyCountryFilter(
     return paginate({ offset, count }, filteredCountries);
 }
 
-export function createApiCountry(country: Country | undefined): ApiCountry {
+function createApiCountry(country: Country | undefined): ApiCountry {
     return country
         ? {
               code: country.code,

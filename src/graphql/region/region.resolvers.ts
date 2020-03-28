@@ -1,8 +1,6 @@
 import { getCountryLookup } from '../../country-lookup';
 import { ApiPagedCountries, ApiRegion, ApiResolvers } from '../../generated/graphql-backend';
-import { applyCountryFilter, createApiCountry } from '../country/country.resolvers';
 import { applyTimeSeriesRange } from '../common';
-import { createApiSubRegion } from '../subregion/subregion.resolvers';
 
 export const resolvers: ApiResolvers = {
     Query: {
@@ -20,16 +18,15 @@ export const resolvers: ApiResolvers = {
         },
     },
 
+    Country: {
+        region: async country => {
+            const lookup = await getCountryLookup();
+            const regionName = lookup.lookupByCode[country.code].region;
+            return createApiRegion(regionName);
+        },
+    },
+
     Region: {
-        countries: async (region, args, context) => {
-            const lookup = await getCountryLookup();
-            const countries = lookup.countriesPerRegion[region.name].map(createApiCountry);
-            return await applyCountryFilter(args, context, countries);
-        },
-        subRegions: async region => {
-            const lookup = await getCountryLookup();
-            return lookup.subRegionsByRegionName[region.name].map(createApiSubRegion);
-        },
         timeline: async (region, { from, to }, context) => {
             const lookup = await getCountryLookup();
             const countries = lookup.countriesPerRegion[region.name].reduce((acc, item) => {
@@ -40,9 +37,17 @@ export const resolvers: ApiResolvers = {
             return applyTimeSeriesRange({ from, to }, stats);
         },
     },
+
+    SubRegion: {
+        region: async subRegion => {
+            const lookup = await getCountryLookup();
+            const regionName = lookup.regionPerSubRegion[subRegion.name];
+            return createApiRegion(regionName);
+        },
+    },
 };
 
-export function createApiRegion(name: string): ApiRegion {
+function createApiRegion(name: string): ApiRegion {
     return {
         name,
         countries: (undefined as any) as ApiPagedCountries,
