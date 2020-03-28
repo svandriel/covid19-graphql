@@ -11,6 +11,7 @@ import {
     ApiSubRegion,
     ApiTimelineItem,
 } from '../generated/graphql-backend';
+import { makeStringLookup } from '../util/make-lookup';
 import { paginate, PaginatedList } from '../util/paginate';
 import { Context } from './context';
 import { LocalDate } from './custom-scalars/local-date';
@@ -134,7 +135,7 @@ async function applyCountryFilter(
     input: ApiCountry[],
 ): Promise<PaginatedList<ApiCountry>> {
     const { offset, count, filter } = args;
-    const { search, exclude, hasCases } = filter || {};
+    const { search, include, exclude, hasCases } = filter || {};
     const filters: Array<(item: ApiCountry) => boolean> = [];
     if (search) {
         const upperSearch = search.toUpperCase();
@@ -142,8 +143,13 @@ async function applyCountryFilter(
             return item.name.toUpperCase().indexOf(upperSearch) !== -1 || item.code.indexOf(upperSearch) !== -1;
         });
     }
+    if (include) {
+        const includeLookup = makeStringLookup(include);
+        filters.push(country => !!includeLookup[country.code]);
+    }
     if (exclude) {
-        filters.push(country => !exclude.includes(country.code));
+        const excludeLookup = makeStringLookup(exclude);
+        filters.push(country => !excludeLookup[country.code]);
     }
     if (!isNil(hasCases)) {
         const countriesWithCases = await context.dataSource.getCountryCodesWithCases();
