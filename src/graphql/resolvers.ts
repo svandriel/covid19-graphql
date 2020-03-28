@@ -1,9 +1,18 @@
 import { Moment } from 'moment';
 import { allPass, isNil } from 'ramda';
 
-import { getCountryLookup } from '../country-lookup';
-import { ApiCountry, ApiRegion, ApiResolvers, ApiSubRegion, ApiTimelineItem } from '../generated/graphql-backend';
-import { paginate } from '../util/paginate';
+import { Country, getCountryLookup } from '../country-lookup';
+import {
+    ApiCountry,
+    ApiCountryFilter,
+    ApiPagedCountries,
+    ApiRegion,
+    ApiResolvers,
+    ApiSubRegion,
+    ApiTimelineItem,
+} from '../generated/graphql-backend';
+import { paginate, PaginatedList } from '../util/paginate';
+import { Context } from './context';
 import { LocalDate } from './custom-scalars/local-date';
 
 export const resolvers: ApiResolvers = {
@@ -15,86 +24,35 @@ export const resolvers: ApiResolvers = {
         country: async (_query, { code }) => {
             const lookup = await getCountryLookup();
             const upperCode = code.toUpperCase();
-            const country = lookup.lookupByCode[upperCode];
-            if (!country) {
-                return (undefined as any) as ApiCountry;
-            }
-            return {
-                code: upperCode,
-                name: country.name,
-                region: (undefined as any) as ApiRegion,
-                subRegion: (undefined as any) as ApiSubRegion,
-                timeline: [],
-                latest: (undefined as any) as ApiTimelineItem,
-            };
+            return createApiCountry(lookup.lookupByCode[upperCode]);
         },
-        countries: async (_query, { offset, count, filter }, context) => {
+        countries: async (_query, args, context) => {
             const lookup = await getCountryLookup();
-            const { search, exclude, hasCases } = filter || {};
-            const filters: Array<(item: ApiCountry) => boolean> = [];
-            if (search) {
-                const upperSearch = search.toUpperCase();
-                filters.push((item: ApiCountry) => {
-                    return item.name.toUpperCase().indexOf(upperSearch) !== -1 || item.code.indexOf(upperSearch) !== -1;
-                });
-            }
-            if (exclude) {
-                filters.push(country => !exclude.includes(country.code));
-            }
-            if (!isNil(hasCases)) {
-                const countriesWithCases = await context.dataSource.getCountryCodesWithCases();
-                filters.push(country => countriesWithCases.includes(country.code) === hasCases);
-            }
-
-            const countries = (lookup.list as any[]) as ApiCountry[];
-            const filteredCountries = countries.filter(allPass(filters));
-
-            return paginate({ offset, count }, filteredCountries);
+            return await applyCountryFilter(args, context, (lookup.list as any[]) as ApiCountry[]);
         },
         region: async (_query, { name }) => {
             const lookup = await getCountryLookup();
             if (!lookup.regionNames.includes(name)) {
                 return (undefined as any) as ApiRegion;
             } else {
-                return {
-                    name,
-                    countries: [],
-                    subRegions: [],
-                    timeline: [],
-                } as ApiRegion;
+                return createApiRegion(name);
             }
         },
         regions: async () => {
             const lookup = await getCountryLookup();
-            return lookup.regionNames.map(name => ({
-                countries: [],
-                name,
-                subRegions: [],
-                timeline: [],
-            }));
+            return lookup.regionNames.map(createApiRegion);
         },
         subRegion: async (_query, { name }) => {
             const lookup = await getCountryLookup();
             if (!lookup.subRegionNames.includes(name)) {
                 return (undefined as any) as ApiSubRegion;
             } else {
-                return {
-                    name,
-                    countries: [],
-                    region: (undefined as any) as ApiRegion,
-                    timeline: [],
-                } as ApiSubRegion;
+                return createApiSubRegion(name);
             }
         },
         subRegions: async () => {
             const lookup = await getCountryLookup();
-            return lookup.subRegionNames.map(name => ({
-                countries: [],
-                name,
-                subRegions: [],
-                timeline: [],
-                region: (undefined as any) as ApiRegion,
-            }));
+            return lookup.subRegionNames.map(createApiSubRegion);
         },
     },
 
@@ -102,31 +60,16 @@ export const resolvers: ApiResolvers = {
         region: async country => {
             const lookup = await getCountryLookup();
             const regionName = lookup.lookupByCode[country.code].region;
-            return {
-                name: regionName,
-                countries: [],
-                region: (undefined as any) as ApiRegion,
-                timeline: [],
-                subRegions: [],
-            };
+            return createApiRegion(regionName);
         },
         subRegion: async country => {
             const lookup = await getCountryLookup();
             const subRegionName = lookup.lookupByCode[country.code].subRegion;
-            return {
-                name: subRegionName,
-                countries: [],
-                region: (undefined as any) as ApiRegion,
-                timeline: [],
-            };
+            return createApiSubRegion(subRegionName);
         },
         timeline: async (country, { from, to }, context) => {
             const stats = await context.dataSource.getTimelineForCountryFromCsv(country.code);
-            if (from || to) {
-                return applyTimeSeriesRange({ from, to }, stats);
-            } else {
-                return stats;
-            }
+            return applyTimeSeriesRange({ from, to }, stats);
         },
         latest: async (country, _args, context) => {
             return context.dataSource.getCurrentForCountry(country.code) as Promise<ApiTimelineItem>;
@@ -134,60 +77,121 @@ export const resolvers: ApiResolvers = {
     },
 
     Region: {
-        countries: async region => {
+        countries: async (region, args, context) => {
             const lookup = await getCountryLookup();
-            return lookup.countriesPerRegion[region.name].map(c => ({
-                code: c.code,
-                name: c.name,
-                region: (undefined as any) as ApiRegion,
-                subRegion: (undefined as any) as ApiSubRegion,
-                timeline: [],
-            }));
+            const countries = lookup.countriesPerRegion[region.name].map(createApiCountry);
+            return await applyCountryFilter(args, context, countries);
         },
         subRegions: async region => {
             const lookup = await getCountryLookup();
-            return lookup.subRegionsByRegionName[region.name].map(
-                name =>
-                    ({
-                        name,
-                        countries: [],
-                        region: (undefined as any) as ApiRegion,
-                        timeline: [],
-                    } as ApiSubRegion),
-            );
+            return lookup.subRegionsByRegionName[region.name].map(createApiSubRegion);
+        },
+        timeline: async (region, { from, to }, context) => {
+            const lookup = await getCountryLookup();
+            const countries = lookup.countriesPerRegion[region.name].reduce((acc, item) => {
+                acc[item.code] = true;
+                return acc;
+            }, {} as Record<string, boolean>);
+            const stats = await context.dataSource.getAggregatedTimelineFromCsv(item => countries[item.countryCode]);
+            return applyTimeSeriesRange({ from, to }, stats);
         },
     },
 
     SubRegion: {
-        countries: async subRegion => {
+        countries: async (subRegion, args, context) => {
             const lookup = await getCountryLookup();
-            return lookup.countriesPerSubRegion[subRegion.name].map(c => ({
-                code: c.code,
-                name: c.name,
-                region: (undefined as any) as ApiRegion,
-                subRegion: (undefined as any) as ApiSubRegion,
-                timeline: [],
-            }));
+            const countries = lookup.countriesPerSubRegion[subRegion.name].map(createApiCountry);
+            return await applyCountryFilter(args, context, countries);
         },
         region: async subRegion => {
             const lookup = await getCountryLookup();
             const regionName = lookup.regionPerSubRegion[subRegion.name];
-            return {
-                name: regionName,
-                subRegions: [],
-                countries: [],
-                timeline: [],
-            } as ApiRegion;
+            return createApiRegion(regionName);
+        },
+        timeline: async (subRegion, { from, to }, context) => {
+            const lookup = await getCountryLookup();
+            const countries = lookup.countriesPerSubRegion[subRegion.name].reduce((acc, item) => {
+                acc[item.code] = true;
+                return acc;
+            }, {} as Record<string, boolean>);
+            const stats = await context.dataSource.getAggregatedTimelineFromCsv(item => countries[item.countryCode]);
+            return applyTimeSeriesRange({ from, to }, stats);
         },
     },
 
     LocalDate,
 };
 
+interface CountryOptions {
+    offset: number;
+    count: number;
+    filter?: ApiCountryFilter;
+}
+
+async function applyCountryFilter(
+    args: CountryOptions,
+    context: Context,
+    input: ApiCountry[],
+): Promise<PaginatedList<ApiCountry>> {
+    const { offset, count, filter } = args;
+    const { search, exclude, hasCases } = filter || {};
+    const filters: Array<(item: ApiCountry) => boolean> = [];
+    if (search) {
+        const upperSearch = search.toUpperCase();
+        filters.push((item: ApiCountry) => {
+            return item.name.toUpperCase().indexOf(upperSearch) !== -1 || item.code.indexOf(upperSearch) !== -1;
+        });
+    }
+    if (exclude) {
+        filters.push(country => !exclude.includes(country.code));
+    }
+    if (!isNil(hasCases)) {
+        const countriesWithCases = await context.dataSource.getCountryCodesWithCases();
+        filters.push(country => countriesWithCases.includes(country.code) === hasCases);
+    }
+    const countries = (input as any[]) as ApiCountry[];
+    const filteredCountries = countries.filter(allPass(filters));
+    return paginate({ offset, count }, filteredCountries);
+}
+
+function createApiCountry(country: Country | undefined): ApiCountry {
+    return country
+        ? {
+              code: country.code,
+              name: country.name,
+              region: (undefined as any) as ApiRegion,
+              subRegion: (undefined as any) as ApiSubRegion,
+              timeline: [],
+              latest: (undefined as any) as ApiTimelineItem,
+          }
+        : ((undefined as any) as ApiCountry);
+}
+
+function createApiRegion(name: string): ApiRegion {
+    return {
+        name,
+        countries: (undefined as any) as ApiPagedCountries,
+        subRegions: [],
+        timeline: [],
+    };
+}
+
+function createApiSubRegion(name: string): ApiSubRegion {
+    return {
+        name,
+        countries: (undefined as any) as ApiPagedCountries,
+        region: (undefined as any) as ApiRegion,
+        timeline: [],
+    };
+}
+
 function applyTimeSeriesRange(
     { from, to }: { from?: Moment | null; to?: Moment | null },
     stats: readonly ApiTimelineItem[],
-): ApiTimelineItem[] {
+): readonly ApiTimelineItem[] {
+    if (isNil(from) && isNil(to)) {
+        return stats;
+    }
     let fromIndex: number = 0;
     let toIndex: number = stats.length;
     if (from) {

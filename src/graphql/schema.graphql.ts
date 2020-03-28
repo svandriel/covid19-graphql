@@ -79,7 +79,7 @@ export const typeDefs = gql`
     type Region {
         name: String!
         subRegions: [SubRegion!]!
-        countries: [Country!]!
+        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
         timeline(
             """
             Filters time line items to be on or after this date (inclusive)
@@ -96,7 +96,7 @@ export const typeDefs = gql`
     type SubRegion {
         name: String!
         region: Region!
-        countries: [Country!]!
+        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
         timeline(
             """
             Filters time line items to be on or after this date (inclusive)

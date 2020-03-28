@@ -60,12 +60,7 @@ export class DataSource {
 
     async getGlobalTimeSeriesFromCsv(): Promise<readonly ApiTimelineItem[]> {
         const stats = await this.fetchCsvBasedTimeSeries();
-
-        const start = new Date().getTime();
-        const result = stats.reduce(mergeTimeSeries).items;
-        const elapsed = new Date().getTime() - start;
-        console.log(`getCsvBasedGlobalTimeSeries: ${elapsed} ms`);
-        return result;
+        return stats.reduce(mergeTimeSeries).items;
     }
 
     /**
@@ -83,15 +78,14 @@ export class DataSource {
         return result;
     }
 
-    async getTimelineForCountryFromCsv(countryCode: string): Promise<readonly ApiTimelineItem[]> {
+    async getAggregatedTimelineFromCsv(fn: (item: TimeSeries) => boolean): Promise<readonly ApiTimelineItem[]> {
         const stats = await this.fetchCsvBasedTimeSeries();
-        // const start = new Date().getTime();
-        const statsForCountry = pluck('items', stats.filter(propEq('countryCode', countryCode)));
-        const result = statsForCountry.reduce(mergeTimeSeriesItemArray, []);
-        // const elapsed = new Date().getTime() - start;
-        // console.log(`getTimelineForCountryFromCsv ${countryCode}: ${elapsed} ms`);
+        const statsForCountry = pluck('items', stats.filter(fn));
+        return statsForCountry.reduce(mergeTimeSeriesItemArray, []);
+    }
 
-        return result;
+    async getTimelineForCountryFromCsv(countryCode: string): Promise<readonly ApiTimelineItem[]> {
+        return this.getAggregatedTimelineFromCsv(i => i.countryCode === countryCode);
     }
 
     /**
