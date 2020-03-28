@@ -15,26 +15,31 @@ export const resolvers: ApiResolvers = {
     LocalDate,
 };
 
+export interface TimeRange {
+    from?: Moment | null;
+    to?: Moment | null;
+}
+
 export function applyTimeSeriesRange(
-    { from, to }: { from?: Moment | null; to?: Moment | null },
-    stats: readonly ApiTimelineItem[],
+    { from, to }: TimeRange,
+    timeline: readonly ApiTimelineItem[],
 ): readonly ApiTimelineItem[] {
     if (isNil(from) && isNil(to)) {
-        return stats;
+        return timeline;
     }
     let fromIndex: number = 0;
-    let toIndex: number = stats.length;
+    let toIndex: number = timeline.length;
     if (from) {
-        fromIndex = stats.findIndex(i => i.date >= from);
+        fromIndex = timeline.findIndex(i => i.date >= from);
         if (fromIndex === -1) {
             fromIndex = 0;
         }
     }
     if (to) {
-        toIndex = stats.findIndex(i => i.date >= to);
+        toIndex = timeline.findIndex(i => i.date >= to);
         if (toIndex === -1) {
-            toIndex = stats.length;
+            toIndex = timeline.length;
         }
     }
-    return stats.slice(fromIndex, toIndex);
+    return timeline.slice(fromIndex, toIndex);
 }
