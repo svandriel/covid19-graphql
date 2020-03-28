@@ -1,13 +1,16 @@
 import { gql } from 'apollo-server-express';
 
 export const typeDefs = gql`
-    scalar LocalDate
+    extend type Query {
+        subRegion(name: String!): SubRegion
+        subRegions: [SubRegion!]!
+    }
 
-    type Query {
-        """
-        Aggregates all data into a single global timeline.
-        """
-        globalTimeline(
+    type SubRegion {
+        name: String!
+        region: Region!
+        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
+        timeline(
             """
             Filters time line items to be on or after this date (inclusive)
             """
@@ -17,13 +20,6 @@ export const typeDefs = gql`
             """
             to: LocalDate
         ): [TimelineItem!]!
-    }
-
-    type TimelineItem {
-        date: LocalDate!
-        confirmed: Int!
-        deceased: Int!
-        recovered: Int!
-        lastUpdated: String
+        latest: TimelineItem
     }
 `;
