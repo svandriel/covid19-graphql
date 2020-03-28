@@ -13,7 +13,7 @@ import { makeStringLookup } from '../../util/make-lookup';
 import { paginate, PaginatedList } from '../../util/paginate';
 import { Context } from '../context';
 import { createApiRegion } from '../region/region.resolvers';
-import { applyTimeSeriesRange } from '../resolvers';
+import { applyTimeSeriesRange } from '../common';
 import { createApiSubRegion } from '../subregion/subregion.resolvers';
 
 export const resolvers: ApiResolvers = {

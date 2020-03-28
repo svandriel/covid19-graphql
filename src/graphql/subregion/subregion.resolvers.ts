@@ -2,7 +2,7 @@ import { getCountryLookup } from '../../country-lookup';
 import { ApiPagedCountries, ApiRegion, ApiResolvers, ApiSubRegion } from '../../generated/graphql-backend';
 import { applyCountryFilter, createApiCountry } from '../country/country.resolvers';
 import { createApiRegion } from '../region/region.resolvers';
-import { applyTimeSeriesRange } from '../resolvers';
+import { applyTimeSeriesRange } from '../common';
 
 export const resolvers: ApiResolvers = {
     Query: {
