@@ -3,10 +3,10 @@ import moment from 'moment';
 import { last, uniq } from 'ramda';
 
 import { getCountryLookup } from './country-lookup';
-import { CsvContent, fetchCsv } from './fetch-csv';
+import { CsvContent, fetchCsv } from './csv/fetch-csv';
 import { fetchPagedEsriData } from './fetch-esri-data';
 import { mergeTimeSeriesArray } from './merging/merge-time-series-array';
-import { invalidCountries, parseCsvRow } from './parse-csv-row';
+import { invalidCountries, parseCsvRow } from './csv/parse-csv-row';
 import { EsriHistoryStat } from './types/esri';
 import { StatsType, statsTypes } from './types/stats-type';
 import { CountryStat, TimeSeries } from './types/time-series-item';

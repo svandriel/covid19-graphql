@@ -3,7 +3,7 @@ import chalk from 'chalk';
 import { groupBy, pluck, prop, uniq, uniqBy } from 'ramda';
 
 import { countryAliases, missingCountries } from './country-aliases';
-import { fetchCsv } from './fetch-csv';
+import { fetchCsv } from './csv/fetch-csv';
 
 const DOWNLOAD_URL =
     'https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv';

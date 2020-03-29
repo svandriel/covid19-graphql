@@ -1,6 +1,6 @@
-import { Country } from './country-lookup';
+import { Country } from '../country-lookup';
 import { parseCsvRow } from './parse-csv-row';
-import { StatsType } from './types/stats-type';
+import { StatsType } from '../types/stats-type';
 
 describe('Parse CSV row', () => {
     it('parses correctly', () => {
