@@ -1,16 +1,17 @@
 {
   "name": "covid19-graphql",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Provides a GraphQL API for the COVID-19 data source from Johns Hopkins university",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "bin": "dist/bin/cli.js",
   "scripts": {
     "clean": "rimraf dist src/generated",
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
     "dev": "concurrently \"npm run watch\" \"npm run start:dev\" \"npm run generate:watch\"",
-    "start": "node dist/index.js",
-    "start:dev": "nodemon -d 1 dist/index.js",
+    "start": "node dist/bin/cli.js",
+    "start:dev": "nodemon -d 1 dist/bin/cli.js",
     "prebuild": "npm run generate",
     "prewatch": "npm run generate",
     "generate": "graphql-codegen --config codegen.yml",
@@ -28,7 +29,8 @@
     "coronavirus",
     "graphql",
     "api",
-    "pandemic"
+    "pandemic",
+    "server"
   ],
   "author": "Sander van Driel <sander.vandriel@gmail.com>",
   "license": "ISC",

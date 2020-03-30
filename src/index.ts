@@ -1,31 +1,46 @@
-import chalk from 'chalk';
-import { isNil } from 'ramda';
+import { ApolloServer } from 'apollo-server-express';
+import compression from 'compression';
+import express, { Application } from 'express';
 
-import { startServer } from './server';
+import { DataSource } from './data-source';
+import { Context } from './graphql/context';
+import { schema } from './graphql/schema';
 
-const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 12000;
-const isProduction = process.env.NODE_ENV === 'production';
+export interface StartServerOptions {
+    port: number;
+    enableTracing: boolean;
+    enablePlayground: boolean;
+}
 
-const enablePlayground = isNil(process.env.ENABLE_PLAYGROUND) ? !isProduction : process.env.ENABLE_PLAYGROUND === '1';
-const enableTracing = isNil(process.env.ENABLE_TRACING) ? !isProduction : process.env.ENABLE_TRACING === '1';
+const dataSource = new DataSource();
 
-main().catch(err => {
-    console.error(err);
-    process.exit(1);
-});
-
-async function main(): Promise<void> {
-    await startServer({
-        port,
-        enableTracing,
-        enablePlayground,
+/**
+ * Starts the GraphQL Covid19 server.
+ * @param opts
+ */
+export async function startServer(opts: StartServerOptions): Promise<Application> {
+    const { port, enableTracing, enablePlayground } = opts;
+    const server = new ApolloServer({
+        context: (): Context => ({
+            dataSource,
+        }),
+        schema,
+        tracing: enableTracing,
+        playground: enablePlayground,
+        introspection: enablePlayground,
     });
-    const url = `http://localhost:${port}`;
-    console.log(`🚀 Server ready at ${chalk.cyan(url)}`);
-    if (enablePlayground) {
-        console.log(`🕹  ${chalk.cyan('Enabled playground')}`);
-    }
-    if (enableTracing) {
-        console.log(`📊 ${chalk.cyan('Enabled tracing')}`);
-    }
+
+    const app = express();
+    app.use(compression());
+
+    server.applyMiddleware({
+        app,
+        path: '/',
+    });
+
+    return new Promise<Application>(resolve => {
+        app.listen(port, () => {
+            resolve(app);
+        });
+    });
 }
