@@ -2,6 +2,14 @@
   "name": "covid19-graphql",
   "version": "0.0.1",
   "description": "Provides a GraphQL API for the COVID-19 data source from Johns Hopkins university",
+  "bugs": {
+    "url": "https://github.com/svandriel/covid19-graphql/issues"
+  },
+  "homepage": "https://github.com/svandriel/covid19-graphql#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svandriel/covid19-graphql.git"
+  },
   "main": "dist/index.js",
   "bin": "dist/bin/cli.js",
   "scripts": {
@@ -34,7 +42,7 @@
     "pandemic",
     "server"
   ],
-  "author": "Sander van Driel <sander.vandriel@gmail.com>",
+  "author": "Sander van Driel",
   "license": "MIT",
   "dependencies": {
     "apollo-server-express": "^2.10.1",
