@@ -9,9 +9,9 @@ import {
     ApiSubRegion,
     ApiTimelineItem,
 } from '../../generated/graphql-backend';
-import { makeStringLookup } from '../../util/make-lookup';
+import { includesString } from '../../util/includes-string';
 import { paginate, PaginatedList } from '../../util/paginate';
-import { applyTimeSeriesRange } from '../common';
+import { applyTimeSeriesRange } from '../common.resolvers';
 import { Context } from '../context';
 
 export const resolvers: ApiResolvers = {
@@ -75,16 +75,17 @@ async function applyCountryFilter(
         });
     }
     if (include) {
-        const includeLookup = makeStringLookup(include);
-        filters.push(country => !!includeLookup[country.code]);
+        const isIncludedCountry = includesString(include);
+        filters.push(country => isIncludedCountry(country.code));
     }
     if (exclude) {
-        const excludeLookup = makeStringLookup(exclude);
-        filters.push(country => !excludeLookup[country.code]);
+        const isExcludedCountry = includesString(exclude);
+        filters.push(country => !isExcludedCountry(country.code));
     }
     if (!isNil(hasCases)) {
         const countriesWithCases = await context.dataSource.getCountryCodesWithCases();
-        filters.push(country => countriesWithCases.includes(country.code) === hasCases);
+        const isCountryWithCases = includesString(countriesWithCases);
+        filters.push(country => isCountryWithCases(country.code));
     }
     const countries = (input as any[]) as ApiCountry[];
     const filteredCountries = countries.filter(allPass(filters));

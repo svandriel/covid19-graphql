@@ -1,19 +1,29 @@
 import { gql } from 'apollo-server-express';
 
 export const typeDefs = gql`
+    """
+    A date notation without a time or timezone.
+    Formatted as yyyy-mm-dd.
+    """
     scalar LocalDate
 
+    """
+    Root of all queries.
+    """
     type Query {
         """
         Aggregates multiple timelines into a single one.
+        Source data for timelines comes from the [2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series).
         """
         timeline(
             """
-            Filters time line items to be on or after this date (inclusive)
+            Filters time line items to be on or after this date (inclusive).
+            Format: yyyy-mm-dd
             """
             from: LocalDate
             """
             Filters time line items to be before this date (exclusive)
+            Format: yyyy-mm-dd
             """
             to: LocalDate
             """
@@ -25,11 +35,11 @@ export const typeDefs = gql`
             """
             excludeRegions: [String!]
             """
-            Determines which sub-regions to include (default: all)
+            Determines which subregions to include (default: all)
             """
             subRegions: [String!]
             """
-            Determines which sub-regions to exclude (default: none)
+            Determines which subregions to exclude (default: none)
             """
             excludeSubRegions: [String!]
             """
@@ -43,22 +53,29 @@ export const typeDefs = gql`
         ): [TimelineItem!]!
     }
 
+    """
+    A single point in a timeline.
+    """
     type TimelineItem {
         date: LocalDate!
+        """
+        Number of confirmed cases.
+        """
         confirmed: Int!
+        """
+        Number of deceased cases.
+        """
         deceased: Int!
+        """
+        Number of recovered cases.
+        Please note that this will soon be unavailable:
+        [notes](https://github.com/CSSEGISandData/COVID-19/issues/1250)
+        """
         recovered: Int!
+        """
+        Date and time of last update (in ISO 8601 format).
+        Present only for latest stats, not for historic timelines.
+        """
         lastUpdated: String
-    }
-
-    input IncludeExclude {
-        """
-        List of items to include (default: all)
-        """
-        include: [String!]
-        """
-        List of items to exclude (default: none)
-        """
-        exclude: [String!]
     }
 `;

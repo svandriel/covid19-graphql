@@ -1,9 +1,7 @@
-import { pluck } from 'ramda';
-
-import { getCountryLookup } from '../../country-lookup';
-import { ApiPagedCountries, ApiRegion, ApiResolvers } from '../../generated/graphql-backend';
-import { makeStringLookup } from '../../util/make-lookup';
-import { applyTimeSeriesRange } from '../common';
+import { getCountryLookup } from '../country-lookup';
+import { ApiPagedCountries, ApiRegion, ApiResolvers } from '../generated/graphql-backend';
+import { applyTimeSeriesRange } from './common.resolvers';
+import { createRegionFilter } from './filters';
 
 export const resolvers: ApiResolvers = {
     Query: {
@@ -32,10 +30,8 @@ export const resolvers: ApiResolvers = {
     Region: {
         timeline: async (region, { from, to }, context) => {
             const lookup = await getCountryLookup();
-            const countries = lookup.countriesPerRegion[region.name];
-            const countryCodeLookup = makeStringLookup(pluck('code', countries));
             const stats = await context.dataSource.getAggregatedTimelineFromCsv(
-                item => !!countryCodeLookup[item.countryCode],
+                createRegionFilter(lookup, [region.name]),
             );
             return applyTimeSeriesRange({ from, to }, stats);
         },

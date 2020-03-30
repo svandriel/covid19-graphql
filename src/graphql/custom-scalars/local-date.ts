@@ -5,7 +5,7 @@ import { DATE_FORMAT_REVERSE } from '../../util/date-formats';
 
 export const LocalDate = new GraphQLScalarType({
     name: 'LocalDate',
-    description: 'A date without time or time zone. Will be serialized as a string.',
+    description: 'A date without time or time zone. Serialized as a string in yyyy-mm-dd notation.',
     parseValue(value: string): Moment {
         const date = moment(value, DATE_FORMAT_REVERSE, true);
         if (!date.isValid()) {
