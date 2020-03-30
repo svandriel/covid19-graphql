@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "bin": "dist/bin/cli.js",
   "scripts": {
-    "clean": "rimraf dist src/generated",
     "build": "tsc",
+    "clean": "rimraf dist src/generated",
     "watch": "tsc -w",
     "test": "jest",
     "dev": "concurrently \"npm run watch\" \"npm run start:dev\" \"npm run generate:watch\"",
