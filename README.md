@@ -35,7 +35,7 @@ Following are some example GraphQL queries:
 
 ### Global timeline since March 2020, excluding China
 
-```
+```graphql
 {
   timeline(
     excludeCountries: "CN",
@@ -51,7 +51,7 @@ Following are some example GraphQL queries:
 
 ### Latest statistics for each country in Southern Europe:
 
-```
+```graphql
 {
   subRegion(name: "Southern Europe") {
     countries(count: 20) {
@@ -74,7 +74,7 @@ Following are some example GraphQL queries:
 
 ### List all countries with confirmed cases, by region and subregion
 
-```
+```graphql
 {
   regions {
     name
