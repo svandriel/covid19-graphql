@@ -1,9 +1,9 @@
 import { allPass, propEq } from 'ramda';
 
-import { TimeSeries } from '../types/time-series-item';
+import { Timeline } from '../types/timeline';
 import { mergeTimeSeries } from './merge-time-series';
 
-export function mergeTimeSeriesArray(a: readonly TimeSeries[], b: readonly TimeSeries[]): readonly TimeSeries[] {
+export function mergeTimeSeriesArray(a: readonly Timeline[], b: readonly Timeline[]): readonly Timeline[] {
     // Find all in series A *not* found in series B
     const onlyInA = a.filter(aSeries => {
         const bSeries = b.find(allPass([propEq('countryCode', aSeries.countryCode), propEq('state', aSeries.state)]));

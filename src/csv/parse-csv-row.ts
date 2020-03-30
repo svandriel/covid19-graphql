@@ -3,14 +3,14 @@ import moment from 'moment';
 import { Country } from '../country-lookup';
 import { ApiTimelineItem } from '../generated/graphql-backend';
 import { StatsType } from '../types/stats-type';
-import { TimeSeries } from '../types/time-series-item';
+import { Timeline } from '../types/timeline';
 import { DATE_FORMAT_CSV } from '../util/date-formats';
 
 export function parseCsvRow(
     lookupByName: Record<string, Country>,
     type: StatsType,
     row: Record<string, string>,
-): TimeSeries {
+): Timeline {
     const countryName = row['Country/Region'];
     const state = row['Province/State'];
     const country = lookupByName[countryName];

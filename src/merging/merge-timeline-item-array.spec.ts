@@ -1,12 +1,12 @@
 import moment from 'moment';
 
 import { DATE_FORMAT_REVERSE } from '../util/date-formats';
-import { mergeTimeSeriesItemArray } from './merge-time-series-item-array';
+import { mergeTimelineItemArray } from './merge-timeline-item-array';
 
 describe('merge time series item array', () => {
     it('merges arrays of same length', () => {
         expect(
-            mergeTimeSeriesItemArray(
+            mergeTimelineItemArray(
                 [
                     {
                         date: moment('2020-03-01', DATE_FORMAT_REVERSE),
@@ -54,7 +54,7 @@ describe('merge time series item array', () => {
 
     it('merges arrays of unequal length (first is longer)', () => {
         expect(
-            mergeTimeSeriesItemArray(
+            mergeTimelineItemArray(
                 [
                     {
                         date: moment('2020-03-01', DATE_FORMAT_REVERSE),
@@ -96,7 +96,7 @@ describe('merge time series item array', () => {
 
     it('merges arrays of unequal length (second is longer)', () => {
         expect(
-            mergeTimeSeriesItemArray(
+            mergeTimelineItemArray(
                 [
                     {
                         date: moment('2020-03-01', DATE_FORMAT_REVERSE),

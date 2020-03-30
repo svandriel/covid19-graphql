@@ -8,6 +8,12 @@ const TIMESERIES_RECOVERED_URL = `${TIMESERIES_BASE_URL}/time_series_covid19_rec
 
 export const DAILY_STATS_BASE_URL = `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports`;
 
+export const ESRI_CASES_URL =
+    'https://services9.arcgis.com/N9p5hsImWXAccRNI/arcgis/rest/services/Nc2JKvYFoAEOFCG5JSI6/FeatureServer/2/query';
+
+export const ESRI_TIMELINE_URL =
+    'https://services9.arcgis.com/N9p5hsImWXAccRNI/arcgis/rest/services/Nc2JKvYFoAEOFCG5JSI6/FeatureServer/4/query';
+
 export const statUrls: Record<StatsType, string> = {
     [StatsType.Confirmed]: TIMESERIES_CONFIRMED_URL,
     [StatsType.Deceased]: TIMESERIES_DEATHS_URL,

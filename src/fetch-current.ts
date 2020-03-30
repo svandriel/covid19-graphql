@@ -2,18 +2,16 @@ import chalk from 'chalk';
 import moment from 'moment';
 
 import { getCountryLookup } from './country-lookup';
-import { fetchEsriData } from './fetch-esri-data';
+import { fetchEsriData } from './esri/fetch-esri-data';
+import { CountryStat } from './types/country-stat';
 import { EsriCurrentStat } from './types/esri';
-import { CountryStat } from './types/time-series-item';
+import { ESRI_CASES_URL } from './urls';
 import { compact } from './util/compact';
-
-const CASES_URL =
-    'https://services9.arcgis.com/N9p5hsImWXAccRNI/arcgis/rest/services/Nc2JKvYFoAEOFCG5JSI6/FeatureServer/2/query';
 
 export async function fetchCurrent(): Promise<readonly CountryStat[]> {
     const lookupPromise = getCountryLookup();
 
-    const json = await fetchEsriData<EsriCurrentStat>(CASES_URL, {
+    const json = await fetchEsriData<EsriCurrentStat>(ESRI_CASES_URL, {
         offset: 0,
         count: 1000,
         orderBy: {

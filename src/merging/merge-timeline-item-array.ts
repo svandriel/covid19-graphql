@@ -1,7 +1,7 @@
 import { ApiTimelineItem } from '../generated/graphql-backend';
-import { mergeTimeSeriesItem } from './merge-time-series-item';
+import { mergeTimelineItem } from './merge-timeline-item';
 
-export function mergeTimeSeriesItemArray(
+export function mergeTimelineItemArray(
     a: readonly ApiTimelineItem[],
     b: readonly ApiTimelineItem[],
 ): ApiTimelineItem[] {
@@ -28,7 +28,7 @@ export function mergeTimeSeriesItemArray(
                   }
                 : b[i];
 
-        const merged = aItem && bItem ? mergeTimeSeriesItem(aItem, bItem) : aItem || bItem;
+        const merged = aItem && bItem ? mergeTimelineItem(aItem, bItem) : aItem || bItem;
         result.push(merged);
 
         lastA = aItem;

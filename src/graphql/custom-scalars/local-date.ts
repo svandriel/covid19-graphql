@@ -14,11 +14,15 @@ export const LocalDate = new GraphQLScalarType({
         return date;
     },
     serialize(value: Moment): string {
-        return value.format(DATE_FORMAT_REVERSE);
+        if (value.isValid()) {
+            return value.format(DATE_FORMAT_REVERSE);
+        } else {
+            throw new Error(`Invalid date, cannot serialize`);
+        }
     },
     parseLiteral(ast: ValueNode): Moment | undefined {
         if (ast.kind !== Kind.STRING) {
-            return undefined;
+            throw new Error('Expected a String type for LocalDate scalar type');
         }
         const date = moment(ast.value, DATE_FORMAT_REVERSE, true);
         if (!date.isValid()) {

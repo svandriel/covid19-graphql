@@ -2,12 +2,13 @@ import { cachifyPromise } from 'cachify-promise';
 import { groupBy, pluck, propEq } from 'ramda';
 
 import { fetchCurrent } from './fetch-current';
-import { fetchBetterTimeSeries, fetchCsvBasedTimeSeries } from './fetch-time-series';
+import { fetchTimeSeries, fetchCsvBasedTimeSeries } from './fetch-time-series';
 import { ApiTimelineItem } from './generated/graphql-backend';
 import { mergeCountryStats } from './merging/merge-country-stats';
 import { mergeTimeSeries } from './merging/merge-time-series';
-import { mergeTimeSeriesItemArray } from './merging/merge-time-series-item-array';
-import { CountryStat, TimeSeries } from './types/time-series-item';
+import { mergeTimelineItemArray } from './merging/merge-timeline-item-array';
+import { CountryStat } from './types/country-stat';
+import { Timeline } from './types/timeline';
 import { DATE_FORMAT_REVERSE } from './util/date-formats';
 
 const ONE_MINUTE = 60 * 1000;
@@ -17,7 +18,7 @@ const DEBUG: boolean = false;
 
 export class DataSource {
     private fetchCurrent: () => Promise<readonly CountryStat[]>;
-    private fetchCsvBasedTimeSeries: () => Promise<readonly TimeSeries[]>;
+    private fetchCsvBasedTimeSeries: () => Promise<readonly Timeline[]>;
     private fetchTimeSeries: () => Promise<readonly CountryStat[]>;
 
     constructor() {
@@ -31,7 +32,7 @@ export class DataSource {
             staleWhileRevalidate: STALE_WHILE_REVALIDATE,
             debug: DEBUG,
         });
-        this.fetchTimeSeries = cachifyPromise(fetchBetterTimeSeries, {
+        this.fetchTimeSeries = cachifyPromise(fetchTimeSeries, {
             ttl: ONE_HOUR,
             staleWhileRevalidate: STALE_WHILE_REVALIDATE,
             debug: DEBUG,
@@ -78,10 +79,10 @@ export class DataSource {
         return result;
     }
 
-    async getAggregatedTimelineFromCsv(fn: (item: TimeSeries) => boolean): Promise<readonly ApiTimelineItem[]> {
+    async getAggregatedTimelineFromCsv(fn: (item: Timeline) => boolean): Promise<readonly ApiTimelineItem[]> {
         const stats = await this.fetchCsvBasedTimeSeries();
         const statsForCountry = pluck('items', stats.filter(fn));
-        return statsForCountry.reduce(mergeTimeSeriesItemArray, []);
+        return statsForCountry.reduce(mergeTimelineItemArray, []);
     }
 
     async getTimelineForCountryFromCsv(countryCode: string): Promise<readonly ApiTimelineItem[]> {

@@ -9,7 +9,17 @@ export function timed<T>(fn: (...args: any[]) => T): (...args: any[]) => T {
         const start = new Date().getTime();
         const result = fn(...args);
         const elapsed = new Date().getTime() - start;
-        console.log(`${fn.name || '<fn>'}: ${elapsed} ms`, result);
+        if (result instanceof Promise) {
+            result
+                .catch(() => {
+                    /* no-op */
+                })
+                .then(() => {
+                    console.log(`${fn.name || '<fn>'}: [promise] ${elapsed} ms`, result);
+                });
+        } else {
+            console.log(`${fn.name || '<fn>'}: ${elapsed} ms`, result);
+        }
         return result;
     };
 }

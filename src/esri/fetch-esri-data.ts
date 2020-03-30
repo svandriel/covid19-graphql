@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import fetch from 'node-fetch';
 import querystring from 'querystring';
 
-import { EsriQuery, EsriResponse } from './types/esri';
+import { EsriQuery, EsriResponse } from '../types/esri';
 
 export async function fetchPagedEsriData<T>(url: string, query: EsriQuery): Promise<readonly T[]> {
     let done = false;

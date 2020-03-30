@@ -1,10 +1,10 @@
-import { TimeSeries } from '../types/time-series-item';
-import { mergeTimeSeriesItemArray } from './merge-time-series-item-array';
+import { Timeline } from '../types/timeline';
+import { mergeTimelineItemArray } from './merge-timeline-item-array';
 
-export function mergeTimeSeries(a: TimeSeries, b: TimeSeries): TimeSeries {
+export function mergeTimeSeries(a: Timeline, b: Timeline): Timeline {
     return {
         countryCode: a.countryCode,
         state: a.state,
-        items: mergeTimeSeriesItemArray(a.items, b.items),
+        items: mergeTimelineItemArray(a.items, b.items),
     };
 }

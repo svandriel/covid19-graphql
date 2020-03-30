@@ -1,5 +1,5 @@
 import { ApiTimelineItem } from '../generated/graphql-backend';
-import { CountryStat } from '../types/time-series-item';
+import { CountryStat } from '../types/country-stat';
 
 export function mergeCountryStats(acc: ApiTimelineItem | undefined, stat: CountryStat): ApiTimelineItem {
     if (acc) {

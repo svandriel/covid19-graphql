@@ -3,7 +3,7 @@ import { allPass, complement, isNil, uniq } from 'ramda';
 
 import { getCountryLookup } from '../country-lookup';
 import { ApiResolvers, ApiTimelineItem } from '../generated/graphql-backend';
-import { TimeSeries } from '../types/time-series-item';
+import { Timeline } from '../types/timeline';
 import { LocalDate } from './custom-scalars/local-date';
 import { createCountryFilter, createRegionFilter, createSubRegionFilter } from './filters';
 
@@ -22,7 +22,7 @@ export const resolvers: ApiResolvers = {
                 excludeCountries,
             } = args;
 
-            const filters: Array<(item: TimeSeries) => boolean> = [];
+            const filters: Array<(item: Timeline) => boolean> = [];
             if (regions) {
                 filters.push(createRegionFilter(lookup, regions));
             }
