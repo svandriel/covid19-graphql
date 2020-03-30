@@ -1,6 +1,6 @@
 {
   "name": "covid19-graphql",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Provides a GraphQL API for the COVID-19 data source from Johns Hopkins university",
   "bugs": {
     "url": "https://github.com/svandriel/covid19-graphql/issues"
