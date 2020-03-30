@@ -4,6 +4,7 @@ import { getCountryLookup } from '../country-lookup';
 import { ApiResolvers, ApiTimelineItem } from '../generated/graphql-backend';
 import { mergeCountryStats } from '../merging/merge-country-stats';
 import { TimeRange } from '../types/time-range';
+import { today } from '../util/timeline-item-utils';
 import { countryPredicate } from './country-predicate';
 import { LocalDate } from './custom-scalars/local-date';
 
@@ -21,7 +22,7 @@ export const resolvers: ApiResolvers = {
             const current = await context.dataSource.getCurrent();
             const predicate = countryPredicate(await lookupPromise, args);
             const filtered = current.filter(stat => predicate(stat.countryCode));
-            return filtered.reduce(mergeCountryStats, undefined as ApiTimelineItem | undefined) as ApiTimelineItem;
+            return filtered.reduce(mergeCountryStats, today());
         },
     },
 
