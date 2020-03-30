@@ -3,7 +3,7 @@ import { gql } from 'apollo-server-express';
 export const typeDefs = gql`
     extend type Query {
         """
-        Gets a region by its code.
+        Gets a region by its name.
         Using a Region object, you can obtain its aggregated timeline or current statistics.
         """
         region(name: String!): Region

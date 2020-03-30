@@ -1,9 +1,9 @@
-node_modules
-*.log
-dist
-.api-key
 .cache
-coverage
 .DS_Store
+*.log
+coverage
+coverage
+dist
+node_modules
 src/generated
 tmp

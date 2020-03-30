@@ -3,7 +3,7 @@ import { gql } from 'apollo-server-express';
 export const typeDefs = gql`
     extend type Query {
         """
-        Gets a subregion by its code.
+        Gets a subregion by its name.
         Using a SubRegion object, you can obtain its aggregated timeline or current statistics.
         """
         subRegion(name: String!): SubRegion

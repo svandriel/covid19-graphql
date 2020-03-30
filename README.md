@@ -1,20 +1,22 @@
 # COVID-19 GraphQL API
 
-Live API: [covid19-graphql.herokuapp.com](https://covid19-graphql.herokuapp.com/) (playground)
+> API Endpoint: [covid19-graphql.herokuapp.com](https://covid19-graphql.herokuapp.com/)
 
 Provides a GraphQL API for the [COVID-19 data source](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data) from Johns Hopkins university.
 
 ## Features
 
-- Provides current statistics per country, subregion and region
+- Provides current, up-to-date statistics per country, subregion and region.
 - Provides timelines per country, subregion and region
-- Lightning fast
+- Lightning fast due to smart caching and aggregation
 - Easy to run locally:
   ```
   npx covid19-graphql
   ```
 
-## Examples
+## Example GraphQL queries
+
+Following are some example GraphQL queries:
 
 ### Latest statistics
 
@@ -90,7 +92,7 @@ Provides a GraphQL API for the [COVID-19 data source](https://github.com/CSSEGIS
 
 [Execute this query &raquo;](<https://covid19-graphql.herokuapp.com/?query=%7B%0A%20%20regions%20%7B%0A%20%20%20%20name%0A%20%20%20%20subRegions%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20countries(count%3A%20100%2C%20filter%3A%20%7B%20hasCases%3A%20true%20%7D)%20%7B%0A%20%20%20%20%20%20%20%20results%20%7B%0A%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-# Running it locally
+## Running it yourself
 
 In order to be in control of your own API endpoint instead of relying on someone else's, you can spin up a COVID19 GraphQL server locally with `npx`:
 
@@ -104,13 +106,13 @@ Or install it globally:
 npm install -g covid19-graphql
 ```
 
-Then you can run by entering:
+Then you can start the GraphQL server by entering:
 
 ```
 covid19-graphql
 ```
 
-## Environment variables
+### Environment variables
 
 The following environment variables affect the configuration of the server:
 
@@ -124,3 +126,13 @@ Example:
 ```
 PORT=8080 covid19-graphql
 ```
+
+## Development
+
+After cloning this repo, enter `npm install` to install the dependencies (btw Node >= 10 is required).
+
+The following commands are most useful:
+
+- `npm run dev`: Starts a development server
+- `npm run build`: Creates a build
+- `npm start`: Starts the server

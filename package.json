@@ -12,6 +12,7 @@
     "dev": "concurrently \"npm run watch\" \"npm run start:dev\" \"npm run generate:watch\"",
     "start": "node dist/bin/cli.js",
     "start:dev": "nodemon -d 1 dist/bin/cli.js",
+    "verify": "npm run test && npm run lint && npm run clean && npm run build",
     "prebuild": "npm run generate",
     "prewatch": "npm run generate",
     "generate": "graphql-codegen --config codegen.yml",
@@ -21,7 +22,8 @@
     "lint:prettier": "prettier \"src/**/*.{ts,graphql,json}\" --check",
     "lint:prettier:fix": "prettier \"src/**/*.{ts,graphql,json}\" --write",
     "lint:tslint": "tslint -p . -t stylish",
-    "lint:tslint:fix": "tslint -p . -t stylish --fix"
+    "lint:tslint:fix": "tslint -p . -t stylish --fix",
+    "version": "npm run verify"
   },
   "keywords": [
     "covid19",
@@ -33,7 +35,7 @@
     "server"
   ],
   "author": "Sander van Driel <sander.vandriel@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "apollo-server-express": "^2.10.1",
     "cachify-promise": "^0.2.2",
@@ -70,7 +72,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run build && npm run test"
+      "pre-push": "npm run verify"
     }
   },
   "lint-staged": {

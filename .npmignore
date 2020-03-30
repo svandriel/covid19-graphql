@@ -1,0 +1,16 @@
+.editorconfig
+.prettierignore
+.prettierrc.yaml
+*.log
+*.spec.d.ts
+*.spec.js
+*.spec.js.map
+codegen.yml
+coverage
+jest.config.js
+node_modules
+src
+testdata
+tmp
+tsconfig.json
+tslint.json
