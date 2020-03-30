@@ -18,8 +18,6 @@ Provides a GraphQL API for the [COVID-19 data source](https://github.com/CSSEGIS
 
 ### Latest statistics
 
-[Execute this query &raquo;](https://covid19-graphql.herokuapp.com/?query=%7B%0A%20%20latest%20%7B%0A%20%20%20%20confirmed%0A%20%20%20%20deceased%0A%20%20%20%20recovered%0A%20%20%20%20lastUpdated%0A%20%20%7D%0A%7D)
-
 ```graphql
 {
   latest {
@@ -31,11 +29,16 @@ Provides a GraphQL API for the [COVID-19 data source](https://github.com/CSSEGIS
 }
 ```
 
+[Execute this query &raquo;](https://covid19-graphql.herokuapp.com/?query=%7B%0A%20%20latest%20%7B%0A%20%20%20%20confirmed%0A%20%20%20%20deceased%0A%20%20%20%20recovered%0A%20%20%20%20lastUpdated%0A%20%20%7D%0A%7D)
+
 ### Global timeline since March 2020, excluding China
 
 ```
 {
-  timeline(excludeCountries: "CN", from: "2020-03-01") {
+  timeline(
+    excludeCountries: "CN",
+    from: "2020-03-01"
+  ) {
     date
     confirmed
   }
@@ -89,7 +92,7 @@ Provides a GraphQL API for the [COVID-19 data source](https://github.com/CSSEGIS
 
 # Running it locally
 
-In order to be in control of your own API endpoint instead of relying on someone else's, you can spin up a COVID19 GraphQL server locally with:
+In order to be in control of your own API endpoint instead of relying on someone else's, you can spin up a COVID19 GraphQL server locally with `npx`:
 
 ```
 npx covid19-graphql
@@ -105,4 +108,19 @@ Then you can run by entering:
 
 ```
 covid19-graphql
+```
+
+## Environment variables
+
+The following environment variables affect the configuration of the server:
+
+- `NODE_ENV`: When set to `production`, will enable tracing, playground and various other debugging settings.
+- `PORT`: Determines the HTTP port on which the server will run (defaults to port 12000)
+- `ENABLE_TRACING`: Overrides the default GraphQL tracing setting (on for development, off for production). Use `1` to turn on `0` to turn off.
+- `ENABLE_PLAYGROUND`: Overrides the default GraphQL playground flag (on for development, off for production). Use `1` to turn on `0` to turn off.
+
+Example:
+
+```
+PORT=8080 covid19-graphql
 ```
