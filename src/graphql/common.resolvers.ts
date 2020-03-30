@@ -3,6 +3,7 @@ import { allPass, complement, isNil, uniq } from 'ramda';
 
 import { getCountryLookup } from '../country-lookup';
 import { ApiResolvers, ApiTimelineItem } from '../generated/graphql-backend';
+import { mergeCountryStats } from '../merging/merge-country-stats';
 import { Timeline } from '../types/timeline';
 import { LocalDate } from './custom-scalars/local-date';
 import { createCountryFilter, createRegionFilter, createSubRegionFilter } from './filters';
@@ -43,6 +44,10 @@ export const resolvers: ApiResolvers = {
             }
             const stats = await context.dataSource.getAggregatedTimelineFromCsv(allPass(filters));
             return applyTimeSeriesRange({ from, to } || {}, stats);
+        },
+        latest: async (_query, args, context) => {
+            const current = await context.dataSource.getCurrent();
+            return current.reduce(mergeCountryStats, undefined as ApiTimelineItem | undefined) as ApiTimelineItem;
         },
     },
 

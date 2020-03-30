@@ -8,6 +8,7 @@ export function mergeCountryStats(acc: ApiTimelineItem | undefined, stat: Countr
             deceased: stat.deceased + acc.deceased,
             recovered: stat.recovered + acc.recovered,
             date: stat.lastUpdated,
+            lastUpdated: stat.lastUpdated?.toISOString() || acc.lastUpdated,
         } as ApiTimelineItem;
     } else {
         return {
@@ -15,6 +16,7 @@ export function mergeCountryStats(acc: ApiTimelineItem | undefined, stat: Countr
             deceased: stat.deceased,
             recovered: stat.recovered,
             date: stat.lastUpdated,
+            lastUpdated: stat.lastUpdated?.toISOString(),
         };
     }
 }
