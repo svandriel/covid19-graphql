@@ -1,7 +1,7 @@
 import { getCountryLookup } from '../../country-lookup';
 import { ApiPagedCountries, ApiRegion, ApiResolvers, ApiSubRegion } from '../../generated/graphql-backend';
-import { applyTimeSeriesRange } from '../common.resolvers';
-import { createSubRegionFilter } from '../filters';
+import { applyTimelineRange } from '../common.resolvers';
+import { countryPredicate } from '../country-predicate';
 
 export const resolvers: ApiResolvers = {
     Query: {
@@ -22,10 +22,11 @@ export const resolvers: ApiResolvers = {
     SubRegion: {
         timeline: async (subRegion, { from, to }, context) => {
             const lookup = await getCountryLookup();
-            const stats = await context.dataSource.getAggregatedTimelineFromCsv(
-                createSubRegionFilter(lookup, [subRegion.name]),
-            );
-            return applyTimeSeriesRange({ from, to }, stats);
+            const predicate = countryPredicate(lookup, {
+                subRegions: [subRegion.name],
+            });
+            const stats = await context.dataSource.getAggregatedTimelineFromCsv(predicate);
+            return applyTimelineRange({ from, to }, stats);
         },
     },
 

@@ -11,7 +11,7 @@ import {
 } from '../../generated/graphql-backend';
 import { includesString } from '../../util/includes-string';
 import { paginate, PaginatedList } from '../../util/paginate';
-import { applyTimeSeriesRange } from '../common.resolvers';
+import { applyTimelineRange } from '../common.resolvers';
 import { Context } from '../context';
 
 export const resolvers: ApiResolvers = {
@@ -30,7 +30,7 @@ export const resolvers: ApiResolvers = {
     Country: {
         timeline: async (country, { from, to }, context) => {
             const stats = await context.dataSource.getTimelineForCountryFromCsv(country.code);
-            return applyTimeSeriesRange({ from, to }, stats);
+            return applyTimelineRange({ from, to }, stats);
         },
         latest: async (country, _args, context) => {
             return context.dataSource.getCurrentForCountry(country.code) as Promise<ApiTimelineItem>;

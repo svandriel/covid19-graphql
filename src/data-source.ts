@@ -1,8 +1,8 @@
 import { cachifyPromise } from 'cachify-promise';
 import { groupBy, pluck, propEq } from 'ramda';
 
-import { fetchCurrent } from './fetch-current';
-import { fetchTimeSeries, fetchCsvBasedTimeSeries } from './fetch-time-series';
+import { fetchCurrent } from './fetching/fetch-current';
+import { fetchCsvBasedTimeline, fetchTimeSeries } from './fetching/fetch-timeline';
 import { ApiTimelineItem } from './generated/graphql-backend';
 import { mergeCountryStats } from './merging/merge-country-stats';
 import { mergeTimeSeries } from './merging/merge-time-series';
@@ -27,7 +27,7 @@ export class DataSource {
             staleWhileRevalidate: STALE_WHILE_REVALIDATE,
             debug: DEBUG,
         });
-        this.fetchCsvBasedTimeSeries = cachifyPromise(fetchCsvBasedTimeSeries, {
+        this.fetchCsvBasedTimeSeries = cachifyPromise(fetchCsvBasedTimeline, {
             ttl: ONE_HOUR,
             staleWhileRevalidate: STALE_WHILE_REVALIDATE,
             debug: DEBUG,
@@ -79,14 +79,17 @@ export class DataSource {
         return result;
     }
 
-    async getAggregatedTimelineFromCsv(fn: (item: Timeline) => boolean): Promise<readonly ApiTimelineItem[]> {
+    async getAggregatedTimelineFromCsv(fn: (countryCode: string) => boolean): Promise<readonly ApiTimelineItem[]> {
         const stats = await this.fetchCsvBasedTimeSeries();
-        const statsForCountry = pluck('items', stats.filter(fn));
+        const statsForCountry = pluck(
+            'items',
+            stats.filter(item => fn(item.countryCode)),
+        );
         return statsForCountry.reduce(mergeTimelineItemArray, []);
     }
 
     async getTimelineForCountryFromCsv(countryCode: string): Promise<readonly ApiTimelineItem[]> {
-        return this.getAggregatedTimelineFromCsv(i => i.countryCode === countryCode);
+        return this.getAggregatedTimelineFromCsv(cc => cc === countryCode);
     }
 
     /**

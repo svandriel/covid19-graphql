@@ -1,12 +1,12 @@
 import chalk from 'chalk';
 import moment from 'moment';
 
-import { getCountryLookup } from './country-lookup';
-import { fetchEsriData } from './esri/fetch-esri-data';
-import { CountryStat } from './types/country-stat';
-import { EsriCurrentStat } from './types/esri';
-import { ESRI_CASES_URL } from './urls';
-import { compact } from './util/compact';
+import { getCountryLookup } from '../country-lookup';
+import { fetchEsriData } from '../esri/fetch-esri-data';
+import { CountryStat } from '../types/country-stat';
+import { EsriCurrentStat } from '../types/esri';
+import { ESRI_CASES_URL } from '../urls';
+import { compact } from '../util/compact';
 
 export async function fetchCurrent(): Promise<readonly CountryStat[]> {
     const lookupPromise = getCountryLookup();

@@ -2,19 +2,19 @@ import chalk from 'chalk';
 import moment from 'moment';
 import { uniq } from 'ramda';
 
-import { getCountryLookup } from './country-lookup';
-import { fetchCsv } from './csv/fetch-csv';
-import { invalidCountries, parseCsvRow } from './csv/parse-csv-row';
-import { fetchPagedEsriData } from './esri/fetch-esri-data';
-import { mergeTimeSeriesArray } from './merging/merge-time-series-array';
-import { CountryStat } from './types/country-stat';
-import { EsriHistoryStat } from './types/esri';
-import { statsTypes } from './types/stats-type';
-import { Timeline } from './types/timeline';
-import { ESRI_TIMELINE_URL, statUrls } from './urls';
-import { compact } from './util/compact';
+import { getCountryLookup } from '../country-lookup';
+import { fetchCsv } from '../csv/fetch-csv';
+import { invalidCountries, parseCsvRow } from '../csv/parse-csv-row';
+import { fetchPagedEsriData } from '../esri/fetch-esri-data';
+import { mergeTimeSeriesArray } from '../merging/merge-time-series-array';
+import { CountryStat } from '../types/country-stat';
+import { EsriHistoryStat } from '../types/esri';
+import { statsTypes } from '../types/stats-type';
+import { Timeline } from '../types/timeline';
+import { ESRI_TIMELINE_URL, statUrls } from '../urls';
+import { compact } from '../util/compact';
 
-export async function fetchCsvBasedTimeSeries(): Promise<readonly Timeline[]> {
+export async function fetchCsvBasedTimeline(): Promise<readonly Timeline[]> {
     const lookup = await getCountryLookup();
     const results: ReadonlyArray<ReadonlyArray<Timeline>> = await Promise.all(
         statsTypes.map(async type => {

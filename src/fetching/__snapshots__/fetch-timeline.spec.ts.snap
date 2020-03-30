@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fetchCovidStats works!! 1`] = `
+exports[`fetchCsvBasedTimeSeries works 1`] = `
 Array [
   Object {
     "countryCode": "TH",

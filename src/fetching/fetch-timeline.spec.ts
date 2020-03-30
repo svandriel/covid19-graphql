@@ -1,11 +1,11 @@
 import nock from 'nock';
 import path from 'path';
 
-import { fetchCsvBasedTimeSeries } from './fetch-time-series';
+import { fetchCsvBasedTimeline } from './fetch-timeline';
 
-const TESTDATA_DIR = path.resolve(__dirname, '..', 'testdata');
+const TESTDATA_DIR = path.resolve(__dirname, '..', '..', 'testdata');
 
-describe('fetchCovidStats', () => {
+describe('fetchCsvBasedTimeSeries', () => {
     beforeEach(() => {
         nock(
             'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series',
@@ -24,9 +24,9 @@ describe('fetchCovidStats', () => {
             .replyWithFile(200, path.join(TESTDATA_DIR, 'all.csv'));
     });
 
-    it('works!!', async () => {
+    it('works', async () => {
         try {
-            const result = await fetchCsvBasedTimeSeries();
+            const result = await fetchCsvBasedTimeline();
             expect(result).toMatchSnapshot();
         } catch (err) {
             fail(err);

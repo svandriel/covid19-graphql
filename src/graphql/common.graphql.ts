@@ -62,7 +62,8 @@ export const typeDefs = gql`
         Takes all country stats by default, but the query can be customized to
         include or exclude regions, subregions and countries.
 
-        Source data for timelines comes from the [Coronavirus COVID-19 Global Cases ops dashboard](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6).
+        Source data for latest statistics comes from the
+        [Coronavirus COVID-19 Global Cases ops dashboard](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6).
         """
         latest(
             """
@@ -108,7 +109,7 @@ export const typeDefs = gql`
         """
         Number of recovered cases.
         Please note that this will soon be unavailable:
-        [notes](https://github.com/CSSEGISandData/COVID-19/issues/1250)
+        [Upcoming changes in time series tables #1250](https://github.com/CSSEGISandData/COVID-19/issues/1250)
         """
         recovered: Int!
         """

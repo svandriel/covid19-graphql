@@ -1,65 +1,34 @@
-import { Moment } from 'moment';
-import { allPass, complement, isNil, uniq } from 'ramda';
+import { isNil } from 'ramda';
 
 import { getCountryLookup } from '../country-lookup';
 import { ApiResolvers, ApiTimelineItem } from '../generated/graphql-backend';
 import { mergeCountryStats } from '../merging/merge-country-stats';
-import { Timeline } from '../types/timeline';
+import { TimeRange } from '../types/time-range';
+import { countryPredicate } from './country-predicate';
 import { LocalDate } from './custom-scalars/local-date';
-import { createCountryFilter, createRegionFilter, createSubRegionFilter } from './filters';
 
 export const resolvers: ApiResolvers = {
     Query: {
         timeline: async (_query, args, context) => {
             const lookup = await getCountryLookup();
-            const {
-                from,
-                to,
-                regions,
-                excludeRegions,
-                subRegions,
-                excludeSubRegions,
-                countries,
-                excludeCountries,
-            } = args;
-
-            const filters: Array<(item: Timeline) => boolean> = [];
-            if (regions) {
-                filters.push(createRegionFilter(lookup, regions));
-            }
-            if (excludeRegions) {
-                filters.push(complement(createRegionFilter(lookup, excludeRegions)));
-            }
-            if (subRegions) {
-                filters.push(createSubRegionFilter(lookup, subRegions));
-            }
-            if (excludeSubRegions) {
-                filters.push(complement(createSubRegionFilter(lookup, excludeSubRegions)));
-            }
-            if (countries) {
-                filters.push(createCountryFilter(uniq(countries)));
-            }
-            if (excludeCountries) {
-                filters.push(complement(createCountryFilter(uniq(excludeCountries))));
-            }
-            const stats = await context.dataSource.getAggregatedTimelineFromCsv(allPass(filters));
-            return applyTimeSeriesRange({ from, to } || {}, stats);
+            const { from, to } = args;
+            const predicate = countryPredicate(lookup, args);
+            const stats = await context.dataSource.getAggregatedTimelineFromCsv(predicate);
+            return applyTimelineRange({ from, to } || {}, stats);
         },
         latest: async (_query, args, context) => {
+            const lookupPromise = getCountryLookup();
             const current = await context.dataSource.getCurrent();
-            return current.reduce(mergeCountryStats, undefined as ApiTimelineItem | undefined) as ApiTimelineItem;
+            const predicate = countryPredicate(await lookupPromise, args);
+            const filtered = current.filter(stat => predicate(stat.countryCode));
+            return filtered.reduce(mergeCountryStats, undefined as ApiTimelineItem | undefined) as ApiTimelineItem;
         },
     },
 
     LocalDate,
 };
 
-export interface TimeRange {
-    from?: Moment | null;
-    to?: Moment | null;
-}
-
-export function applyTimeSeriesRange(
+export function applyTimelineRange(
     { from, to }: TimeRange,
     timeline: readonly ApiTimelineItem[],
 ): readonly ApiTimelineItem[] {
