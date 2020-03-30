@@ -10,6 +10,7 @@ import { mergeTimelineItemArray } from './merging/merge-timeline-item-array';
 import { CountryStat } from './types/country-stat';
 import { Timeline } from './types/timeline';
 import { DATE_FORMAT_REVERSE } from './util/date-formats';
+import { today } from './util/timeline-item-utils';
 
 const ONE_MINUTE = 60 * 1000;
 const ONE_HOUR = 60 * ONE_MINUTE;
@@ -55,7 +56,7 @@ export class DataSource {
                 lastUpdated: found.lastUpdated.toISOString(),
             } as ApiTimelineItem;
         } else {
-            return undefined;
+            return today();
         }
     }
 
@@ -72,7 +73,7 @@ export class DataSource {
         const start = new Date().getTime();
         const groups = groupBy(stat => stat.lastUpdated.format(DATE_FORMAT_REVERSE), stats);
         const result = Object.entries(groups).map(([, countryStats]) => {
-            return countryStats.reduce(mergeCountryStats, undefined as ApiTimelineItem | undefined) as ApiTimelineItem;
+            return countryStats.reduce(mergeCountryStats, today());
         });
         const elapsed = new Date().getTime() - start;
         console.log(`getGlobalTimeSeries: ${elapsed} ms`);
@@ -114,7 +115,7 @@ export class DataSource {
     }
 
     async getCountryCodesWithCases(): Promise<string[]> {
-        const stats = await this.fetchCsvBasedTimeSeries();
+        const stats = await this.fetchCurrent();
         return pluck('countryCode', stats);
     }
 }

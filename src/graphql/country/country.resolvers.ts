@@ -85,7 +85,7 @@ async function applyCountryFilter(
     if (!isNil(hasCases)) {
         const countriesWithCases = await context.dataSource.getCountryCodesWithCases();
         const isCountryWithCases = includesString(countriesWithCases);
-        filters.push(country => isCountryWithCases(country.code));
+        filters.push(country => isCountryWithCases(country.code) === hasCases);
     }
     const countries = (input as any[]) as ApiCountry[];
     const filteredCountries = countries.filter(allPass(filters));

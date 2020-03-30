@@ -1,7 +1,7 @@
 import { ApiTimelineItem } from '../generated/graphql-backend';
 import { CountryStat } from '../types/country-stat';
 
-export function mergeCountryStats(acc: ApiTimelineItem | undefined, stat: CountryStat): ApiTimelineItem {
+export function mergeCountryStats(acc: ApiTimelineItem, stat: CountryStat): ApiTimelineItem {
     if (acc) {
         return {
             confirmed: stat.confirmed + acc.confirmed,

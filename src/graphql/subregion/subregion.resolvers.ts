@@ -1,7 +1,15 @@
 import { getCountryLookup } from '../../country-lookup';
-import { ApiPagedCountries, ApiRegion, ApiResolvers, ApiSubRegion } from '../../generated/graphql-backend';
+import {
+    ApiPagedCountries,
+    ApiRegion,
+    ApiResolvers,
+    ApiSubRegion,
+    ApiTimelineItem,
+} from '../../generated/graphql-backend';
 import { applyTimelineRange } from '../common.resolvers';
 import { countryPredicate } from '../country-predicate';
+import { mergeCountryStats } from '../../merging/merge-country-stats';
+import { today } from '../../util/timeline-item-utils';
 
 export const resolvers: ApiResolvers = {
     Query: {
@@ -28,6 +36,15 @@ export const resolvers: ApiResolvers = {
             const stats = await context.dataSource.getAggregatedTimelineFromCsv(predicate);
             return applyTimelineRange({ from, to }, stats);
         },
+        latest: async (subRegion, _args, context) => {
+            const lookupPromise = getCountryLookup();
+            const current = await context.dataSource.getCurrent();
+            const predicate = countryPredicate(await lookupPromise, {
+                subRegions: [subRegion.name],
+            });
+            const filtered = current.filter(stat => predicate(stat.countryCode));
+            return filtered.reduce(mergeCountryStats, today());
+        },
     },
 
     Region: {
@@ -52,5 +69,6 @@ function createApiSubRegion(name: string): ApiSubRegion {
         countries: (undefined as any) as ApiPagedCountries,
         region: (undefined as any) as ApiRegion,
         timeline: [],
+        latest: (undefined as any) as ApiTimelineItem,
     };
 }

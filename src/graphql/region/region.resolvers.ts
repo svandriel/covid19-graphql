@@ -1,7 +1,9 @@
 import { getCountryLookup } from '../../country-lookup';
-import { ApiPagedCountries, ApiRegion, ApiResolvers } from '../../generated/graphql-backend';
+import { ApiPagedCountries, ApiRegion, ApiResolvers, ApiTimelineItem } from '../../generated/graphql-backend';
+import { mergeCountryStats } from '../../merging/merge-country-stats';
 import { applyTimelineRange } from '../common.resolvers';
 import { countryPredicate } from '../country-predicate';
+import { today } from '../../util/timeline-item-utils';
 
 export const resolvers: ApiResolvers = {
     Query: {
@@ -36,6 +38,15 @@ export const resolvers: ApiResolvers = {
             const stats = await context.dataSource.getAggregatedTimelineFromCsv(predicate);
             return applyTimelineRange({ from, to }, stats);
         },
+        latest: async (region, _args, context) => {
+            const lookupPromise = getCountryLookup();
+            const current = await context.dataSource.getCurrent();
+            const predicate = countryPredicate(await lookupPromise, {
+                regions: [region.name],
+            });
+            const filtered = current.filter(stat => predicate(stat.countryCode));
+            return filtered.reduce(mergeCountryStats, today());
+        },
     },
 
     SubRegion: {
@@ -53,5 +64,6 @@ function createApiRegion(name: string): ApiRegion {
         countries: (undefined as any) as ApiPagedCountries,
         subRegions: [],
         timeline: [],
+        latest: (undefined as any) as ApiTimelineItem,
     };
 }

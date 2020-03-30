@@ -22,3 +22,6 @@ overrides:
   - files: '*.graphql'
     options:
       tabWidth: 2
+  - files: '*.md'
+    options:
+      tabWidth: 2
