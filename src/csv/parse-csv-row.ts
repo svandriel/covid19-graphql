@@ -32,7 +32,7 @@ export function parseTimeSeriesItems(type: StatsType, row: Record<string, string
     });
     return dateRowNames.reduce((acc, rowName) => {
         const last: ApiTimelineItem | undefined = acc[acc.length - 1];
-        const date = moment(rowName, DATE_FORMAT_CSV);
+        const date = moment(rowName, DATE_FORMAT_CSV).utcOffset(0, true);
         if (date.isValid()) {
             const valueStr = row[rowName];
             const value = valueStr === '' ? 0 : parseInt(valueStr, 10);
