@@ -23,7 +23,7 @@ export async function fetchCsvBasedTimeline(): Promise<readonly Timeline[]> {
                 try {
                     return parseCsvRow(lookup.lookupByName, type, i);
                 } catch (err) {
-                    console.error(`fetchCsvBasedTimeSeries ${chalk.red('ERROR')}: ${err}`);
+                    console.error(`fetchCsvBasedTimeline ${chalk.red('ERROR')}: ${err}`);
                     return undefined;
                 }
             });

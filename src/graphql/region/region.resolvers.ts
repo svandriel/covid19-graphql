@@ -1,9 +1,9 @@
 import { getCountryLookup } from '../../country-lookup';
-import { ApiPagedCountries, ApiRegion, ApiResolvers, ApiTimelineItem } from '../../generated/graphql-backend';
+import { ApiLatest, ApiPagedCountries, ApiRegion, ApiResolvers } from '../../generated/graphql-backend';
 import { mergeCountryStats } from '../../merging/merge-country-stats';
+import { today } from '../../util/timeline-item-utils';
 import { applyTimelineRange } from '../common.resolvers';
 import { countryPredicate } from '../country-predicate';
-import { today } from '../../util/timeline-item-utils';
 
 export const resolvers: ApiResolvers = {
     Query: {
@@ -64,6 +64,6 @@ function createApiRegion(name: string): ApiRegion {
         countries: (undefined as any) as ApiPagedCountries,
         subRegions: [],
         timeline: [],
-        latest: (undefined as any) as ApiTimelineItem,
+        latest: (undefined as any) as ApiLatest,
     };
 }

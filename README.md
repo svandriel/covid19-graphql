@@ -10,6 +10,7 @@ Provides a GraphQL API for the [COVID-19 data source](https://github.com/CSSEGIS
 - Provides timelines per country, subregion and region
 - Lightning fast due to smart caching and aggregation
 - Easy to run locally:
+
   ```
   npx covid19-graphql
   ```
@@ -37,10 +38,7 @@ Following are some example GraphQL queries:
 
 ```graphql
 {
-  timeline(
-    excludeCountries: "CN",
-    from: "2020-03-01"
-  ) {
+  timeline(excludeCountries: "CN", from: "2020-03-01") {
     date
     confirmed
   }
@@ -116,7 +114,7 @@ covid19-graphql
 
 The following environment variables affect the configuration of the server:
 
-- `NODE_ENV`: When set to `production`, will enable tracing, playground and various other debugging settings.
+- `NODE_ENV`: When set to `production`, will disable tracing, playground and various other debugging settings. It will enable various performance optimizations.
 - `PORT`: Determines the HTTP port on which the server will run (defaults to port 12000)
 - `ENABLE_TRACING`: Overrides the default GraphQL tracing setting (on for development, off for production). Use `1` to turn on `0` to turn off.
 - `ENABLE_PLAYGROUND`: Overrides the default GraphQL playground flag (on for development, off for production). Use `1` to turn on `0` to turn off.
