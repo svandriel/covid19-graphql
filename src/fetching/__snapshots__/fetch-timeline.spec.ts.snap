@@ -7,7 +7,7 @@ Array [
     "items": Array [
       Object {
         "confirmed": 2,
-        "date": "2020-01-21T23:00:00.000Z",
+        "date": "2020-01-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": undefined,
         "deltaDeceased": undefined,
@@ -16,7 +16,7 @@ Array [
       },
       Object {
         "confirmed": 3,
-        "date": "2020-01-22T23:00:00.000Z",
+        "date": "2020-01-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -25,7 +25,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-01-23T23:00:00.000Z",
+        "date": "2020-01-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -34,7 +34,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-01-24T23:00:00.000Z",
+        "date": "2020-01-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -43,7 +43,7 @@ Array [
       },
       Object {
         "confirmed": 8,
-        "date": "2020-01-25T23:00:00.000Z",
+        "date": "2020-01-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -52,7 +52,7 @@ Array [
       },
       Object {
         "confirmed": 8,
-        "date": "2020-01-26T23:00:00.000Z",
+        "date": "2020-01-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -61,7 +61,7 @@ Array [
       },
       Object {
         "confirmed": 14,
-        "date": "2020-01-27T23:00:00.000Z",
+        "date": "2020-01-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 6,
         "deltaDeceased": 0,
@@ -70,7 +70,7 @@ Array [
       },
       Object {
         "confirmed": 14,
-        "date": "2020-01-28T23:00:00.000Z",
+        "date": "2020-01-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -79,7 +79,7 @@ Array [
       },
       Object {
         "confirmed": 14,
-        "date": "2020-01-29T23:00:00.000Z",
+        "date": "2020-01-30T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -88,7 +88,7 @@ Array [
       },
       Object {
         "confirmed": 19,
-        "date": "2020-01-30T23:00:00.000Z",
+        "date": "2020-01-31T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 5,
         "deltaDeceased": 0,
@@ -97,7 +97,7 @@ Array [
       },
       Object {
         "confirmed": 19,
-        "date": "2020-01-31T23:00:00.000Z",
+        "date": "2020-02-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -106,7 +106,7 @@ Array [
       },
       Object {
         "confirmed": 19,
-        "date": "2020-02-01T23:00:00.000Z",
+        "date": "2020-02-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -115,7 +115,7 @@ Array [
       },
       Object {
         "confirmed": 19,
-        "date": "2020-02-02T23:00:00.000Z",
+        "date": "2020-02-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -124,7 +124,7 @@ Array [
       },
       Object {
         "confirmed": 25,
-        "date": "2020-02-03T23:00:00.000Z",
+        "date": "2020-02-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 6,
         "deltaDeceased": 0,
@@ -133,7 +133,7 @@ Array [
       },
       Object {
         "confirmed": 25,
-        "date": "2020-02-04T23:00:00.000Z",
+        "date": "2020-02-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -142,7 +142,7 @@ Array [
       },
       Object {
         "confirmed": 25,
-        "date": "2020-02-05T23:00:00.000Z",
+        "date": "2020-02-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -151,7 +151,7 @@ Array [
       },
       Object {
         "confirmed": 25,
-        "date": "2020-02-06T23:00:00.000Z",
+        "date": "2020-02-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -160,7 +160,7 @@ Array [
       },
       Object {
         "confirmed": 32,
-        "date": "2020-02-07T23:00:00.000Z",
+        "date": "2020-02-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -169,7 +169,7 @@ Array [
       },
       Object {
         "confirmed": 32,
-        "date": "2020-02-08T23:00:00.000Z",
+        "date": "2020-02-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -178,7 +178,7 @@ Array [
       },
       Object {
         "confirmed": 32,
-        "date": "2020-02-09T23:00:00.000Z",
+        "date": "2020-02-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -187,7 +187,7 @@ Array [
       },
       Object {
         "confirmed": 33,
-        "date": "2020-02-10T23:00:00.000Z",
+        "date": "2020-02-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -196,7 +196,7 @@ Array [
       },
       Object {
         "confirmed": 33,
-        "date": "2020-02-11T23:00:00.000Z",
+        "date": "2020-02-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -205,7 +205,7 @@ Array [
       },
       Object {
         "confirmed": 33,
-        "date": "2020-02-12T23:00:00.000Z",
+        "date": "2020-02-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -214,7 +214,7 @@ Array [
       },
       Object {
         "confirmed": 33,
-        "date": "2020-02-13T23:00:00.000Z",
+        "date": "2020-02-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -223,7 +223,7 @@ Array [
       },
       Object {
         "confirmed": 33,
-        "date": "2020-02-14T23:00:00.000Z",
+        "date": "2020-02-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -232,7 +232,7 @@ Array [
       },
       Object {
         "confirmed": 34,
-        "date": "2020-02-15T23:00:00.000Z",
+        "date": "2020-02-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -241,7 +241,7 @@ Array [
       },
       Object {
         "confirmed": 35,
-        "date": "2020-02-16T23:00:00.000Z",
+        "date": "2020-02-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -250,7 +250,7 @@ Array [
       },
       Object {
         "confirmed": 35,
-        "date": "2020-02-17T23:00:00.000Z",
+        "date": "2020-02-18T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -259,7 +259,7 @@ Array [
       },
       Object {
         "confirmed": 35,
-        "date": "2020-02-18T23:00:00.000Z",
+        "date": "2020-02-19T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -268,7 +268,7 @@ Array [
       },
       Object {
         "confirmed": 35,
-        "date": "2020-02-19T23:00:00.000Z",
+        "date": "2020-02-20T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -277,7 +277,7 @@ Array [
       },
       Object {
         "confirmed": 35,
-        "date": "2020-02-20T23:00:00.000Z",
+        "date": "2020-02-21T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -286,7 +286,7 @@ Array [
       },
       Object {
         "confirmed": 35,
-        "date": "2020-02-21T23:00:00.000Z",
+        "date": "2020-02-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -295,7 +295,7 @@ Array [
       },
       Object {
         "confirmed": 35,
-        "date": "2020-02-22T23:00:00.000Z",
+        "date": "2020-02-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -304,7 +304,7 @@ Array [
       },
       Object {
         "confirmed": 35,
-        "date": "2020-02-23T23:00:00.000Z",
+        "date": "2020-02-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -313,7 +313,7 @@ Array [
       },
       Object {
         "confirmed": 37,
-        "date": "2020-02-24T23:00:00.000Z",
+        "date": "2020-02-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -322,7 +322,7 @@ Array [
       },
       Object {
         "confirmed": 40,
-        "date": "2020-02-25T23:00:00.000Z",
+        "date": "2020-02-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -331,7 +331,7 @@ Array [
       },
       Object {
         "confirmed": 40,
-        "date": "2020-02-26T23:00:00.000Z",
+        "date": "2020-02-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -340,7 +340,7 @@ Array [
       },
       Object {
         "confirmed": 41,
-        "date": "2020-02-27T23:00:00.000Z",
+        "date": "2020-02-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -349,7 +349,7 @@ Array [
       },
       Object {
         "confirmed": 42,
-        "date": "2020-02-28T23:00:00.000Z",
+        "date": "2020-02-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -358,7 +358,7 @@ Array [
       },
       Object {
         "confirmed": 42,
-        "date": "2020-02-29T23:00:00.000Z",
+        "date": "2020-03-01T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 0,
         "deltaDeceased": 1,
@@ -367,7 +367,7 @@ Array [
       },
       Object {
         "confirmed": 43,
-        "date": "2020-03-01T23:00:00.000Z",
+        "date": "2020-03-02T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -376,7 +376,7 @@ Array [
       },
       Object {
         "confirmed": 43,
-        "date": "2020-03-02T23:00:00.000Z",
+        "date": "2020-03-03T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -385,7 +385,7 @@ Array [
       },
       Object {
         "confirmed": 43,
-        "date": "2020-03-03T23:00:00.000Z",
+        "date": "2020-03-04T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -394,7 +394,7 @@ Array [
       },
       Object {
         "confirmed": 47,
-        "date": "2020-03-04T23:00:00.000Z",
+        "date": "2020-03-05T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -403,7 +403,7 @@ Array [
       },
       Object {
         "confirmed": 48,
-        "date": "2020-03-05T23:00:00.000Z",
+        "date": "2020-03-06T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -412,7 +412,7 @@ Array [
       },
       Object {
         "confirmed": 50,
-        "date": "2020-03-06T23:00:00.000Z",
+        "date": "2020-03-07T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -421,7 +421,7 @@ Array [
       },
       Object {
         "confirmed": 50,
-        "date": "2020-03-07T23:00:00.000Z",
+        "date": "2020-03-08T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -430,7 +430,7 @@ Array [
       },
       Object {
         "confirmed": 50,
-        "date": "2020-03-08T23:00:00.000Z",
+        "date": "2020-03-09T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -439,7 +439,7 @@ Array [
       },
       Object {
         "confirmed": 53,
-        "date": "2020-03-09T23:00:00.000Z",
+        "date": "2020-03-10T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -448,7 +448,7 @@ Array [
       },
       Object {
         "confirmed": 59,
-        "date": "2020-03-10T23:00:00.000Z",
+        "date": "2020-03-11T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 6,
         "deltaDeceased": 0,
@@ -457,7 +457,7 @@ Array [
       },
       Object {
         "confirmed": 70,
-        "date": "2020-03-11T23:00:00.000Z",
+        "date": "2020-03-12T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 11,
         "deltaDeceased": 0,
@@ -466,7 +466,7 @@ Array [
       },
       Object {
         "confirmed": 75,
-        "date": "2020-03-12T23:00:00.000Z",
+        "date": "2020-03-13T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 5,
         "deltaDeceased": 0,
@@ -475,7 +475,7 @@ Array [
       },
       Object {
         "confirmed": 82,
-        "date": "2020-03-13T23:00:00.000Z",
+        "date": "2020-03-14T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -484,7 +484,7 @@ Array [
       },
       Object {
         "confirmed": 114,
-        "date": "2020-03-14T23:00:00.000Z",
+        "date": "2020-03-15T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 32,
         "deltaDeceased": 0,
@@ -493,7 +493,7 @@ Array [
       },
       Object {
         "confirmed": 147,
-        "date": "2020-03-15T23:00:00.000Z",
+        "date": "2020-03-16T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 33,
         "deltaDeceased": 0,
@@ -502,7 +502,7 @@ Array [
       },
       Object {
         "confirmed": 177,
-        "date": "2020-03-16T23:00:00.000Z",
+        "date": "2020-03-17T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 30,
         "deltaDeceased": 0,
@@ -517,7 +517,7 @@ Array [
     "items": Array [
       Object {
         "confirmed": 2,
-        "date": "2020-01-21T23:00:00.000Z",
+        "date": "2020-01-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": undefined,
         "deltaDeceased": undefined,
@@ -526,7 +526,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-22T23:00:00.000Z",
+        "date": "2020-01-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": -1,
         "deltaDeceased": 0,
@@ -535,7 +535,7 @@ Array [
       },
       Object {
         "confirmed": 2,
-        "date": "2020-01-23T23:00:00.000Z",
+        "date": "2020-01-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -544,7 +544,7 @@ Array [
       },
       Object {
         "confirmed": 2,
-        "date": "2020-01-24T23:00:00.000Z",
+        "date": "2020-01-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -553,7 +553,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-25T23:00:00.000Z",
+        "date": "2020-01-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -562,7 +562,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-26T23:00:00.000Z",
+        "date": "2020-01-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -571,7 +571,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-01-27T23:00:00.000Z",
+        "date": "2020-01-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -580,7 +580,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-01-28T23:00:00.000Z",
+        "date": "2020-01-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -589,7 +589,7 @@ Array [
       },
       Object {
         "confirmed": 11,
-        "date": "2020-01-29T23:00:00.000Z",
+        "date": "2020-01-30T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -598,7 +598,7 @@ Array [
       },
       Object {
         "confirmed": 15,
-        "date": "2020-01-30T23:00:00.000Z",
+        "date": "2020-01-31T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -607,7 +607,7 @@ Array [
       },
       Object {
         "confirmed": 20,
-        "date": "2020-01-31T23:00:00.000Z",
+        "date": "2020-02-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 5,
         "deltaDeceased": 0,
@@ -616,7 +616,7 @@ Array [
       },
       Object {
         "confirmed": 20,
-        "date": "2020-02-01T23:00:00.000Z",
+        "date": "2020-02-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -625,7 +625,7 @@ Array [
       },
       Object {
         "confirmed": 20,
-        "date": "2020-02-02T23:00:00.000Z",
+        "date": "2020-02-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -634,7 +634,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-03T23:00:00.000Z",
+        "date": "2020-02-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -643,7 +643,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-04T23:00:00.000Z",
+        "date": "2020-02-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -652,7 +652,7 @@ Array [
       },
       Object {
         "confirmed": 45,
-        "date": "2020-02-05T23:00:00.000Z",
+        "date": "2020-02-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 23,
         "deltaDeceased": 0,
@@ -661,7 +661,7 @@ Array [
       },
       Object {
         "confirmed": 25,
-        "date": "2020-02-06T23:00:00.000Z",
+        "date": "2020-02-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": -20,
         "deltaDeceased": 0,
@@ -670,7 +670,7 @@ Array [
       },
       Object {
         "confirmed": 25,
-        "date": "2020-02-07T23:00:00.000Z",
+        "date": "2020-02-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -679,7 +679,7 @@ Array [
       },
       Object {
         "confirmed": 26,
-        "date": "2020-02-08T23:00:00.000Z",
+        "date": "2020-02-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -688,7 +688,7 @@ Array [
       },
       Object {
         "confirmed": 26,
-        "date": "2020-02-09T23:00:00.000Z",
+        "date": "2020-02-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -697,7 +697,7 @@ Array [
       },
       Object {
         "confirmed": 26,
-        "date": "2020-02-10T23:00:00.000Z",
+        "date": "2020-02-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -706,7 +706,7 @@ Array [
       },
       Object {
         "confirmed": 28,
-        "date": "2020-02-11T23:00:00.000Z",
+        "date": "2020-02-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -715,7 +715,7 @@ Array [
       },
       Object {
         "confirmed": 28,
-        "date": "2020-02-12T23:00:00.000Z",
+        "date": "2020-02-13T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 0,
         "deltaDeceased": 1,
@@ -724,7 +724,7 @@ Array [
       },
       Object {
         "confirmed": 29,
-        "date": "2020-02-13T23:00:00.000Z",
+        "date": "2020-02-14T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -733,7 +733,7 @@ Array [
       },
       Object {
         "confirmed": 43,
-        "date": "2020-02-14T23:00:00.000Z",
+        "date": "2020-02-15T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 14,
         "deltaDeceased": 0,
@@ -742,7 +742,7 @@ Array [
       },
       Object {
         "confirmed": 59,
-        "date": "2020-02-15T23:00:00.000Z",
+        "date": "2020-02-16T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 16,
         "deltaDeceased": 0,
@@ -751,7 +751,7 @@ Array [
       },
       Object {
         "confirmed": 66,
-        "date": "2020-02-16T23:00:00.000Z",
+        "date": "2020-02-17T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -760,7 +760,7 @@ Array [
       },
       Object {
         "confirmed": 74,
-        "date": "2020-02-17T23:00:00.000Z",
+        "date": "2020-02-18T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 8,
         "deltaDeceased": 0,
@@ -769,7 +769,7 @@ Array [
       },
       Object {
         "confirmed": 84,
-        "date": "2020-02-18T23:00:00.000Z",
+        "date": "2020-02-19T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 10,
         "deltaDeceased": 0,
@@ -778,7 +778,7 @@ Array [
       },
       Object {
         "confirmed": 94,
-        "date": "2020-02-19T23:00:00.000Z",
+        "date": "2020-02-20T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 10,
         "deltaDeceased": 0,
@@ -787,7 +787,7 @@ Array [
       },
       Object {
         "confirmed": 105,
-        "date": "2020-02-20T23:00:00.000Z",
+        "date": "2020-02-21T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 11,
         "deltaDeceased": 0,
@@ -796,7 +796,7 @@ Array [
       },
       Object {
         "confirmed": 122,
-        "date": "2020-02-21T23:00:00.000Z",
+        "date": "2020-02-22T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 17,
         "deltaDeceased": 0,
@@ -805,7 +805,7 @@ Array [
       },
       Object {
         "confirmed": 147,
-        "date": "2020-02-22T23:00:00.000Z",
+        "date": "2020-02-23T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 25,
         "deltaDeceased": 0,
@@ -814,7 +814,7 @@ Array [
       },
       Object {
         "confirmed": 159,
-        "date": "2020-02-23T23:00:00.000Z",
+        "date": "2020-02-24T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 12,
         "deltaDeceased": 0,
@@ -823,7 +823,7 @@ Array [
       },
       Object {
         "confirmed": 170,
-        "date": "2020-02-24T23:00:00.000Z",
+        "date": "2020-02-25T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 11,
         "deltaDeceased": 0,
@@ -832,7 +832,7 @@ Array [
       },
       Object {
         "confirmed": 189,
-        "date": "2020-02-25T23:00:00.000Z",
+        "date": "2020-02-26T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 19,
         "deltaDeceased": 1,
@@ -841,7 +841,7 @@ Array [
       },
       Object {
         "confirmed": 214,
-        "date": "2020-02-26T23:00:00.000Z",
+        "date": "2020-02-27T00:00:00.000Z",
         "deceased": 4,
         "deltaConfirmed": 25,
         "deltaDeceased": 2,
@@ -850,7 +850,7 @@ Array [
       },
       Object {
         "confirmed": 228,
-        "date": "2020-02-27T23:00:00.000Z",
+        "date": "2020-02-28T00:00:00.000Z",
         "deceased": 4,
         "deltaConfirmed": 14,
         "deltaDeceased": 0,
@@ -859,7 +859,7 @@ Array [
       },
       Object {
         "confirmed": 241,
-        "date": "2020-02-28T23:00:00.000Z",
+        "date": "2020-02-29T00:00:00.000Z",
         "deceased": 5,
         "deltaConfirmed": 13,
         "deltaDeceased": 1,
@@ -868,7 +868,7 @@ Array [
       },
       Object {
         "confirmed": 256,
-        "date": "2020-02-29T23:00:00.000Z",
+        "date": "2020-03-01T00:00:00.000Z",
         "deceased": 6,
         "deltaConfirmed": 15,
         "deltaDeceased": 1,
@@ -877,7 +877,7 @@ Array [
       },
       Object {
         "confirmed": 274,
-        "date": "2020-03-01T23:00:00.000Z",
+        "date": "2020-03-02T00:00:00.000Z",
         "deceased": 6,
         "deltaConfirmed": 18,
         "deltaDeceased": 0,
@@ -886,7 +886,7 @@ Array [
       },
       Object {
         "confirmed": 293,
-        "date": "2020-03-02T23:00:00.000Z",
+        "date": "2020-03-03T00:00:00.000Z",
         "deceased": 6,
         "deltaConfirmed": 19,
         "deltaDeceased": 0,
@@ -895,7 +895,7 @@ Array [
       },
       Object {
         "confirmed": 331,
-        "date": "2020-03-03T23:00:00.000Z",
+        "date": "2020-03-04T00:00:00.000Z",
         "deceased": 6,
         "deltaConfirmed": 38,
         "deltaDeceased": 0,
@@ -904,7 +904,7 @@ Array [
       },
       Object {
         "confirmed": 360,
-        "date": "2020-03-04T23:00:00.000Z",
+        "date": "2020-03-05T00:00:00.000Z",
         "deceased": 6,
         "deltaConfirmed": 29,
         "deltaDeceased": 0,
@@ -913,7 +913,7 @@ Array [
       },
       Object {
         "confirmed": 420,
-        "date": "2020-03-05T23:00:00.000Z",
+        "date": "2020-03-06T00:00:00.000Z",
         "deceased": 6,
         "deltaConfirmed": 60,
         "deltaDeceased": 0,
@@ -922,7 +922,7 @@ Array [
       },
       Object {
         "confirmed": 461,
-        "date": "2020-03-06T23:00:00.000Z",
+        "date": "2020-03-07T00:00:00.000Z",
         "deceased": 6,
         "deltaConfirmed": 41,
         "deltaDeceased": 0,
@@ -931,7 +931,7 @@ Array [
       },
       Object {
         "confirmed": 502,
-        "date": "2020-03-07T23:00:00.000Z",
+        "date": "2020-03-08T00:00:00.000Z",
         "deceased": 6,
         "deltaConfirmed": 41,
         "deltaDeceased": 0,
@@ -940,7 +940,7 @@ Array [
       },
       Object {
         "confirmed": 511,
-        "date": "2020-03-08T23:00:00.000Z",
+        "date": "2020-03-09T00:00:00.000Z",
         "deceased": 10,
         "deltaConfirmed": 9,
         "deltaDeceased": 4,
@@ -949,7 +949,7 @@ Array [
       },
       Object {
         "confirmed": 581,
-        "date": "2020-03-09T23:00:00.000Z",
+        "date": "2020-03-10T00:00:00.000Z",
         "deceased": 10,
         "deltaConfirmed": 70,
         "deltaDeceased": 0,
@@ -958,7 +958,7 @@ Array [
       },
       Object {
         "confirmed": 639,
-        "date": "2020-03-10T23:00:00.000Z",
+        "date": "2020-03-11T00:00:00.000Z",
         "deceased": 15,
         "deltaConfirmed": 58,
         "deltaDeceased": 5,
@@ -967,7 +967,7 @@ Array [
       },
       Object {
         "confirmed": 639,
-        "date": "2020-03-11T23:00:00.000Z",
+        "date": "2020-03-12T00:00:00.000Z",
         "deceased": 16,
         "deltaConfirmed": 0,
         "deltaDeceased": 1,
@@ -976,7 +976,7 @@ Array [
       },
       Object {
         "confirmed": 701,
-        "date": "2020-03-12T23:00:00.000Z",
+        "date": "2020-03-13T00:00:00.000Z",
         "deceased": 19,
         "deltaConfirmed": 62,
         "deltaDeceased": 3,
@@ -985,7 +985,7 @@ Array [
       },
       Object {
         "confirmed": 773,
-        "date": "2020-03-13T23:00:00.000Z",
+        "date": "2020-03-14T00:00:00.000Z",
         "deceased": 22,
         "deltaConfirmed": 72,
         "deltaDeceased": 3,
@@ -994,7 +994,7 @@ Array [
       },
       Object {
         "confirmed": 839,
-        "date": "2020-03-14T23:00:00.000Z",
+        "date": "2020-03-15T00:00:00.000Z",
         "deceased": 22,
         "deltaConfirmed": 66,
         "deltaDeceased": 0,
@@ -1003,7 +1003,7 @@ Array [
       },
       Object {
         "confirmed": 825,
-        "date": "2020-03-15T23:00:00.000Z",
+        "date": "2020-03-16T00:00:00.000Z",
         "deceased": 27,
         "deltaConfirmed": -14,
         "deltaDeceased": 5,
@@ -1012,7 +1012,7 @@ Array [
       },
       Object {
         "confirmed": 878,
-        "date": "2020-03-16T23:00:00.000Z",
+        "date": "2020-03-17T00:00:00.000Z",
         "deceased": 29,
         "deltaConfirmed": 53,
         "deltaDeceased": 2,
@@ -1027,7 +1027,7 @@ Array [
     "items": Array [
       Object {
         "confirmed": 0,
-        "date": "2020-01-21T23:00:00.000Z",
+        "date": "2020-01-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": undefined,
         "deltaDeceased": undefined,
@@ -1036,7 +1036,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-22T23:00:00.000Z",
+        "date": "2020-01-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -1045,7 +1045,7 @@ Array [
       },
       Object {
         "confirmed": 3,
-        "date": "2020-01-23T23:00:00.000Z",
+        "date": "2020-01-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -1054,7 +1054,7 @@ Array [
       },
       Object {
         "confirmed": 3,
-        "date": "2020-01-24T23:00:00.000Z",
+        "date": "2020-01-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1063,7 +1063,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-25T23:00:00.000Z",
+        "date": "2020-01-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -1072,7 +1072,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-01-26T23:00:00.000Z",
+        "date": "2020-01-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -1081,7 +1081,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-01-27T23:00:00.000Z",
+        "date": "2020-01-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -1090,7 +1090,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-01-28T23:00:00.000Z",
+        "date": "2020-01-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1099,7 +1099,7 @@ Array [
       },
       Object {
         "confirmed": 10,
-        "date": "2020-01-29T23:00:00.000Z",
+        "date": "2020-01-30T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -1108,7 +1108,7 @@ Array [
       },
       Object {
         "confirmed": 13,
-        "date": "2020-01-30T23:00:00.000Z",
+        "date": "2020-01-31T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -1117,7 +1117,7 @@ Array [
       },
       Object {
         "confirmed": 16,
-        "date": "2020-01-31T23:00:00.000Z",
+        "date": "2020-02-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -1126,7 +1126,7 @@ Array [
       },
       Object {
         "confirmed": 18,
-        "date": "2020-02-01T23:00:00.000Z",
+        "date": "2020-02-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -1135,7 +1135,7 @@ Array [
       },
       Object {
         "confirmed": 18,
-        "date": "2020-02-02T23:00:00.000Z",
+        "date": "2020-02-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1144,7 +1144,7 @@ Array [
       },
       Object {
         "confirmed": 24,
-        "date": "2020-02-03T23:00:00.000Z",
+        "date": "2020-02-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 6,
         "deltaDeceased": 0,
@@ -1153,7 +1153,7 @@ Array [
       },
       Object {
         "confirmed": 28,
-        "date": "2020-02-04T23:00:00.000Z",
+        "date": "2020-02-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -1162,7 +1162,7 @@ Array [
       },
       Object {
         "confirmed": 28,
-        "date": "2020-02-05T23:00:00.000Z",
+        "date": "2020-02-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1171,7 +1171,7 @@ Array [
       },
       Object {
         "confirmed": 30,
-        "date": "2020-02-06T23:00:00.000Z",
+        "date": "2020-02-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -1180,7 +1180,7 @@ Array [
       },
       Object {
         "confirmed": 33,
-        "date": "2020-02-07T23:00:00.000Z",
+        "date": "2020-02-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -1189,7 +1189,7 @@ Array [
       },
       Object {
         "confirmed": 40,
-        "date": "2020-02-08T23:00:00.000Z",
+        "date": "2020-02-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -1198,7 +1198,7 @@ Array [
       },
       Object {
         "confirmed": 45,
-        "date": "2020-02-09T23:00:00.000Z",
+        "date": "2020-02-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 5,
         "deltaDeceased": 0,
@@ -1207,7 +1207,7 @@ Array [
       },
       Object {
         "confirmed": 47,
-        "date": "2020-02-10T23:00:00.000Z",
+        "date": "2020-02-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -1216,7 +1216,7 @@ Array [
       },
       Object {
         "confirmed": 50,
-        "date": "2020-02-11T23:00:00.000Z",
+        "date": "2020-02-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -1225,7 +1225,7 @@ Array [
       },
       Object {
         "confirmed": 58,
-        "date": "2020-02-12T23:00:00.000Z",
+        "date": "2020-02-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 8,
         "deltaDeceased": 0,
@@ -1234,7 +1234,7 @@ Array [
       },
       Object {
         "confirmed": 67,
-        "date": "2020-02-13T23:00:00.000Z",
+        "date": "2020-02-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 9,
         "deltaDeceased": 0,
@@ -1243,7 +1243,7 @@ Array [
       },
       Object {
         "confirmed": 72,
-        "date": "2020-02-14T23:00:00.000Z",
+        "date": "2020-02-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 5,
         "deltaDeceased": 0,
@@ -1252,7 +1252,7 @@ Array [
       },
       Object {
         "confirmed": 75,
-        "date": "2020-02-15T23:00:00.000Z",
+        "date": "2020-02-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -1261,7 +1261,7 @@ Array [
       },
       Object {
         "confirmed": 77,
-        "date": "2020-02-16T23:00:00.000Z",
+        "date": "2020-02-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -1270,7 +1270,7 @@ Array [
       },
       Object {
         "confirmed": 81,
-        "date": "2020-02-17T23:00:00.000Z",
+        "date": "2020-02-18T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -1279,7 +1279,7 @@ Array [
       },
       Object {
         "confirmed": 84,
-        "date": "2020-02-18T23:00:00.000Z",
+        "date": "2020-02-19T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -1288,7 +1288,7 @@ Array [
       },
       Object {
         "confirmed": 84,
-        "date": "2020-02-19T23:00:00.000Z",
+        "date": "2020-02-20T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1297,7 +1297,7 @@ Array [
       },
       Object {
         "confirmed": 85,
-        "date": "2020-02-20T23:00:00.000Z",
+        "date": "2020-02-21T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -1306,7 +1306,7 @@ Array [
       },
       Object {
         "confirmed": 85,
-        "date": "2020-02-21T23:00:00.000Z",
+        "date": "2020-02-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1315,7 +1315,7 @@ Array [
       },
       Object {
         "confirmed": 89,
-        "date": "2020-02-22T23:00:00.000Z",
+        "date": "2020-02-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -1324,7 +1324,7 @@ Array [
       },
       Object {
         "confirmed": 89,
-        "date": "2020-02-23T23:00:00.000Z",
+        "date": "2020-02-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1333,7 +1333,7 @@ Array [
       },
       Object {
         "confirmed": 91,
-        "date": "2020-02-24T23:00:00.000Z",
+        "date": "2020-02-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -1342,7 +1342,7 @@ Array [
       },
       Object {
         "confirmed": 93,
-        "date": "2020-02-25T23:00:00.000Z",
+        "date": "2020-02-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -1351,7 +1351,7 @@ Array [
       },
       Object {
         "confirmed": 93,
-        "date": "2020-02-26T23:00:00.000Z",
+        "date": "2020-02-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1360,7 +1360,7 @@ Array [
       },
       Object {
         "confirmed": 93,
-        "date": "2020-02-27T23:00:00.000Z",
+        "date": "2020-02-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1369,7 +1369,7 @@ Array [
       },
       Object {
         "confirmed": 102,
-        "date": "2020-02-28T23:00:00.000Z",
+        "date": "2020-02-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 9,
         "deltaDeceased": 0,
@@ -1378,7 +1378,7 @@ Array [
       },
       Object {
         "confirmed": 106,
-        "date": "2020-02-29T23:00:00.000Z",
+        "date": "2020-03-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -1387,7 +1387,7 @@ Array [
       },
       Object {
         "confirmed": 108,
-        "date": "2020-03-01T23:00:00.000Z",
+        "date": "2020-03-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -1396,7 +1396,7 @@ Array [
       },
       Object {
         "confirmed": 110,
-        "date": "2020-03-02T23:00:00.000Z",
+        "date": "2020-03-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -1405,7 +1405,7 @@ Array [
       },
       Object {
         "confirmed": 110,
-        "date": "2020-03-03T23:00:00.000Z",
+        "date": "2020-03-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1414,7 +1414,7 @@ Array [
       },
       Object {
         "confirmed": 117,
-        "date": "2020-03-04T23:00:00.000Z",
+        "date": "2020-03-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -1423,7 +1423,7 @@ Array [
       },
       Object {
         "confirmed": 130,
-        "date": "2020-03-05T23:00:00.000Z",
+        "date": "2020-03-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 13,
         "deltaDeceased": 0,
@@ -1432,7 +1432,7 @@ Array [
       },
       Object {
         "confirmed": 138,
-        "date": "2020-03-06T23:00:00.000Z",
+        "date": "2020-03-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 8,
         "deltaDeceased": 0,
@@ -1441,7 +1441,7 @@ Array [
       },
       Object {
         "confirmed": 150,
-        "date": "2020-03-07T23:00:00.000Z",
+        "date": "2020-03-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 12,
         "deltaDeceased": 0,
@@ -1450,7 +1450,7 @@ Array [
       },
       Object {
         "confirmed": 150,
-        "date": "2020-03-08T23:00:00.000Z",
+        "date": "2020-03-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1459,7 +1459,7 @@ Array [
       },
       Object {
         "confirmed": 160,
-        "date": "2020-03-09T23:00:00.000Z",
+        "date": "2020-03-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 10,
         "deltaDeceased": 0,
@@ -1468,7 +1468,7 @@ Array [
       },
       Object {
         "confirmed": 178,
-        "date": "2020-03-10T23:00:00.000Z",
+        "date": "2020-03-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 18,
         "deltaDeceased": 0,
@@ -1477,7 +1477,7 @@ Array [
       },
       Object {
         "confirmed": 178,
-        "date": "2020-03-11T23:00:00.000Z",
+        "date": "2020-03-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1486,7 +1486,7 @@ Array [
       },
       Object {
         "confirmed": 200,
-        "date": "2020-03-12T23:00:00.000Z",
+        "date": "2020-03-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 22,
         "deltaDeceased": 0,
@@ -1495,7 +1495,7 @@ Array [
       },
       Object {
         "confirmed": 212,
-        "date": "2020-03-13T23:00:00.000Z",
+        "date": "2020-03-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 12,
         "deltaDeceased": 0,
@@ -1504,7 +1504,7 @@ Array [
       },
       Object {
         "confirmed": 226,
-        "date": "2020-03-14T23:00:00.000Z",
+        "date": "2020-03-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 14,
         "deltaDeceased": 0,
@@ -1513,7 +1513,7 @@ Array [
       },
       Object {
         "confirmed": 243,
-        "date": "2020-03-15T23:00:00.000Z",
+        "date": "2020-03-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 17,
         "deltaDeceased": 0,
@@ -1522,7 +1522,7 @@ Array [
       },
       Object {
         "confirmed": 266,
-        "date": "2020-03-16T23:00:00.000Z",
+        "date": "2020-03-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 23,
         "deltaDeceased": 0,
@@ -1537,7 +1537,7 @@ Array [
     "items": Array [
       Object {
         "confirmed": 0,
-        "date": "2020-01-21T23:00:00.000Z",
+        "date": "2020-01-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": undefined,
         "deltaDeceased": undefined,
@@ -1546,7 +1546,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-22T23:00:00.000Z",
+        "date": "2020-01-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1555,7 +1555,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-23T23:00:00.000Z",
+        "date": "2020-01-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1564,7 +1564,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-24T23:00:00.000Z",
+        "date": "2020-01-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -1573,7 +1573,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-25T23:00:00.000Z",
+        "date": "2020-01-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1582,7 +1582,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-26T23:00:00.000Z",
+        "date": "2020-01-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1591,7 +1591,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-27T23:00:00.000Z",
+        "date": "2020-01-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1600,7 +1600,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-28T23:00:00.000Z",
+        "date": "2020-01-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1609,7 +1609,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-29T23:00:00.000Z",
+        "date": "2020-01-30T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1618,7 +1618,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-30T23:00:00.000Z",
+        "date": "2020-01-31T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1627,7 +1627,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-31T23:00:00.000Z",
+        "date": "2020-02-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1636,7 +1636,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-01T23:00:00.000Z",
+        "date": "2020-02-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1645,7 +1645,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-02T23:00:00.000Z",
+        "date": "2020-02-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1654,7 +1654,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-03T23:00:00.000Z",
+        "date": "2020-02-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1663,7 +1663,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-04T23:00:00.000Z",
+        "date": "2020-02-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1672,7 +1672,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-05T23:00:00.000Z",
+        "date": "2020-02-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1681,7 +1681,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-06T23:00:00.000Z",
+        "date": "2020-02-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1690,7 +1690,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-07T23:00:00.000Z",
+        "date": "2020-02-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1699,7 +1699,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-08T23:00:00.000Z",
+        "date": "2020-02-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1708,7 +1708,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-09T23:00:00.000Z",
+        "date": "2020-02-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1717,7 +1717,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-10T23:00:00.000Z",
+        "date": "2020-02-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1726,7 +1726,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-11T23:00:00.000Z",
+        "date": "2020-02-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1735,7 +1735,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-12T23:00:00.000Z",
+        "date": "2020-02-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1744,7 +1744,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-13T23:00:00.000Z",
+        "date": "2020-02-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1753,7 +1753,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-14T23:00:00.000Z",
+        "date": "2020-02-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1762,7 +1762,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-15T23:00:00.000Z",
+        "date": "2020-02-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1771,7 +1771,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-16T23:00:00.000Z",
+        "date": "2020-02-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1780,7 +1780,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-17T23:00:00.000Z",
+        "date": "2020-02-18T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1789,7 +1789,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-18T23:00:00.000Z",
+        "date": "2020-02-19T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1798,7 +1798,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-19T23:00:00.000Z",
+        "date": "2020-02-20T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1807,7 +1807,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-20T23:00:00.000Z",
+        "date": "2020-02-21T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1816,7 +1816,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-21T23:00:00.000Z",
+        "date": "2020-02-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1825,7 +1825,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-22T23:00:00.000Z",
+        "date": "2020-02-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1834,7 +1834,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-23T23:00:00.000Z",
+        "date": "2020-02-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1843,7 +1843,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-24T23:00:00.000Z",
+        "date": "2020-02-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1852,7 +1852,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-25T23:00:00.000Z",
+        "date": "2020-02-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1861,7 +1861,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-26T23:00:00.000Z",
+        "date": "2020-02-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1870,7 +1870,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-27T23:00:00.000Z",
+        "date": "2020-02-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1879,7 +1879,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-28T23:00:00.000Z",
+        "date": "2020-02-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1888,7 +1888,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-29T23:00:00.000Z",
+        "date": "2020-03-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1897,7 +1897,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-01T23:00:00.000Z",
+        "date": "2020-03-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1906,7 +1906,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-02T23:00:00.000Z",
+        "date": "2020-03-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1915,7 +1915,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-03T23:00:00.000Z",
+        "date": "2020-03-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1924,7 +1924,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-04T23:00:00.000Z",
+        "date": "2020-03-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1933,7 +1933,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-05T23:00:00.000Z",
+        "date": "2020-03-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1942,7 +1942,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-06T23:00:00.000Z",
+        "date": "2020-03-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1951,7 +1951,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-07T23:00:00.000Z",
+        "date": "2020-03-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1960,7 +1960,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-08T23:00:00.000Z",
+        "date": "2020-03-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1969,7 +1969,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-09T23:00:00.000Z",
+        "date": "2020-03-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1978,7 +1978,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-10T23:00:00.000Z",
+        "date": "2020-03-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1987,7 +1987,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-11T23:00:00.000Z",
+        "date": "2020-03-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -1996,7 +1996,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-12T23:00:00.000Z",
+        "date": "2020-03-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2005,7 +2005,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-13T23:00:00.000Z",
+        "date": "2020-03-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2014,7 +2014,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-14T23:00:00.000Z",
+        "date": "2020-03-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2023,7 +2023,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-15T23:00:00.000Z",
+        "date": "2020-03-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2032,7 +2032,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-03-16T23:00:00.000Z",
+        "date": "2020-03-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2047,7 +2047,7 @@ Array [
     "items": Array [
       Object {
         "confirmed": 0,
-        "date": "2020-01-21T23:00:00.000Z",
+        "date": "2020-01-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": undefined,
         "deltaDeceased": undefined,
@@ -2056,7 +2056,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-22T23:00:00.000Z",
+        "date": "2020-01-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2065,7 +2065,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-23T23:00:00.000Z",
+        "date": "2020-01-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2074,7 +2074,7 @@ Array [
       },
       Object {
         "confirmed": 3,
-        "date": "2020-01-24T23:00:00.000Z",
+        "date": "2020-01-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -2083,7 +2083,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-25T23:00:00.000Z",
+        "date": "2020-01-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2092,7 +2092,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-26T23:00:00.000Z",
+        "date": "2020-01-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2101,7 +2101,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-27T23:00:00.000Z",
+        "date": "2020-01-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2110,7 +2110,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-01-28T23:00:00.000Z",
+        "date": "2020-01-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -2119,7 +2119,7 @@ Array [
       },
       Object {
         "confirmed": 8,
-        "date": "2020-01-29T23:00:00.000Z",
+        "date": "2020-01-30T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2128,7 +2128,7 @@ Array [
       },
       Object {
         "confirmed": 8,
-        "date": "2020-01-30T23:00:00.000Z",
+        "date": "2020-01-31T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2137,7 +2137,7 @@ Array [
       },
       Object {
         "confirmed": 8,
-        "date": "2020-01-31T23:00:00.000Z",
+        "date": "2020-02-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2146,7 +2146,7 @@ Array [
       },
       Object {
         "confirmed": 8,
-        "date": "2020-02-01T23:00:00.000Z",
+        "date": "2020-02-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2155,7 +2155,7 @@ Array [
       },
       Object {
         "confirmed": 8,
-        "date": "2020-02-02T23:00:00.000Z",
+        "date": "2020-02-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2164,7 +2164,7 @@ Array [
       },
       Object {
         "confirmed": 10,
-        "date": "2020-02-03T23:00:00.000Z",
+        "date": "2020-02-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -2173,7 +2173,7 @@ Array [
       },
       Object {
         "confirmed": 12,
-        "date": "2020-02-04T23:00:00.000Z",
+        "date": "2020-02-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -2182,7 +2182,7 @@ Array [
       },
       Object {
         "confirmed": 12,
-        "date": "2020-02-05T23:00:00.000Z",
+        "date": "2020-02-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2191,7 +2191,7 @@ Array [
       },
       Object {
         "confirmed": 12,
-        "date": "2020-02-06T23:00:00.000Z",
+        "date": "2020-02-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2200,7 +2200,7 @@ Array [
       },
       Object {
         "confirmed": 16,
-        "date": "2020-02-07T23:00:00.000Z",
+        "date": "2020-02-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -2209,7 +2209,7 @@ Array [
       },
       Object {
         "confirmed": 16,
-        "date": "2020-02-08T23:00:00.000Z",
+        "date": "2020-02-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2218,7 +2218,7 @@ Array [
       },
       Object {
         "confirmed": 18,
-        "date": "2020-02-09T23:00:00.000Z",
+        "date": "2020-02-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -2227,7 +2227,7 @@ Array [
       },
       Object {
         "confirmed": 18,
-        "date": "2020-02-10T23:00:00.000Z",
+        "date": "2020-02-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2236,7 +2236,7 @@ Array [
       },
       Object {
         "confirmed": 18,
-        "date": "2020-02-11T23:00:00.000Z",
+        "date": "2020-02-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2245,7 +2245,7 @@ Array [
       },
       Object {
         "confirmed": 19,
-        "date": "2020-02-12T23:00:00.000Z",
+        "date": "2020-02-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2254,7 +2254,7 @@ Array [
       },
       Object {
         "confirmed": 19,
-        "date": "2020-02-13T23:00:00.000Z",
+        "date": "2020-02-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2263,7 +2263,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-14T23:00:00.000Z",
+        "date": "2020-02-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -2272,7 +2272,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-15T23:00:00.000Z",
+        "date": "2020-02-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2281,7 +2281,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-16T23:00:00.000Z",
+        "date": "2020-02-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2290,7 +2290,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-17T23:00:00.000Z",
+        "date": "2020-02-18T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2299,7 +2299,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-18T23:00:00.000Z",
+        "date": "2020-02-19T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2308,7 +2308,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-19T23:00:00.000Z",
+        "date": "2020-02-20T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2317,7 +2317,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-20T23:00:00.000Z",
+        "date": "2020-02-21T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2326,7 +2326,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-21T23:00:00.000Z",
+        "date": "2020-02-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2335,7 +2335,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-22T23:00:00.000Z",
+        "date": "2020-02-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2344,7 +2344,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-23T23:00:00.000Z",
+        "date": "2020-02-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2353,7 +2353,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-24T23:00:00.000Z",
+        "date": "2020-02-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2362,7 +2362,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-02-25T23:00:00.000Z",
+        "date": "2020-02-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2371,7 +2371,7 @@ Array [
       },
       Object {
         "confirmed": 23,
-        "date": "2020-02-26T23:00:00.000Z",
+        "date": "2020-02-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2380,7 +2380,7 @@ Array [
       },
       Object {
         "confirmed": 23,
-        "date": "2020-02-27T23:00:00.000Z",
+        "date": "2020-02-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2389,7 +2389,7 @@ Array [
       },
       Object {
         "confirmed": 25,
-        "date": "2020-02-28T23:00:00.000Z",
+        "date": "2020-02-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -2398,7 +2398,7 @@ Array [
       },
       Object {
         "confirmed": 29,
-        "date": "2020-02-29T23:00:00.000Z",
+        "date": "2020-03-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -2407,7 +2407,7 @@ Array [
       },
       Object {
         "confirmed": 29,
-        "date": "2020-03-01T23:00:00.000Z",
+        "date": "2020-03-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2416,7 +2416,7 @@ Array [
       },
       Object {
         "confirmed": 36,
-        "date": "2020-03-02T23:00:00.000Z",
+        "date": "2020-03-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -2425,7 +2425,7 @@ Array [
       },
       Object {
         "confirmed": 50,
-        "date": "2020-03-03T23:00:00.000Z",
+        "date": "2020-03-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 14,
         "deltaDeceased": 0,
@@ -2434,7 +2434,7 @@ Array [
       },
       Object {
         "confirmed": 50,
-        "date": "2020-03-04T23:00:00.000Z",
+        "date": "2020-03-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2443,7 +2443,7 @@ Array [
       },
       Object {
         "confirmed": 83,
-        "date": "2020-03-05T23:00:00.000Z",
+        "date": "2020-03-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 33,
         "deltaDeceased": 0,
@@ -2452,7 +2452,7 @@ Array [
       },
       Object {
         "confirmed": 93,
-        "date": "2020-03-06T23:00:00.000Z",
+        "date": "2020-03-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 10,
         "deltaDeceased": 0,
@@ -2461,7 +2461,7 @@ Array [
       },
       Object {
         "confirmed": 99,
-        "date": "2020-03-07T23:00:00.000Z",
+        "date": "2020-03-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 6,
         "deltaDeceased": 0,
@@ -2470,7 +2470,7 @@ Array [
       },
       Object {
         "confirmed": 117,
-        "date": "2020-03-08T23:00:00.000Z",
+        "date": "2020-03-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 18,
         "deltaDeceased": 0,
@@ -2479,7 +2479,7 @@ Array [
       },
       Object {
         "confirmed": 129,
-        "date": "2020-03-09T23:00:00.000Z",
+        "date": "2020-03-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 12,
         "deltaDeceased": 0,
@@ -2488,7 +2488,7 @@ Array [
       },
       Object {
         "confirmed": 149,
-        "date": "2020-03-10T23:00:00.000Z",
+        "date": "2020-03-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 20,
         "deltaDeceased": 0,
@@ -2497,7 +2497,7 @@ Array [
       },
       Object {
         "confirmed": 149,
-        "date": "2020-03-11T23:00:00.000Z",
+        "date": "2020-03-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2506,7 +2506,7 @@ Array [
       },
       Object {
         "confirmed": 197,
-        "date": "2020-03-12T23:00:00.000Z",
+        "date": "2020-03-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 48,
         "deltaDeceased": 0,
@@ -2515,7 +2515,7 @@ Array [
       },
       Object {
         "confirmed": 238,
-        "date": "2020-03-13T23:00:00.000Z",
+        "date": "2020-03-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 41,
         "deltaDeceased": 0,
@@ -2524,7 +2524,7 @@ Array [
       },
       Object {
         "confirmed": 428,
-        "date": "2020-03-14T23:00:00.000Z",
+        "date": "2020-03-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 190,
         "deltaDeceased": 0,
@@ -2533,7 +2533,7 @@ Array [
       },
       Object {
         "confirmed": 566,
-        "date": "2020-03-15T23:00:00.000Z",
+        "date": "2020-03-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 138,
         "deltaDeceased": 0,
@@ -2542,7 +2542,7 @@ Array [
       },
       Object {
         "confirmed": 673,
-        "date": "2020-03-16T23:00:00.000Z",
+        "date": "2020-03-17T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 107,
         "deltaDeceased": 2,
@@ -2557,7 +2557,7 @@ Array [
     "items": Array [
       Object {
         "confirmed": 0,
-        "date": "2020-01-21T23:00:00.000Z",
+        "date": "2020-01-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": undefined,
         "deltaDeceased": undefined,
@@ -2566,7 +2566,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-22T23:00:00.000Z",
+        "date": "2020-01-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2575,7 +2575,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-23T23:00:00.000Z",
+        "date": "2020-01-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2584,7 +2584,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-24T23:00:00.000Z",
+        "date": "2020-01-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2593,7 +2593,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-25T23:00:00.000Z",
+        "date": "2020-01-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2602,7 +2602,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-26T23:00:00.000Z",
+        "date": "2020-01-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2611,7 +2611,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-27T23:00:00.000Z",
+        "date": "2020-01-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2620,7 +2620,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-28T23:00:00.000Z",
+        "date": "2020-01-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2629,7 +2629,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-29T23:00:00.000Z",
+        "date": "2020-01-30T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2638,7 +2638,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-30T23:00:00.000Z",
+        "date": "2020-01-31T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2647,7 +2647,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-31T23:00:00.000Z",
+        "date": "2020-02-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2656,7 +2656,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-01T23:00:00.000Z",
+        "date": "2020-02-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2665,7 +2665,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-02T23:00:00.000Z",
+        "date": "2020-02-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2674,7 +2674,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-02-03T23:00:00.000Z",
+        "date": "2020-02-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2683,7 +2683,7 @@ Array [
       },
       Object {
         "confirmed": 2,
-        "date": "2020-02-04T23:00:00.000Z",
+        "date": "2020-02-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2692,7 +2692,7 @@ Array [
       },
       Object {
         "confirmed": 2,
-        "date": "2020-02-05T23:00:00.000Z",
+        "date": "2020-02-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2701,7 +2701,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-06T23:00:00.000Z",
+        "date": "2020-02-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -2710,7 +2710,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-07T23:00:00.000Z",
+        "date": "2020-02-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2719,7 +2719,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-08T23:00:00.000Z",
+        "date": "2020-02-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2728,7 +2728,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-09T23:00:00.000Z",
+        "date": "2020-02-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2737,7 +2737,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-10T23:00:00.000Z",
+        "date": "2020-02-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2746,7 +2746,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-11T23:00:00.000Z",
+        "date": "2020-02-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2755,7 +2755,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-12T23:00:00.000Z",
+        "date": "2020-02-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2764,7 +2764,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-13T23:00:00.000Z",
+        "date": "2020-02-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2773,7 +2773,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-14T23:00:00.000Z",
+        "date": "2020-02-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2782,7 +2782,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-15T23:00:00.000Z",
+        "date": "2020-02-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2791,7 +2791,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-16T23:00:00.000Z",
+        "date": "2020-02-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2800,7 +2800,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-17T23:00:00.000Z",
+        "date": "2020-02-18T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2809,7 +2809,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-18T23:00:00.000Z",
+        "date": "2020-02-19T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2818,7 +2818,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-19T23:00:00.000Z",
+        "date": "2020-02-20T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2827,7 +2827,7 @@ Array [
       },
       Object {
         "confirmed": 6,
-        "date": "2020-02-20T23:00:00.000Z",
+        "date": "2020-02-21T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2836,7 +2836,7 @@ Array [
       },
       Object {
         "confirmed": 6,
-        "date": "2020-02-21T23:00:00.000Z",
+        "date": "2020-02-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2845,7 +2845,7 @@ Array [
       },
       Object {
         "confirmed": 6,
-        "date": "2020-02-22T23:00:00.000Z",
+        "date": "2020-02-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2854,7 +2854,7 @@ Array [
       },
       Object {
         "confirmed": 6,
-        "date": "2020-02-23T23:00:00.000Z",
+        "date": "2020-02-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2863,7 +2863,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-02-24T23:00:00.000Z",
+        "date": "2020-02-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2872,7 +2872,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-02-25T23:00:00.000Z",
+        "date": "2020-02-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2881,7 +2881,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-02-26T23:00:00.000Z",
+        "date": "2020-02-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2890,7 +2890,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-02-27T23:00:00.000Z",
+        "date": "2020-02-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2899,7 +2899,7 @@ Array [
       },
       Object {
         "confirmed": 8,
-        "date": "2020-02-28T23:00:00.000Z",
+        "date": "2020-02-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2908,7 +2908,7 @@ Array [
       },
       Object {
         "confirmed": 8,
-        "date": "2020-02-29T23:00:00.000Z",
+        "date": "2020-03-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2917,7 +2917,7 @@ Array [
       },
       Object {
         "confirmed": 8,
-        "date": "2020-03-01T23:00:00.000Z",
+        "date": "2020-03-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2926,7 +2926,7 @@ Array [
       },
       Object {
         "confirmed": 9,
-        "date": "2020-03-02T23:00:00.000Z",
+        "date": "2020-03-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2935,7 +2935,7 @@ Array [
       },
       Object {
         "confirmed": 12,
-        "date": "2020-03-03T23:00:00.000Z",
+        "date": "2020-03-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -2944,7 +2944,7 @@ Array [
       },
       Object {
         "confirmed": 13,
-        "date": "2020-03-04T23:00:00.000Z",
+        "date": "2020-03-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -2953,7 +2953,7 @@ Array [
       },
       Object {
         "confirmed": 21,
-        "date": "2020-03-05T23:00:00.000Z",
+        "date": "2020-03-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 8,
         "deltaDeceased": 0,
@@ -2962,7 +2962,7 @@ Array [
       },
       Object {
         "confirmed": 21,
-        "date": "2020-03-06T23:00:00.000Z",
+        "date": "2020-03-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2971,7 +2971,7 @@ Array [
       },
       Object {
         "confirmed": 27,
-        "date": "2020-03-07T23:00:00.000Z",
+        "date": "2020-03-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 6,
         "deltaDeceased": 0,
@@ -2980,7 +2980,7 @@ Array [
       },
       Object {
         "confirmed": 32,
-        "date": "2020-03-08T23:00:00.000Z",
+        "date": "2020-03-09T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 5,
         "deltaDeceased": 1,
@@ -2989,7 +2989,7 @@ Array [
       },
       Object {
         "confirmed": 32,
-        "date": "2020-03-09T23:00:00.000Z",
+        "date": "2020-03-10T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -2998,7 +2998,7 @@ Array [
       },
       Object {
         "confirmed": 39,
-        "date": "2020-03-10T23:00:00.000Z",
+        "date": "2020-03-11T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -3007,7 +3007,7 @@ Array [
       },
       Object {
         "confirmed": 46,
-        "date": "2020-03-11T23:00:00.000Z",
+        "date": "2020-03-12T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -3016,7 +3016,7 @@ Array [
       },
       Object {
         "confirmed": 64,
-        "date": "2020-03-12T23:00:00.000Z",
+        "date": "2020-03-13T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 18,
         "deltaDeceased": 0,
@@ -3025,7 +3025,7 @@ Array [
       },
       Object {
         "confirmed": 64,
-        "date": "2020-03-13T23:00:00.000Z",
+        "date": "2020-03-14T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3034,7 +3034,7 @@ Array [
       },
       Object {
         "confirmed": 73,
-        "date": "2020-03-14T23:00:00.000Z",
+        "date": "2020-03-15T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 9,
         "deltaDeceased": 0,
@@ -3043,7 +3043,7 @@ Array [
       },
       Object {
         "confirmed": 103,
-        "date": "2020-03-15T23:00:00.000Z",
+        "date": "2020-03-16T00:00:00.000Z",
         "deceased": 4,
         "deltaConfirmed": 30,
         "deltaDeceased": 3,
@@ -3052,7 +3052,7 @@ Array [
       },
       Object {
         "confirmed": 103,
-        "date": "2020-03-16T23:00:00.000Z",
+        "date": "2020-03-17T00:00:00.000Z",
         "deceased": 4,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3067,7 +3067,7 @@ Array [
     "items": Array [
       Object {
         "confirmed": 0,
-        "date": "2020-01-21T23:00:00.000Z",
+        "date": "2020-01-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": undefined,
         "deltaDeceased": undefined,
@@ -3076,7 +3076,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-22T23:00:00.000Z",
+        "date": "2020-01-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3085,7 +3085,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-23T23:00:00.000Z",
+        "date": "2020-01-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3094,7 +3094,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-24T23:00:00.000Z",
+        "date": "2020-01-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3103,7 +3103,7 @@ Array [
       },
       Object {
         "confirmed": 3,
-        "date": "2020-01-25T23:00:00.000Z",
+        "date": "2020-01-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -3112,7 +3112,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-26T23:00:00.000Z",
+        "date": "2020-01-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -3121,7 +3121,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-27T23:00:00.000Z",
+        "date": "2020-01-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3130,7 +3130,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-28T23:00:00.000Z",
+        "date": "2020-01-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3139,7 +3139,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-29T23:00:00.000Z",
+        "date": "2020-01-30T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3148,7 +3148,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-30T23:00:00.000Z",
+        "date": "2020-01-31T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3157,7 +3157,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-31T23:00:00.000Z",
+        "date": "2020-02-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3166,7 +3166,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-01T23:00:00.000Z",
+        "date": "2020-02-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3175,7 +3175,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-02T23:00:00.000Z",
+        "date": "2020-02-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3184,7 +3184,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-03T23:00:00.000Z",
+        "date": "2020-02-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3193,7 +3193,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-04T23:00:00.000Z",
+        "date": "2020-02-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3202,7 +3202,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-05T23:00:00.000Z",
+        "date": "2020-02-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3211,7 +3211,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-06T23:00:00.000Z",
+        "date": "2020-02-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3220,7 +3220,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-07T23:00:00.000Z",
+        "date": "2020-02-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3229,7 +3229,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-08T23:00:00.000Z",
+        "date": "2020-02-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3238,7 +3238,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-09T23:00:00.000Z",
+        "date": "2020-02-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3247,7 +3247,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-10T23:00:00.000Z",
+        "date": "2020-02-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3256,7 +3256,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-11T23:00:00.000Z",
+        "date": "2020-02-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3265,7 +3265,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-12T23:00:00.000Z",
+        "date": "2020-02-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3274,7 +3274,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-13T23:00:00.000Z",
+        "date": "2020-02-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3283,7 +3283,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-14T23:00:00.000Z",
+        "date": "2020-02-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3292,7 +3292,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-15T23:00:00.000Z",
+        "date": "2020-02-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3301,7 +3301,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-16T23:00:00.000Z",
+        "date": "2020-02-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3310,7 +3310,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-17T23:00:00.000Z",
+        "date": "2020-02-18T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3319,7 +3319,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-18T23:00:00.000Z",
+        "date": "2020-02-19T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3328,7 +3328,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-19T23:00:00.000Z",
+        "date": "2020-02-20T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3337,7 +3337,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-20T23:00:00.000Z",
+        "date": "2020-02-21T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3346,7 +3346,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-21T23:00:00.000Z",
+        "date": "2020-02-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3355,7 +3355,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-22T23:00:00.000Z",
+        "date": "2020-02-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3364,7 +3364,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-23T23:00:00.000Z",
+        "date": "2020-02-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3373,7 +3373,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-24T23:00:00.000Z",
+        "date": "2020-02-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3382,7 +3382,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-25T23:00:00.000Z",
+        "date": "2020-02-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3391,7 +3391,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-26T23:00:00.000Z",
+        "date": "2020-02-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3400,7 +3400,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-27T23:00:00.000Z",
+        "date": "2020-02-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3409,7 +3409,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-28T23:00:00.000Z",
+        "date": "2020-02-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3418,7 +3418,7 @@ Array [
       },
       Object {
         "confirmed": 6,
-        "date": "2020-02-29T23:00:00.000Z",
+        "date": "2020-03-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -3427,7 +3427,7 @@ Array [
       },
       Object {
         "confirmed": 6,
-        "date": "2020-03-01T23:00:00.000Z",
+        "date": "2020-03-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3436,7 +3436,7 @@ Array [
       },
       Object {
         "confirmed": 13,
-        "date": "2020-03-02T23:00:00.000Z",
+        "date": "2020-03-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -3445,7 +3445,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-03-03T23:00:00.000Z",
+        "date": "2020-03-04T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 9,
         "deltaDeceased": 1,
@@ -3454,7 +3454,7 @@ Array [
       },
       Object {
         "confirmed": 22,
-        "date": "2020-03-04T23:00:00.000Z",
+        "date": "2020-03-05T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3463,7 +3463,7 @@ Array [
       },
       Object {
         "confirmed": 26,
-        "date": "2020-03-05T23:00:00.000Z",
+        "date": "2020-03-06T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -3472,7 +3472,7 @@ Array [
       },
       Object {
         "confirmed": 28,
-        "date": "2020-03-06T23:00:00.000Z",
+        "date": "2020-03-07T00:00:00.000Z",
         "deceased": 1,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -3481,7 +3481,7 @@ Array [
       },
       Object {
         "confirmed": 38,
-        "date": "2020-03-07T23:00:00.000Z",
+        "date": "2020-03-08T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 10,
         "deltaDeceased": 1,
@@ -3490,7 +3490,7 @@ Array [
       },
       Object {
         "confirmed": 48,
-        "date": "2020-03-08T23:00:00.000Z",
+        "date": "2020-03-09T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 10,
         "deltaDeceased": 0,
@@ -3499,7 +3499,7 @@ Array [
       },
       Object {
         "confirmed": 55,
-        "date": "2020-03-09T23:00:00.000Z",
+        "date": "2020-03-10T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -3508,7 +3508,7 @@ Array [
       },
       Object {
         "confirmed": 65,
-        "date": "2020-03-10T23:00:00.000Z",
+        "date": "2020-03-11T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 10,
         "deltaDeceased": 0,
@@ -3517,7 +3517,7 @@ Array [
       },
       Object {
         "confirmed": 65,
-        "date": "2020-03-11T23:00:00.000Z",
+        "date": "2020-03-12T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3526,7 +3526,7 @@ Array [
       },
       Object {
         "confirmed": 92,
-        "date": "2020-03-12T23:00:00.000Z",
+        "date": "2020-03-13T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 27,
         "deltaDeceased": 0,
@@ -3535,7 +3535,7 @@ Array [
       },
       Object {
         "confirmed": 112,
-        "date": "2020-03-13T23:00:00.000Z",
+        "date": "2020-03-14T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 20,
         "deltaDeceased": 0,
@@ -3544,7 +3544,7 @@ Array [
       },
       Object {
         "confirmed": 134,
-        "date": "2020-03-14T23:00:00.000Z",
+        "date": "2020-03-15T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 22,
         "deltaDeceased": 0,
@@ -3553,7 +3553,7 @@ Array [
       },
       Object {
         "confirmed": 171,
-        "date": "2020-03-15T23:00:00.000Z",
+        "date": "2020-03-16T00:00:00.000Z",
         "deceased": 2,
         "deltaConfirmed": 37,
         "deltaDeceased": 0,
@@ -3562,7 +3562,7 @@ Array [
       },
       Object {
         "confirmed": 210,
-        "date": "2020-03-16T23:00:00.000Z",
+        "date": "2020-03-17T00:00:00.000Z",
         "deceased": 4,
         "deltaConfirmed": 39,
         "deltaDeceased": 2,
@@ -3577,7 +3577,7 @@ Array [
     "items": Array [
       Object {
         "confirmed": 0,
-        "date": "2020-01-21T23:00:00.000Z",
+        "date": "2020-01-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": undefined,
         "deltaDeceased": undefined,
@@ -3586,7 +3586,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-22T23:00:00.000Z",
+        "date": "2020-01-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3595,7 +3595,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-23T23:00:00.000Z",
+        "date": "2020-01-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3604,7 +3604,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-24T23:00:00.000Z",
+        "date": "2020-01-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3613,7 +3613,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-25T23:00:00.000Z",
+        "date": "2020-01-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -3622,7 +3622,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-26T23:00:00.000Z",
+        "date": "2020-01-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3631,7 +3631,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-27T23:00:00.000Z",
+        "date": "2020-01-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3640,7 +3640,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-28T23:00:00.000Z",
+        "date": "2020-01-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3649,7 +3649,7 @@ Array [
       },
       Object {
         "confirmed": 2,
-        "date": "2020-01-29T23:00:00.000Z",
+        "date": "2020-01-30T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -3658,7 +3658,7 @@ Array [
       },
       Object {
         "confirmed": 3,
-        "date": "2020-01-30T23:00:00.000Z",
+        "date": "2020-01-31T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -3667,7 +3667,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-01-31T23:00:00.000Z",
+        "date": "2020-02-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -3676,7 +3676,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-01T23:00:00.000Z",
+        "date": "2020-02-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3685,7 +3685,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-02T23:00:00.000Z",
+        "date": "2020-02-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3694,7 +3694,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-03T23:00:00.000Z",
+        "date": "2020-02-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3703,7 +3703,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-04T23:00:00.000Z",
+        "date": "2020-02-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3712,7 +3712,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-05T23:00:00.000Z",
+        "date": "2020-02-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3721,7 +3721,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-06T23:00:00.000Z",
+        "date": "2020-02-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3730,7 +3730,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-07T23:00:00.000Z",
+        "date": "2020-02-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3739,7 +3739,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-08T23:00:00.000Z",
+        "date": "2020-02-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3748,7 +3748,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-09T23:00:00.000Z",
+        "date": "2020-02-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3757,7 +3757,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-10T23:00:00.000Z",
+        "date": "2020-02-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3766,7 +3766,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-11T23:00:00.000Z",
+        "date": "2020-02-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3775,7 +3775,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-12T23:00:00.000Z",
+        "date": "2020-02-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3784,7 +3784,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-13T23:00:00.000Z",
+        "date": "2020-02-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3793,7 +3793,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-14T23:00:00.000Z",
+        "date": "2020-02-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3802,7 +3802,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-15T23:00:00.000Z",
+        "date": "2020-02-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3811,7 +3811,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-16T23:00:00.000Z",
+        "date": "2020-02-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3820,7 +3820,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-17T23:00:00.000Z",
+        "date": "2020-02-18T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3829,7 +3829,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-18T23:00:00.000Z",
+        "date": "2020-02-19T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3838,7 +3838,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-19T23:00:00.000Z",
+        "date": "2020-02-20T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3847,7 +3847,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-20T23:00:00.000Z",
+        "date": "2020-02-21T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3856,7 +3856,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-21T23:00:00.000Z",
+        "date": "2020-02-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3865,7 +3865,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-22T23:00:00.000Z",
+        "date": "2020-02-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3874,7 +3874,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-23T23:00:00.000Z",
+        "date": "2020-02-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3883,7 +3883,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-24T23:00:00.000Z",
+        "date": "2020-02-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3892,7 +3892,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-25T23:00:00.000Z",
+        "date": "2020-02-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3901,7 +3901,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-26T23:00:00.000Z",
+        "date": "2020-02-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3910,7 +3910,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-27T23:00:00.000Z",
+        "date": "2020-02-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3919,7 +3919,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-02-28T23:00:00.000Z",
+        "date": "2020-02-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -3928,7 +3928,7 @@ Array [
       },
       Object {
         "confirmed": 7,
-        "date": "2020-02-29T23:00:00.000Z",
+        "date": "2020-03-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3937,7 +3937,7 @@ Array [
       },
       Object {
         "confirmed": 9,
-        "date": "2020-03-01T23:00:00.000Z",
+        "date": "2020-03-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -3946,7 +3946,7 @@ Array [
       },
       Object {
         "confirmed": 9,
-        "date": "2020-03-02T23:00:00.000Z",
+        "date": "2020-03-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3955,7 +3955,7 @@ Array [
       },
       Object {
         "confirmed": 10,
-        "date": "2020-03-03T23:00:00.000Z",
+        "date": "2020-03-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -3964,7 +3964,7 @@ Array [
       },
       Object {
         "confirmed": 10,
-        "date": "2020-03-04T23:00:00.000Z",
+        "date": "2020-03-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3973,7 +3973,7 @@ Array [
       },
       Object {
         "confirmed": 10,
-        "date": "2020-03-05T23:00:00.000Z",
+        "date": "2020-03-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -3982,7 +3982,7 @@ Array [
       },
       Object {
         "confirmed": 11,
-        "date": "2020-03-06T23:00:00.000Z",
+        "date": "2020-03-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -3991,7 +3991,7 @@ Array [
       },
       Object {
         "confirmed": 11,
-        "date": "2020-03-07T23:00:00.000Z",
+        "date": "2020-03-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4000,7 +4000,7 @@ Array [
       },
       Object {
         "confirmed": 15,
-        "date": "2020-03-08T23:00:00.000Z",
+        "date": "2020-03-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -4009,7 +4009,7 @@ Array [
       },
       Object {
         "confirmed": 18,
-        "date": "2020-03-09T23:00:00.000Z",
+        "date": "2020-03-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -4018,7 +4018,7 @@ Array [
       },
       Object {
         "confirmed": 21,
-        "date": "2020-03-10T23:00:00.000Z",
+        "date": "2020-03-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -4027,7 +4027,7 @@ Array [
       },
       Object {
         "confirmed": 21,
-        "date": "2020-03-11T23:00:00.000Z",
+        "date": "2020-03-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4036,7 +4036,7 @@ Array [
       },
       Object {
         "confirmed": 36,
-        "date": "2020-03-12T23:00:00.000Z",
+        "date": "2020-03-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 15,
         "deltaDeceased": 0,
@@ -4045,7 +4045,7 @@ Array [
       },
       Object {
         "confirmed": 49,
-        "date": "2020-03-13T23:00:00.000Z",
+        "date": "2020-03-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 13,
         "deltaDeceased": 0,
@@ -4054,7 +4054,7 @@ Array [
       },
       Object {
         "confirmed": 57,
-        "date": "2020-03-14T23:00:00.000Z",
+        "date": "2020-03-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 8,
         "deltaDeceased": 0,
@@ -4063,7 +4063,7 @@ Array [
       },
       Object {
         "confirmed": 71,
-        "date": "2020-03-15T23:00:00.000Z",
+        "date": "2020-03-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 14,
         "deltaDeceased": 0,
@@ -4072,7 +4072,7 @@ Array [
       },
       Object {
         "confirmed": 94,
-        "date": "2020-03-16T23:00:00.000Z",
+        "date": "2020-03-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 23,
         "deltaDeceased": 0,
@@ -4087,7 +4087,7 @@ Array [
     "items": Array [
       Object {
         "confirmed": 0,
-        "date": "2020-01-21T23:00:00.000Z",
+        "date": "2020-01-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": undefined,
         "deltaDeceased": undefined,
@@ -4096,7 +4096,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-22T23:00:00.000Z",
+        "date": "2020-01-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4105,7 +4105,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-23T23:00:00.000Z",
+        "date": "2020-01-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4114,7 +4114,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-24T23:00:00.000Z",
+        "date": "2020-01-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4123,7 +4123,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-25T23:00:00.000Z",
+        "date": "2020-01-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4132,7 +4132,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-26T23:00:00.000Z",
+        "date": "2020-01-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4141,7 +4141,7 @@ Array [
       },
       Object {
         "confirmed": 0,
-        "date": "2020-01-27T23:00:00.000Z",
+        "date": "2020-01-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4150,7 +4150,7 @@ Array [
       },
       Object {
         "confirmed": 1,
-        "date": "2020-01-28T23:00:00.000Z",
+        "date": "2020-01-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -4159,7 +4159,7 @@ Array [
       },
       Object {
         "confirmed": 3,
-        "date": "2020-01-29T23:00:00.000Z",
+        "date": "2020-01-30T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -4168,7 +4168,7 @@ Array [
       },
       Object {
         "confirmed": 2,
-        "date": "2020-01-30T23:00:00.000Z",
+        "date": "2020-01-31T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": -1,
         "deltaDeceased": 0,
@@ -4177,7 +4177,7 @@ Array [
       },
       Object {
         "confirmed": 3,
-        "date": "2020-01-31T23:00:00.000Z",
+        "date": "2020-02-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -4186,7 +4186,7 @@ Array [
       },
       Object {
         "confirmed": 2,
-        "date": "2020-02-01T23:00:00.000Z",
+        "date": "2020-02-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": -1,
         "deltaDeceased": 0,
@@ -4195,7 +4195,7 @@ Array [
       },
       Object {
         "confirmed": 2,
-        "date": "2020-02-02T23:00:00.000Z",
+        "date": "2020-02-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4204,7 +4204,7 @@ Array [
       },
       Object {
         "confirmed": 3,
-        "date": "2020-02-03T23:00:00.000Z",
+        "date": "2020-02-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -4213,7 +4213,7 @@ Array [
       },
       Object {
         "confirmed": 3,
-        "date": "2020-02-04T23:00:00.000Z",
+        "date": "2020-02-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4222,7 +4222,7 @@ Array [
       },
       Object {
         "confirmed": 4,
-        "date": "2020-02-05T23:00:00.000Z",
+        "date": "2020-02-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -4231,7 +4231,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-06T23:00:00.000Z",
+        "date": "2020-02-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 1,
         "deltaDeceased": 0,
@@ -4240,7 +4240,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-07T23:00:00.000Z",
+        "date": "2020-02-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4249,7 +4249,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-08T23:00:00.000Z",
+        "date": "2020-02-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4258,7 +4258,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-09T23:00:00.000Z",
+        "date": "2020-02-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4267,7 +4267,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-10T23:00:00.000Z",
+        "date": "2020-02-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4276,7 +4276,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-11T23:00:00.000Z",
+        "date": "2020-02-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4285,7 +4285,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-12T23:00:00.000Z",
+        "date": "2020-02-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4294,7 +4294,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-13T23:00:00.000Z",
+        "date": "2020-02-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4303,7 +4303,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-14T23:00:00.000Z",
+        "date": "2020-02-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4312,7 +4312,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-15T23:00:00.000Z",
+        "date": "2020-02-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4321,7 +4321,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-16T23:00:00.000Z",
+        "date": "2020-02-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4330,7 +4330,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-17T23:00:00.000Z",
+        "date": "2020-02-18T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4339,7 +4339,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-18T23:00:00.000Z",
+        "date": "2020-02-19T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4348,7 +4348,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-19T23:00:00.000Z",
+        "date": "2020-02-20T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4357,7 +4357,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-20T23:00:00.000Z",
+        "date": "2020-02-21T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4366,7 +4366,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-21T23:00:00.000Z",
+        "date": "2020-02-22T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4375,7 +4375,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-22T23:00:00.000Z",
+        "date": "2020-02-23T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4384,7 +4384,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-23T23:00:00.000Z",
+        "date": "2020-02-24T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4393,7 +4393,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-24T23:00:00.000Z",
+        "date": "2020-02-25T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4402,7 +4402,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-25T23:00:00.000Z",
+        "date": "2020-02-26T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4411,7 +4411,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-26T23:00:00.000Z",
+        "date": "2020-02-27T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4420,7 +4420,7 @@ Array [
       },
       Object {
         "confirmed": 5,
-        "date": "2020-02-27T23:00:00.000Z",
+        "date": "2020-02-28T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4429,7 +4429,7 @@ Array [
       },
       Object {
         "confirmed": 9,
-        "date": "2020-02-28T23:00:00.000Z",
+        "date": "2020-02-29T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 4,
         "deltaDeceased": 0,
@@ -4438,7 +4438,7 @@ Array [
       },
       Object {
         "confirmed": 9,
-        "date": "2020-02-29T23:00:00.000Z",
+        "date": "2020-03-01T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4447,7 +4447,7 @@ Array [
       },
       Object {
         "confirmed": 9,
-        "date": "2020-03-01T23:00:00.000Z",
+        "date": "2020-03-02T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4456,7 +4456,7 @@ Array [
       },
       Object {
         "confirmed": 11,
-        "date": "2020-03-02T23:00:00.000Z",
+        "date": "2020-03-03T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -4465,7 +4465,7 @@ Array [
       },
       Object {
         "confirmed": 11,
-        "date": "2020-03-03T23:00:00.000Z",
+        "date": "2020-03-04T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4474,7 +4474,7 @@ Array [
       },
       Object {
         "confirmed": 13,
-        "date": "2020-03-04T23:00:00.000Z",
+        "date": "2020-03-05T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -4483,7 +4483,7 @@ Array [
       },
       Object {
         "confirmed": 13,
-        "date": "2020-03-05T23:00:00.000Z",
+        "date": "2020-03-06T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4492,7 +4492,7 @@ Array [
       },
       Object {
         "confirmed": 13,
-        "date": "2020-03-06T23:00:00.000Z",
+        "date": "2020-03-07T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4501,7 +4501,7 @@ Array [
       },
       Object {
         "confirmed": 15,
-        "date": "2020-03-07T23:00:00.000Z",
+        "date": "2020-03-08T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -4510,7 +4510,7 @@ Array [
       },
       Object {
         "confirmed": 15,
-        "date": "2020-03-08T23:00:00.000Z",
+        "date": "2020-03-09T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4519,7 +4519,7 @@ Array [
       },
       Object {
         "confirmed": 18,
-        "date": "2020-03-09T23:00:00.000Z",
+        "date": "2020-03-10T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 3,
         "deltaDeceased": 0,
@@ -4528,7 +4528,7 @@ Array [
       },
       Object {
         "confirmed": 20,
-        "date": "2020-03-10T23:00:00.000Z",
+        "date": "2020-03-11T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 2,
         "deltaDeceased": 0,
@@ -4537,7 +4537,7 @@ Array [
       },
       Object {
         "confirmed": 20,
-        "date": "2020-03-11T23:00:00.000Z",
+        "date": "2020-03-12T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 0,
         "deltaDeceased": 0,
@@ -4546,7 +4546,7 @@ Array [
       },
       Object {
         "confirmed": 35,
-        "date": "2020-03-12T23:00:00.000Z",
+        "date": "2020-03-13T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 15,
         "deltaDeceased": 0,
@@ -4555,7 +4555,7 @@ Array [
       },
       Object {
         "confirmed": 46,
-        "date": "2020-03-13T23:00:00.000Z",
+        "date": "2020-03-14T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 11,
         "deltaDeceased": 0,
@@ -4564,7 +4564,7 @@ Array [
       },
       Object {
         "confirmed": 61,
-        "date": "2020-03-14T23:00:00.000Z",
+        "date": "2020-03-15T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 15,
         "deltaDeceased": 0,
@@ -4573,7 +4573,7 @@ Array [
       },
       Object {
         "confirmed": 68,
-        "date": "2020-03-15T23:00:00.000Z",
+        "date": "2020-03-16T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 7,
         "deltaDeceased": 0,
@@ -4582,7 +4582,7 @@ Array [
       },
       Object {
         "confirmed": 78,
-        "date": "2020-03-16T23:00:00.000Z",
+        "date": "2020-03-17T00:00:00.000Z",
         "deceased": 0,
         "deltaConfirmed": 10,
         "deltaDeceased": 0,
