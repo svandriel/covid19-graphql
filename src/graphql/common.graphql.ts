@@ -103,15 +103,34 @@ export const typeDefs = gql`
         """
         confirmed: Int!
         """
+        Difference in number of confirmed cases with regard
+        to previous timeline item.
+        """
+        deltaConfirmed: Int
+        """
         Number of deceased cases.
         """
         deceased: Int!
         """
+        Difference in number of deceased cases with regard
+        to previous timeline item.
+        """
+        deltaDeceased: Int
+        """
         Number of recovered cases.
+
         Please note that this will soon be unavailable:
         [Upcoming changes in time series tables #1250](https://github.com/CSSEGISandData/COVID-19/issues/1250)
         """
         recovered: Int!
+        """
+        Difference in number of recovered cases with regard
+        to previous timeline item.
+
+        Please note that this will soon be unavailable:
+        [Upcoming changes in time series tables #1250](https://github.com/CSSEGISandData/COVID-19/issues/1250)
+        """
+        deltaRecovered: Int
         """
         Date and time of last update (in ISO 8601 format).
         Present only for latest stats, not for historic timelines.

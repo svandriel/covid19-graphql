@@ -8,6 +8,9 @@ export function today(): ApiTimelineItem {
         confirmed: 0,
         deceased: 0,
         recovered: 0,
+        deltaConfirmed: 0,
+        deltaDeceased: 0,
+        deltaRecovered: 0,
         date,
     };
 }

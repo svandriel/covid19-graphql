@@ -18,6 +18,9 @@ export function mergeTimelineItemArray(
                 ? {
                       ...lastA,
                       date: b[i].date,
+                      deltaConfirmed: 0,
+                      deltaDeceased: 0,
+                      deltaRecovered: 0,
                   }
                 : a[i];
         const bItem =
@@ -25,6 +28,9 @@ export function mergeTimelineItemArray(
                 ? {
                       ...lastB,
                       date: a[i].date,
+                      deltaConfirmed: 0,
+                      deltaDeceased: 0,
+                      deltaRecovered: 0,
                   }
                 : b[i];
 
