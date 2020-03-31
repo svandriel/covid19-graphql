@@ -1,8 +1,15 @@
 # COVID-19 GraphQL API
 
+[![Build Status](https://travis-ci.com/svandriel/covid19-graphql.svg?branch=master)](https://travis-ci.com/svandriel/covid19-graphql)
+![node version](https://img.shields.io/badge/node->=10-brightgreen.svg)
+![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/svandriel/covid19-graphql/blob/master/LICENSE)
+
 > API Endpoint: [covid19-graphql.herokuapp.com](https://covid19-graphql.herokuapp.com/)
 
-Provides a GraphQL API for the [COVID-19 data source](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data) from Johns Hopkins university.
+This GraphQL API provides real-time, update information on the COVID-19 cases across the world.
+
+Data is sourced from [the Github repository](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data) and the [OPS dashboard](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) from Johns Hopkins university.
 
 ## Features
 
