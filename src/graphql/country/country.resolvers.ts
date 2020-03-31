@@ -4,10 +4,10 @@ import { Country, getCountryLookup } from '../../country-lookup';
 import {
     ApiCountry,
     ApiCountryFilter,
+    ApiLatest,
     ApiRegion,
     ApiResolvers,
     ApiSubRegion,
-    ApiTimelineItem,
 } from '../../generated/graphql-backend';
 import { includesString } from '../../util/includes-string';
 import { paginate, PaginatedList } from '../../util/paginate';
@@ -33,7 +33,7 @@ export const resolvers: ApiResolvers = {
             return applyTimelineRange({ from, to }, stats);
         },
         latest: async (country, _args, context) => {
-            return context.dataSource.getCurrentForCountry(country.code) as Promise<ApiTimelineItem>;
+            return context.dataSource.getCurrentForCountry(country.code);
         },
     },
 
@@ -100,7 +100,7 @@ function createApiCountry(country: Country | undefined): ApiCountry {
               region: (undefined as any) as ApiRegion,
               subRegion: (undefined as any) as ApiSubRegion,
               timeline: [],
-              latest: (undefined as any) as ApiTimelineItem,
+              latest: (undefined as any) as ApiLatest,
           }
         : ((undefined as any) as ApiCountry);
 }

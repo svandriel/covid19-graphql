@@ -79,7 +79,7 @@ export const typeDefs = gql`
             """
             to: LocalDate
         ): [TimelineItem!]!
-        latest: TimelineItem!
+        latest: Latest!
     }
 
     extend type Region {

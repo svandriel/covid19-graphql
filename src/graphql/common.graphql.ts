@@ -90,7 +90,7 @@ export const typeDefs = gql`
             Determines which countries to exclude (default: none)
             """
             excludeCountries: [String!]
-        ): TimelineItem!
+        ): Latest!
     }
 
     """
@@ -131,9 +131,30 @@ export const typeDefs = gql`
         [Upcoming changes in time series tables #1250](https://github.com/CSSEGISandData/COVID-19/issues/1250)
         """
         deltaRecovered: Int
+    }
+
+    """
+    Latest statistics, with timestamp.
+    """
+    type Latest {
+        """
+        Number of confirmed cases.
+        """
+        confirmed: Int!
+        """
+        Number of deceased cases.
+        """
+        deceased: Int!
+        """
+        Number of recovered cases.
+
+        Please note that this will soon be unavailable:
+        [Upcoming changes in time series tables #1250](https://github.com/CSSEGISandData/COVID-19/issues/1250)
+        """
+        recovered: Int!
         """
         Date and time of last update (in ISO 8601 format).
-        Present only for latest stats, not for historic timelines.
+        Only present when there are reported cases.
         """
         lastUpdated: String
     }
