@@ -26,7 +26,7 @@ export async function fetchCurrent(): Promise<readonly CountryStat[]> {
             console.error(`fetchCurrent ${chalk.red('ERROR')}: Country not found: ${countryName}`);
             return undefined;
         }
-        const lastUpdated = moment(f.attributes.Last_Update).utcOffset(0, true);
+        const lastUpdated = moment(f.attributes.Last_Update).utc();
         return {
             confirmed: f.attributes.Confirmed,
             deceased: f.attributes.Deaths,
