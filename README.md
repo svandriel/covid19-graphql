@@ -7,7 +7,7 @@
 
 > API Endpoint: [covid19-graphql.herokuapp.com](https://covid19-graphql.herokuapp.com/)
 
-This GraphQL API provides real-time, update information on the COVID-19 cases across the world.
+This GraphQL API provides real-time, updated information on the COVID-19 cases across the world caused by the Coronavirus SARS-CoV-2.
 
 Data is sourced from [the Github repository](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data) and the [OPS dashboard](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) from Johns Hopkins university.
 
