@@ -33,12 +33,12 @@ export const countryAliases: Record<string, string> = {
     'Cruise Ship': 'Ship',
     'Diamond Princess': 'Ship',
     'MS Zaandam': 'Ship',
+    Laos: "Lao People's Democratic Republic",
 };
 
 export const missingCountries: Country[] = [
     { name: 'Kosovo', code: 'XK', region: 'Europe', subRegion: 'Southern Europe' },
     { name: 'Ship', code: 'SHIP', region: 'Ship', subRegion: 'Ship' },
     { name: 'Macau', code: 'MO', region: 'Asia', subRegion: 'Eastern Asia' },
-    { name: 'Laos', code: 'LA', region: 'Asia', subRegion: 'South-eastern Asia' },
     { name: 'West Bank and Gaza', code: 'WBG', region: 'Asia', subRegion: 'Western Asia' },
 ];
