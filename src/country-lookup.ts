@@ -16,8 +16,8 @@ async function getCountryLookupUncached(): Promise<CountryLookup> {
         .map(row => ({
             code: row['alpha-2'],
             name: row.name,
-            region: row.region,
-            subRegion: row['sub-region'],
+            region: row.region || row.name,
+            subRegion: row['sub-region'] || row.name,
         }))
         .concat(missingCountries);
 
