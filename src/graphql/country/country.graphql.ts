@@ -11,7 +11,13 @@ export const typeDefs = gql`
         """
         Gets multiple countries as a filtered, paginated list.
         """
-        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
+        countries(
+            offset: Int = 0
+            count: Int = 10
+            filter: CountryFilter
+            sortBy: CountrySort = NAME
+            sortOrder: SortOrder = ASCENDING
+        ): PagedCountries!
     }
 
     """
@@ -34,6 +40,14 @@ export const typeDefs = gql`
         Only includes countries with or without cases
         """
         hasCases: Boolean
+    }
+
+    enum CountrySort {
+        NAME
+        CODE
+        CONFIRMED
+        DECEASED
+        RECOVERED
     }
 
     """
@@ -83,10 +97,22 @@ export const typeDefs = gql`
     }
 
     extend type Region {
-        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
+        countries(
+            offset: Int = 0
+            count: Int = 10
+            filter: CountryFilter
+            sortBy: CountrySort = NAME
+            sortOrder: SortOrder = ASCENDING
+        ): PagedCountries!
     }
 
     extend type SubRegion {
-        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
+        countries(
+            offset: Int = 0
+            count: Int = 10
+            filter: CountryFilter
+            sortBy: CountrySort = NAME
+            sortOrder: SortOrder = ASCENDING
+        ): PagedCountries!
     }
 `;

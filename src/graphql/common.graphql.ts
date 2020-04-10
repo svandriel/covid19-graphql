@@ -158,4 +158,9 @@ export const typeDefs = gql`
         """
         lastUpdated: String
     }
+
+    enum SortOrder {
+        ASCENDING
+        DESCENDING
+    }
 `;
