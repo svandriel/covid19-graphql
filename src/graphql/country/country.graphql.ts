@@ -97,10 +97,22 @@ export const typeDefs = gql`
     }
 
     extend type Region {
-        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
+        countries(
+            offset: Int = 0
+            count: Int = 10
+            filter: CountryFilter
+            sortBy: CountrySort = NAME
+            sortOrder: SortOrder = ASCENDING
+        ): PagedCountries!
     }
 
     extend type SubRegion {
-        countries(offset: Int = 0, count: Int = 10, filter: CountryFilter): PagedCountries!
+        countries(
+            offset: Int = 0
+            count: Int = 10
+            filter: CountryFilter
+            sortBy: CountrySort = NAME
+            sortOrder: SortOrder = ASCENDING
+        ): PagedCountries!
     }
 `;

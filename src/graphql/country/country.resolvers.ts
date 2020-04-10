@@ -46,7 +46,8 @@ export const resolvers: ApiResolvers = {
             const lookup = await getCountryLookup();
             const countries = lookup.countriesPerRegion[region.name].map(createApiCountry);
             const filteredCountries = await applyCountryFilter(args, context, countries);
-            return paginate(args, filteredCountries);
+            const sorted = await countrySort(context.dataSource, args, filteredCountries);
+            return paginate(args, sorted);
         },
     },
 
@@ -55,7 +56,8 @@ export const resolvers: ApiResolvers = {
             const lookup = await getCountryLookup();
             const countries = lookup.countriesPerSubRegion[subRegion.name].map(createApiCountry);
             const filteredCountries = await applyCountryFilter(args, context, countries);
-            return paginate(args, filteredCountries);
+            const sorted = await countrySort(context.dataSource, args, filteredCountries);
+            return paginate(args, sorted);
         },
     },
 };
