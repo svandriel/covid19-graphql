@@ -1,4 +1,4 @@
-import { allPass, isNil } from 'ramda';
+import { allPass, includes, isNil } from 'ramda';
 
 import { Country, getCountryLookup } from '../../country-lookup';
 import {
@@ -10,9 +10,11 @@ import {
     ApiSubRegion,
 } from '../../generated/graphql-backend';
 import { includesString } from '../../util/includes-string';
-import { paginate, PaginatedList } from '../../util/paginate';
+import { normalizeString } from '../../util/normalize-string';
+import { paginate } from '../../util/paginate';
 import { applyTimelineRange } from '../common.resolvers';
 import { Context } from '../context';
+import { countrySort } from './country-sort';
 
 export const resolvers: ApiResolvers = {
     Query: {
@@ -23,7 +25,9 @@ export const resolvers: ApiResolvers = {
         },
         countries: async (_query, args, context) => {
             const lookup = await getCountryLookup();
-            return await applyCountryFilter(args, context, (lookup.list as any[]) as ApiCountry[]);
+            const countries = await applyCountryFilter(args, context, (lookup.list as any[]) as ApiCountry[]);
+            const sorted = await countrySort(context.dataSource, args, countries);
+            return paginate(args, sorted);
         },
     },
 
@@ -41,7 +45,8 @@ export const resolvers: ApiResolvers = {
         countries: async (region, args, context) => {
             const lookup = await getCountryLookup();
             const countries = lookup.countriesPerRegion[region.name].map(createApiCountry);
-            return await applyCountryFilter(args, context, countries);
+            const filteredCountries = await applyCountryFilter(args, context, countries);
+            return paginate(args, filteredCountries);
         },
     },
 
@@ -49,7 +54,8 @@ export const resolvers: ApiResolvers = {
         countries: async (subRegion, args, context) => {
             const lookup = await getCountryLookup();
             const countries = lookup.countriesPerSubRegion[subRegion.name].map(createApiCountry);
-            return await applyCountryFilter(args, context, countries);
+            const filteredCountries = await applyCountryFilter(args, context, countries);
+            return paginate(args, filteredCountries);
         },
     },
 };
@@ -60,19 +66,15 @@ interface CountryOptions {
     filter?: ApiCountryFilter;
 }
 
-async function applyCountryFilter(
-    args: CountryOptions,
-    context: Context,
-    input: ApiCountry[],
-): Promise<PaginatedList<ApiCountry>> {
-    const { offset, count, filter } = args;
+async function applyCountryFilter(args: CountryOptions, context: Context, input: ApiCountry[]): Promise<ApiCountry[]> {
+    const { filter } = args;
     const { search, include, exclude, hasCases } = filter || {};
     const filters: Array<(item: ApiCountry) => boolean> = [];
     if (search) {
-        const upperSearch = search.toUpperCase();
-        filters.push((item: ApiCountry) => {
-            return item.name.toUpperCase().indexOf(upperSearch) !== -1 || item.code.indexOf(upperSearch) !== -1;
-        });
+        const upperSearch = normalizeString(search);
+        filters.push(
+            (item: ApiCountry) => includes(upperSearch, normalizeString(item.name)) || includes(upperSearch, item.code),
+        );
     }
     if (include) {
         const isIncludedCountry = includesString(include);
@@ -88,8 +90,7 @@ async function applyCountryFilter(
         filters.push(country => isCountryWithCases(country.code) === hasCases);
     }
     const countries = (input as any[]) as ApiCountry[];
-    const filteredCountries = countries.filter(allPass(filters));
-    return paginate({ offset, count }, filteredCountries);
+    return countries.filter(allPass(filters));
 }
 
 function createApiCountry(country: Country | undefined): ApiCountry {

@@ -36,6 +36,14 @@ export class DataSource {
         return this.fetchCurrent();
     }
 
+    async getCurrentAsLookup(): Promise<Record<string, CountryStat>> {
+        const current = await this.getCurrent();
+        return current.reduce((acc, item) => {
+            acc[item.countryCode] = item;
+            return acc;
+        }, {} as Record<string, CountryStat>);
+    }
+
     async getCurrentForCountry(countryCode: string): Promise<ApiLatest> {
         const all = await this.getCurrent();
         const found = all.find(propEq('countryCode', countryCode));
