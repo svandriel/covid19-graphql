@@ -12,9 +12,10 @@ generates:
       scalars:
         LocalDate: Moment
     plugins:
-      - add: |
-          // tslint:disable
-          import { Context } from '../graphql/context';
-          import { Moment } from 'moment';
+      - add:
+          content: |
+            // tslint:disable
+            import { Context } from '../graphql/context';
+            import { Moment } from 'moment';
       - typescript
       - typescript-resolvers
