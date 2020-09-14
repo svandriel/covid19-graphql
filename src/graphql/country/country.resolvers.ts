@@ -65,7 +65,7 @@ export const resolvers: ApiResolvers = {
 interface CountryOptions {
     offset: number;
     count: number;
-    filter?: ApiCountryFilter;
+    filter?: ApiCountryFilter | null;
 }
 
 async function applyCountryFilter(args: CountryOptions, context: Context, input: ApiCountry[]): Promise<ApiCountry[]> {
